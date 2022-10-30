@@ -1,0 +1,31 @@
+{
+    "suggest.completionItemKindLabels": {
+        "function"              : "",
+        "method"                : "",
+        "variable"              : "",
+        "constant"              : "",
+        "struct"                : "",
+        "class"                 : "פּ",
+        "interface"             : "",
+        "text"                  : "",
+        "enum"                  : "",
+        "enumMember"            : "",
+        "module"                : "",
+        "color"                 : "",
+        "property"              : "ﰠ",
+        "field"                 : "",
+        "unit"                  : "塞",
+        "file"                  : "",
+        "value"                 : "",
+        "event"                 : "",
+        "folder"                : "",
+        "keyword"               : "",
+        "snippet"               : "",
+        "operator"              : "",
+        "reference"             : "",
+        "constructor"           : "",
+        "typeParameter"         : ""
+    },
+
+    "Lua.telemetry.enable": false
+}
