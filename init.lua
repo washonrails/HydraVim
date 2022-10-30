@@ -8,9 +8,7 @@ Plug 'dundalek/lazy-lsp.nvim' 									" aut install lsp
 Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
 Plug 'goolord/alpha-nvim'										" Tela inicial
 Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
-" Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lualine/lualine.nvim'
-" Plug 'terrortylor/nvim-comment'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
 Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
 Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
