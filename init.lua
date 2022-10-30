@@ -1,29 +1,27 @@
 vim.cmd([[
 call plug#begin('~/.vim/vim.plug')
 
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} 					"  Terminal flutuante
-Plug 'norcalli/nvim-colorizer.lua' 								" Exiba a cor do código da cor
-Plug 'mg979/vim-visual-multi', {'branch': 'master'} 			" Multi cursor
-Plug 'dundalek/lazy-lsp.nvim' 									" aut install lsp
-Plug 'lewis6991/gitsigns.nvim'									" Indicadores git
-Plug 'goolord/alpha-nvim'										" Tela inicial
-Plug 'lukas-reineke/indent-blankline.nvim'						" Linhas de indentação
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 				" Autocomplete
-Plug 'neovim/nvim-lspconfig' 									" LPS https://www.jakewiesler.com/blog/getting-started-with-vim
-Plug 'nvim-lua/plenary.nvim' 									" Dependênci do Telescope
-Plug 'nvim-telescope/telescope.nvim' 							" Localiza arquivos
-Plug 'kyazdani42/nvim-web-devicons' 							" Icones geral
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' } 				" Gerencidor de abas
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 	" TSInstall C (dependência do Telescope)
-Plug 'kien/rainbow_parentheses.vim' 							" Cor dos pares de () {} []
-Plug 'Xuyuanp/nerdtree-git-plugin'								" Nerdtree git plugin
-Plug 'nvim-tree/nvim-tree.lua'
-Plug 'ryanoasis/vim-devicons' 									" Icons for plugins (NERDTree)
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
-Plug 'sheerun/vim-polyglot' 									" Better sintax
-Plug 'folke/trouble.nvim' 										" lista os erros do código
-Plug 'dense-analysis/ale' 										" Icones do diagnostics
+Plug 'SolarVim/nvim-treesitter'
+Plug 'SolarVim/nvim-tree.lua'
+Plug 'SolarVim/nvim-lspconfig'
+Plug 'SolarVim/lualine.nvim'
+Plug 'SolarVim/coc.nvim'
+Plug 'SolarVim/ale'
+Plug 'SolarVim/gitsigns.nvim'
+Plug 'SolarVim/vim-polyglot'
+Plug 'SolarVim/bufferline.nvim'
+Plug 'SolarVim/toggleterm.nvim'
+Plug 'SolarVim/telescope.nvim'
+Plug 'SolarVim/nvim-web-devicons'
+Plug 'SolarVim/lazy-lsp.nvim'
+Plug 'SolarVim/alpha-nvim'
+Plug 'SolarVim/plenary.nvim'
+Plug 'SolarVim/trouble.nvim'
+Plug 'SolarVim/indent-blankline.nvim'
+Plug 'SolarVim/vim-devicons'
+Plug 'SolarVim/vim-visual-multi'
+Plug 'SolarVim/nvim-colorizer.lua'
+Plug 'SolarVim/rainbow_parentheses.vim'
 
 " temas --
 Plug 'navarasu/onedark.nvim' 									" One dark mode
