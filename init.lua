@@ -24,7 +24,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 					" Color for icons
 Plug 'sheerun/vim-polyglot' 									" Better sintax
 Plug 'folke/trouble.nvim' 										" lista os erros do código
 Plug 'dense-analysis/ale' 										" Icones do diagnostics
-" Plug 'voldikss/vim-floaterm' 									" Terminal fluent
 
 " temas --
 Plug 'navarasu/onedark.nvim' 									" One dark mode
