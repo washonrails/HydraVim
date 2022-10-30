@@ -34,7 +34,7 @@
 ### (WSL/Linux)
 Após a instalação das dependências, execute o comando abaixo. Tenha o <a href="https://git-scm.com/" target="_blank"> Git </a> instalado.<p>
 ```shell
-curl https://raw.githubusercontent.com/Diogo-ss/SUNvim/main/script/install.sh > sunvim_install.sh && sh sunvim_install.sh
+curl https://raw.githubusercontent.com/SolarVim/Solar/main/script/install.sh > sunvim_install.sh && sh sunvim_install.sh
 ```
 ## Linguagens
 Cada linguagem necessita de suporte indivídual para seu funcionamento no SUNvim, mas é simples. O autocomplete é o <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a> e toda sua documentação oficial está disponível em <a href="https://github.com/neoclide/coc.nvim" target="_blank"> Coc.nvim </a>. Cada linguagem precisa de seu compilador e do seu <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> Language servers </a>. ```C/C++```, ```HTML```, ```Java```, ```Javascript/Typescript```, ```JSON```, ```Lua``` e ```Python``` podem ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui.</a><p>
