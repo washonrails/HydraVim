@@ -24,7 +24,7 @@ Plug 'SolarVim/nvim-colorizer.lua'
 Plug 'SolarVim/rainbow_parentheses.vim'
 
 " temas --
-Plug 'navarasu/onedark.nvim' 									" One dark mode
+Plug 'navarasu/onedark.nvim'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
