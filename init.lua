@@ -6,7 +6,6 @@ Plug 'SolarVim/nvim-tree.lua'
 Plug 'SolarVim/nvim-lspconfig'
 Plug 'SolarVim/lualine.nvim'
 Plug 'SolarVim/coc.nvim'
-Plug 'SolarVim/ale'
 Plug 'SolarVim/gitsigns.nvim'
 Plug 'SolarVim/vim-polyglot'
 Plug 'SolarVim/bufferline.nvim'
@@ -60,7 +59,6 @@ require ('plugins.trouble')
 require ('plugins.coc_settings')
 require ('plugins.vim_treesitter')
 require ('plugins.lsp_config')
-require ('plugins.ale_sign')
 
 -- temas
 require ('theme.theme')
