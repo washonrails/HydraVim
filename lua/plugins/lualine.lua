@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-	symbols = { error = ' ', warn = ' ', info = ' ', hint = ' '},
+	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
     icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = ''},
