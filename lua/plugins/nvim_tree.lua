@@ -74,7 +74,7 @@ require("nvim-tree").setup({
 					unmerged = "",
 					renamed = "➜",
 					untracked = "★",
-					deleted = "",
+					deleted = "",
 					ignored = "◌",
 				},
 			},
