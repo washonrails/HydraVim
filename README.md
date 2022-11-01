@@ -1,6 +1,6 @@
 # Simple Useful Nvim - SolarVim
 
-<img src="https://github.com/Diogo-ss/SUNvim/blob/main/screenshot/20220625_000531.png" min-width="200px" max-width="200px" width="300px" align="right" alt="Computador iuriCode">
+<img src="https://avatars.githubusercontent.com/u/116992099?s=400&u=46d74edbb9ea98808728619bc7a94537ac77bd52" min-width="50px" max-width="50px" width="200px" align="right" alt="Computador iuriCode">
 
 <a href="https://sunvim.netlify.app/" target="_blank"> 🚀 Site - beta</a>
 
