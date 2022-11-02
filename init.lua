@@ -20,8 +20,8 @@ Plug 'SolarVim/indent-blankline.nvim'
 Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
 Plug 'SolarVim/nvim-colorizer.lua'
+Plug 'SolarVim/indent-blankline.nvim'
 
-Plug 'Yggdroot/indentLine'
 " temas --
 Plug 'navarasu/onedark.nvim'
 Plug 'tiagovla/tokyodark.nvim'
