@@ -20,7 +20,6 @@ Plug 'SolarVim/indent-blankline.nvim'
 Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
 Plug 'SolarVim/nvim-colorizer.lua'
-Plug 'SolarVim/rainbow_parentheses.vim'
 
 " temas --
 Plug 'navarasu/onedark.nvim'
@@ -44,7 +43,6 @@ require ('config.comment')
 require ('plugins.settings')
 require ('plugins.nvim_tree')
 require ('plugins.telescope')
-require ('plugins.rainbow_parentheses')
 require ('plugins.lualine')
 require ('plugins.icons_unicode')
 require ('plugins.indent_blankline')
