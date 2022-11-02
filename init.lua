@@ -61,9 +61,9 @@ require ('plugins.colorizer')
 require ('plugins.toggleterm')
 
 -- lsp
-require ('plugins.coc_settings')
-require ('plugins.vim_treesitter')
-require ('plugins.lsp_config')
+require ('lsp.coc_settings')
+require ('lsp.vim_treesitter')
+require ('lsp.lsp_config')
 
 -- temas
 require ('theme.theme')
