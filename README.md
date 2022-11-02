@@ -22,6 +22,16 @@
 ## Screenshot
 
 ## Dependências
+
+``
+nodejs ranger python
+``
+
+pynvim:
+``
+pip install pynvim
+``
+
 <a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.7.0<p>
 <a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx - Necessário para o autocomplete <p>
 <a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a> - Instalador dos Plugins <p>
