@@ -33,14 +33,14 @@ Plug 'rafamadriz/neon'
 Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
 
-" opcionanal
+" opt
 " Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
 " Plug 'andweeb/presence.nvim'
 
 call plug#end()
 ]])
 
--- opcionanal
+-- opt
 -- require('plugins.presence')
 
 -- config
