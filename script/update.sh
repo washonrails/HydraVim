@@ -19,7 +19,7 @@ logo()
 # 	git merge
 # 	if [ $(git status --porcelain | wc -l) -eq "0" ]; then
 #   		echo
-# 		echo -e "\033[32m  Your SUNvim is last vesrion. \033[0m"
+# 		echo -e "\033[32m Your SUNvim is last vesrion. \033[0m"
 # 	else
 # 		echo
 #   		echo " You SUNvim is old version"
@@ -44,7 +44,7 @@ function update()
 			echo
 			echo " Canceled - Type 'exit' or press 'CTRL + d' to close"
 			exit;;
-		* ) echo -e $"\033[0;31m  Invaled option \033[0m";; 
+		* ) echo -e $"\033[0;31m Invaled option \033[0m";; 
 	esac
 
 	done
@@ -61,7 +61,7 @@ function install_update()
 	git reset --hard @{u}
 	git clean -df
 	git pull
-	echo -e "\033[32m  SUNvim upgrade finish. \033[0m"
+	echo -e "\033[32m SUNvim upgrade finish. \033[0m"
 	
 	while true; do
 	read -p " Restart now? (y/n) " yn
@@ -71,9 +71,9 @@ function install_update()
 			killall nvim
 			break;;
 		[nN] ) 
-	 			echo -e "\033[32m  OK! SUNvim upgrade finish. \033[0m"
+	 			echo -e "\033[32m OK! SUNvim upgrade finish. \033[0m"
 	 			exit;;
-		* ) echo -e $"\033[0;31m  Invaled option \033[0m";; 
+		* ) echo -e $"\033[0;31m Invaled option \033[0m";; 
 	esac
 
 	done
