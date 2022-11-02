@@ -26,6 +26,13 @@
         "constructor"           : "",
         "typeParameter"         : ""
     },
+    "suggest.floatConfig": {
+//      "maxWidth": 50,
+      "border": true,
+      "rounded": true,
+      "highlight": "CocCustomPopup",
+      "borderhighlight": "CocCustomPopupBorder"
+    },
     "diagnostic.enable": {
       "default": true
     },
