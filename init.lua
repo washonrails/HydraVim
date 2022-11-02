@@ -41,7 +41,6 @@ require ('config.mappings')
 require ('config.comment')
 
 -- plugins config
-require ('plugins.settings')
 require ('plugins.nvim_tree')
 require ('plugins.telescope')
 require ('plugins.lualine')
