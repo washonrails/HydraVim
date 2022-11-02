@@ -21,8 +21,7 @@ require("nvim-tree").setup({
         show_on_dirs = false,
         debounce_delay = 50,
         icons = {
-          hint = "",
---           hint = "",
+          hint = "",
           info = "",
           warning = "",
           error = "",
@@ -55,9 +54,9 @@ require("nvim-tree").setup({
 				git = true,
 			},
 			glyphs = {
-				default = "",
+				default = "",
 				symlink = "",
-				bookmark = "",
+				bookmark = "",
 				folder = {
 					arrow_closed = "",
 					arrow_open = "",
