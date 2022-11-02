@@ -36,7 +36,7 @@ Após a instalação das dependências, execute o comando abaixo. Tenha o <a hre
 ```shell
 curl https://raw.githubusercontent.com/SolarVim/Solar/main/script/install.sh > sunvim_install.sh && sh sunvim_install.sh
 ```
-
+Após o termino da instalção: Execute o comando abaixo
 ```shell
 nvim -c 'CocInstall coc-pairs coc-snippets'
 ```
