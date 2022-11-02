@@ -15,7 +15,6 @@ Plug 'SolarVim/nvim-web-devicons'
 Plug 'SolarVim/lazy-lsp.nvim'
 Plug 'SolarVim/alpha-nvim'
 Plug 'SolarVim/plenary.nvim'
-Plug 'SolarVim/trouble.nvim'
 Plug 'SolarVim/indent-blankline.nvim'
 Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
@@ -60,7 +59,6 @@ require ('plugins.alpha')
 require ('plugins.gitsigns')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
-require ('plugins.trouble')
 
 -- lsp
 require ('plugins.coc_settings')
