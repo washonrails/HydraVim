@@ -1,2 +1,2 @@
-require('onedark').setup { style = 'darker' }
-require('onedark').load()
+vim.o.background = 'dark'
+	vim.cmd.colorscheme 'oxocarbon'

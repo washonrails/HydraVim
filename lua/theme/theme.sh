@@ -6,7 +6,7 @@ theme_num=0
 theme_h=0
 theme_v=0
 
-th_list=('onedark' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord')
+th_list=('onedark' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord' 'oxocarbon')
 size=${#th_list[@]}
 
 declare -A st_list
@@ -53,6 +53,11 @@ st_list[6,0]=0
 st_list[7,0]=2
 st_list[7,1]='dark'
 st_list[7,2]='light'
+
+# oxocarbon
+st_list[8,0]=2
+st_list[8,1]='dark'
+st_list[8,2]='light'
 #########################################################
 function echo_config()
 {
@@ -84,6 +89,9 @@ vim.cmd[[colorscheme neon]]" > ~/.config/nvim/lua/theme/theme.lua
 	echo $"vim.cmd([[ colorscheme nord ]])" > ~/.config/nvim/lua/theme/theme.lua
 	elif (($1 == 7)); then
 	echo $"require('onenord').setup({ theme = '${st_list[$theme_h,$theme_v]}' })" > ~/.config/nvim/lua/theme/theme.lua
+	elif (($1 == 8)); then
+	echo $"vim.o.background = '${st_list[$theme_h,$theme_v]}'
+	vim.cmd.colorscheme 'oxocarbon'" > ~/.config/nvim/lua/theme/theme.lua
 	fi
 }
 

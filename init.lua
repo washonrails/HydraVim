@@ -21,6 +21,8 @@ Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
 Plug 'SolarVim/nvim-colorizer.lua'
 Plug 'SolarVim/indent-blankline.nvim'
+Plug 'makerj/vim-pdf'
+Plug 'andweeb/presence.nvim'
 
 " temas --
 Plug 'navarasu/onedark.nvim'
@@ -31,6 +33,7 @@ Plug 'luisiacc/gruvbox-baby'
 Plug 'rafamadriz/neon'
 Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
+Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
 
 call plug#end()
 ]])
@@ -51,6 +54,8 @@ require ('plugins.gitsigns')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
 require ('plugins.trouble')
+require('plugins.presence')
+
 
 -- lsp
 require ('plugins.coc_settings')
