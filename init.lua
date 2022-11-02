@@ -21,11 +21,7 @@ Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
 Plug 'SolarVim/nvim-colorizer.lua'
 Plug 'SolarVim/indent-blankline.nvim'
-Plug 'makerj/vim-pdf'
-
-" snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'SolarVim/vim-snippets'
 
 " temas --
 Plug 'navarasu/onedark.nvim'
@@ -38,6 +34,7 @@ Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
 
 " opt
+" Plug 'makerj/vim-pdf'
 " Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
 " Plug 'andweeb/presence.nvim'
 
