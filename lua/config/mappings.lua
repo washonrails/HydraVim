@@ -26,8 +26,8 @@ vc [[ vnoremap <S-j> <ESC> yyp :m .+0<CR>v ]]				-- copia para baixo no modo vis
 vc [[ vnoremap <S-k> <ESC> yyp:m .-1<CR>gv=gv ]]			-- copia para cima no modo visual
 
 -- dividir a tela - split mode
-map('n', '<A-j>', '<CMD>vsplit<CR>')						-- divide o buffer verticalmente 
-map('n', '<A-h>', '<CMD>split<CR>')						-- divide o buffer horizontalmente
+map('n', '<A-n>', '<CMD>vsplit<CR>')						-- divide o buffer verticalmente 
+map('n', '<A-b>', '<CMD>split<CR>')						-- divide o buffer horizontalmente
 
 -- split resize
 vc [[ nnoremap <silent> <C-A-h> :vertical resize +3<CR> ]]	-- redimenciona o buffer vertical para a esquerda
