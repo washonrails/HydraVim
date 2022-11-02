@@ -47,6 +47,7 @@ call plug#end()
 require ('config.settings')
 require ('config.mappings')
 require ('config.comment')
+require ('config.autosave')
 
 -- plugins config
 require ('plugins.nvim_tree')
