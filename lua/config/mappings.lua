@@ -57,6 +57,9 @@ map('n', '<C-v>', 'p<ESC>')									-- colar no modo normal
 map('v', '<C-a>', 'ggVG')									-- selecionar tudo no modo visual
 map('n', '<C-a>', 'ggVG')									-- selecionar tudo no modo normal
 
+-- snippets
+vc([[xmap <leader>sp  <Plug>(coc-convert-snippet)]])
+
 -- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
