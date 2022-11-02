@@ -73,13 +73,13 @@ map('n', '<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && ex
 -- NvimTree
 map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
 
--- selecinar tudo
-map('v', '<TAB>', '>gv')									-- selecionar tudo no modo normal
-map('v', '<S-TAB>', '<gv')									-- selecionar tudo no modo normal
+-- add/rm TAB em texto
+map('v', '<TAB>', '>gv')									-- adiciona TAB do texto selecionado
+map('v', '<S-TAB>', '<gv')									-- remove TAB do texto selecionado
 
 -- abas
-map('n', '<S-TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
-map('n', '<TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
+map('n', '<TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
+map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
 map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')		-- fechar aba
 
