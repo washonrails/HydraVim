@@ -26,6 +26,21 @@
         "constructor"           : "",
         "typeParameter"         : ""
     },
+    "diagnostic.enable": {
+      "default": true
+    },
+    "diagnostic.hintSign": {
+      "default": ""
+    },
+    "diagnostic.infoSign": {
+      "default": ""
+    },
+    "diagnostic.warningSign": {
+      "default": ""
+    },
+    "diagnostic.errorSign": {
+      "default": ""
+    },
 
     "Lua.telemetry.enable": false
 }
