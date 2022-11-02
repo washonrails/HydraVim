@@ -10,21 +10,21 @@
         "text"                  : "",
         "enum"                  : "",
         "enumMember"            : "",
-        "module"                : "",
+        "module"                : "",
         "color"                 : "",
         "property"              : "ﰠ",
         "field"                 : "",
-        "unit"                  : "塞",
+        "unit"                  : "陋",
         "file"                  : "",
         "value"                 : "",
         "event"                 : "",
         "folder"                : "",
-        "keyword"               : "",
+        "keyword"               : "",
         "snippet"               : "",
         "operator"              : "",
         "reference"             : "",
         "constructor"           : "",
-        "typeParameter"         : ""
+        "typeParameter"         : ""
     },
     "diagnostic.enable": {
       "default": true
