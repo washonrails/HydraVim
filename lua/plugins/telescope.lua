@@ -1,15 +1,28 @@
 local actions = require('telescope.actions')
 require('telescope').setup {
   defaults = {
-    layout_config = {
-      width = 0.85,
-      prompt_position = "top",
-      preview_cutoff = 120,
-      horizontal = {mirror = false},
-      vertical = {mirror = false}
+    vimgrep_arguments = {
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
     },
-    find_command = {
-      'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
+    layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        prompt_position = "bottom",
+        preview_width = 0.55,
+        results_width = 0.8,
+      },
+      vertical = {
+        mirror = false,
+      },
+      width = 0.87,
+      height = 0.80,
+      preview_cutoff = 120,
     },
     prompt_prefix = " ",
     selection_caret = " ",
@@ -17,14 +30,21 @@ require('telescope').setup {
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",
-    layout_strategy = "horizontal",
     file_sorter = require'telescope.sorters'.get_fuzzy_file,
     file_ignore_patterns = {},
     generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
     path_display = {},
-    winblend = 0,
-    border = {},
-    borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
+	winblend = 0,
+	border = {},
+	borderchars = {
+	  prompt = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+	  -- prompt = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
+      -- preview = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
+      -- results = {"━", "┃", "━", "┃", "┏", "┓", "┛", "┗"},
+      -- prompt = {" ", " ", " ", " ", " ", " ", " ", " "},
+      preview = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+      results = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
+    },
     color_devicons = true,
     use_less = true,
     set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
