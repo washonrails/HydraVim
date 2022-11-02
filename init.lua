@@ -21,6 +21,7 @@ Plug 'SolarVim/vim-devicons'
 Plug 'SolarVim/vim-visual-multi'
 Plug 'SolarVim/nvim-colorizer.lua'
 
+Plug 'Yggdroot/indentLine'
 " temas --
 Plug 'navarasu/onedark.nvim'
 Plug 'tiagovla/tokyodark.nvim'
@@ -45,7 +46,7 @@ require ('plugins.nvim_tree')
 require ('plugins.telescope')
 require ('plugins.lualine')
 require ('plugins.icons_unicode')
-require ('plugins.indent_blankline')
+require ('plugins.indent_line')
 require ('plugins.buffer')
 require ('plugins.alpha')
 require ('plugins.gitsigns')
