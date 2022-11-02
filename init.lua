@@ -23,6 +23,10 @@ Plug 'SolarVim/nvim-colorizer.lua'
 Plug 'SolarVim/indent-blankline.nvim'
 Plug 'makerj/vim-pdf'
 
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " temas --
 Plug 'navarasu/onedark.nvim'
 Plug 'tiagovla/tokyodark.nvim'
