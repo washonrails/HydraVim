@@ -1,10 +1,11 @@
--- Some servers have issues with backup files, see #649.
 vim.opt.backup = false
 vim.opt.writebackup = false
 
 vim.opt.updatetime = 300
 
 vim.opt.signcolumn = "yes"
+
+vim.cmd([[ let g:coc_global_extensions = ['coc-pairs', 'coc-snippets'] ]])
 
 local keyset = vim.keymap.set
 function _G.check_back_space()
