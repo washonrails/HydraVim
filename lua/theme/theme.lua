@@ -1,1 +1,2 @@
-vim.cmd.colorscheme 'github_dark_colorblind'
+require('onedark').setup { style = 'darker' }
+require('onedark').load()
