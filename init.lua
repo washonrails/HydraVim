@@ -1,4 +1,13 @@
 vim.cmd([[
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 call plug#begin('~/.vim/vim.plug')
 
 Plug 'SolarVim/nvim-treesitter'
@@ -33,6 +42,7 @@ Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'JoosepAlviste/palenightfall.nvim'
+Plug 'projekt0n/github-nvim-theme'
 
 " opt
 " Plug 'makerj/vim-pdf'
