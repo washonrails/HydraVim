@@ -1,6 +1,13 @@
 local nvim_lsp = require('lspconfig')
 local servers = {'ccls','clangd', 'pyright', 'tsserver'}
 
+vim.diagnostic.config({
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = false,
+})
+
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
