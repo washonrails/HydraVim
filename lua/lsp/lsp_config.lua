@@ -6,6 +6,8 @@ vim.diagnostic.config({
   underline = true,
   update_in_insert = true,
   severity_sort = false,
+  virtual_text = true,
+  virtual_text = { prefix = '■',} -- Could be '●', '▎', 'x'
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
