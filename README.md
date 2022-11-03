@@ -24,7 +24,7 @@
 ## Dependências
 
 ``
-nodejs ranger python
+nodejs ranger python3 yarn
 ``
 
 pynvim:
