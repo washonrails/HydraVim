@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
 	use 'SolarVim/nvim-tree.lua'
 	use 'SolarVim/nvim-lspconfig'
 	use 'SolarVim/lualine.nvim'
-	use { 'SolarVim/coc.nvim', run = 'yarn install --frozen-lockfile' }
+	use { 'SolarVim/coc.nvim', run = 'cd ~/.local/share/nvim/site/pack/packer/start && yarn install --frozen-lockfile' }
 	use 'SolarVim/gitsigns.nvim'
 	use 'SolarVim/vim-polyglot'
 	use 'SolarVim/bufferline.nvim'
