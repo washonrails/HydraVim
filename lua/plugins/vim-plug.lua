@@ -29,7 +29,7 @@ call plug#begin('~/.vim/vim.plug')
     Plug 'SolarVim/nvim-colorizer.lua'
     Plug 'SolarVim/indent-blankline.nvim'
     Plug 'SolarVim/vim-snippets'
-    " temas --
+	" temas --
     Plug 'navarasu/onedark.nvim'
     Plug 'tiagovla/tokyodark.nvim'
     Plug 'folke/tokyonight.nvim'
