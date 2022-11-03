@@ -1,5 +1,5 @@
--- packer
-require ('plugins.packer')
+require ('plugins.vim-plug')
+-- require ('plugins.packer')
 
 -- config
 require ('config.settings')
