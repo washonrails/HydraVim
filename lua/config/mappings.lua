@@ -86,6 +86,17 @@ nnoremap <silent><C-w> :BufferLinePickClose<CR>
 nnoremap <silent><C-w> :BufferLinePickClose<CR>
 ]])
 
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
+vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
+
 -- terminal
 map('n', '<leader>t', '<CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
 map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
