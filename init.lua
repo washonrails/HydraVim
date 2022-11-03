@@ -1,9 +1,6 @@
 -- packer
 require ('plugins.packer')
 
--- opt
--- require('plugins.presence')
-
 -- config
 require ('config.settings')
 require ('config.mappings')
@@ -20,6 +17,7 @@ require ('plugins.alpha')
 require ('plugins.gitsigns')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
+-- require('plugins.presence')
 
 -- lsp
 require ('lsp.coc_settings')
