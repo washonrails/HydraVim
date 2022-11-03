@@ -98,7 +98,8 @@ vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
 
 -- terminal
-map('n', '<leader>t', '<CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
+-- vim.cmd[[noremap <leader>t <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>]]
+map('n', '<leader>t', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
 map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
