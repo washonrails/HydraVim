@@ -14,7 +14,7 @@ Plug 'SolarVim/nvim-treesitter'
 Plug 'SolarVim/nvim-tree.lua'
 Plug 'SolarVim/nvim-lspconfig'
 Plug 'SolarVim/lualine.nvim'
-Plug 'SolarVim/coc.nvim'
+Plug 'SolarVim/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'SolarVim/gitsigns.nvim'
 Plug 'SolarVim/vim-polyglot'
 Plug 'SolarVim/bufferline.nvim'
