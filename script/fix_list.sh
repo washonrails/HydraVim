@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-echo "1.0 - 17.10.2022
+echo "1.0 - 02.11.2022
 
 - First version release"
 
