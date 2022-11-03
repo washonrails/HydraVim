@@ -6,7 +6,7 @@ theme_num=0
 theme_h=0
 theme_v=0
 
-th_list=('onedark' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord' 'catppuccin' 'palenightfall')
+th_list=('onedark' 'tokyonight' 'tokyodark' 'gruvbox' 'gruvbox-baby' 'neon' 'nord' 'onenord' 'catppuccin' 'palenightfall' 'github-nvim')
 size=${#th_list[@]}
 
 declare -A st_list
@@ -69,6 +69,16 @@ st_list[8,4]='latte'
 # palenightfall
 st_list[9,0]=0
 
+# github-nvim
+st_list[10,0]=7
+st_list[10,1]='dark'
+st_list[10,2]='dimmed'
+st_list[10,3]='dark_default'
+st_list[10,4]='dark_colorblind'
+st_list[10,5]='light'
+st_list[10,6]='light_default'
+st_list[10,7]='light_colorblind'
+
 #########################################################
 function echo_config()
 {
@@ -104,14 +114,10 @@ vim.cmd[[colorscheme neon]]" > ~/.config/nvim/lua/theme/theme.lua
 	echo $"vim.cmd.colorscheme 'catppuccin-${st_list[$theme_h,$theme_v]}'" > ~/.config/nvim/lua/theme/theme.lua
 	elif (($1 == 9)); then
 	echo $"vim.cmd.colorscheme 'palenightfall'" > ~/.config/nvim/lua/theme/theme.lua
+	elif (($1 == 10)); then
+	echo $"vim.cmd.colorscheme 'github_${st_list[$theme_h,$theme_v]}'" > ~/.config/nvim/lua/theme/theme.lua
 	fi
 }
-
-
-
-
-
-
 
 ###########################################################
 
