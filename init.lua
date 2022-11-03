@@ -31,6 +31,7 @@ Plug 'luisiacc/gruvbox-baby'
 Plug 'rafamadriz/neon'
 Plug 'shaunsingh/nord.nvim'
 Plug 'rmehri01/onenord.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " opt
 " Plug 'makerj/vim-pdf'
