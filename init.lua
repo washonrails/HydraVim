@@ -17,6 +17,7 @@ require ('plugins.alpha')
 require ('plugins.gitsigns')
 require ('plugins.colorizer')
 require ('plugins.toggleterm')
+require ('plugins.which_key')
 -- require('plugins.presence')
 
 -- lsp
