@@ -72,16 +72,29 @@ end
 
 local mappings = {
   q = { ":q<cr>", "Quit" },
-  Q = { ":wq<cr>", "Save & Quit" },
   w = { ":w<cr>", "Save" },
-  x = { ":bdelete<cr>", "Close" },
-  E = { ":e ~/.config/nvim/init.lua<cr>", "Edit config" },
-  f = { ":Telescope find_files<cr>", "Telescope Find Files" },
-  r = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
+  e = { ":NvimTreeToggle<cr>", "Tree" },
+  E = { ":e ~/.config/nvim/init.lua<cr>", "Settings" },
+  r = { ":Telescope live_grep<cr>", "Live Grep" },
+  u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", "Update" },
   t = {
-    t = { ":ToggleTerm<cr>", "Split Below" },
-    f = { toggle_float, "Floating Terminal" },
+    t = { ":ToggleTerm<cr>", "Horizontal" },
+    m = { ":ToggleTerm size=45 direction=vertical<CR>", "Vertical" },
+    f = { toggle_float, "Floating" },
     l = { toggle_lazygit, "LazyGit" }
+  },
+  g = {
+	name = "Git",
+	c = { ":Telescope git_commits<cr>", "Commits" },
+	b = { ":Telescope git_branches<cr>", "Branches" },
+	s = { ":Telescope git_status<cr>", "Status" },
+	
+  },
+  f = {
+	name = "Files",
+	n = { ":ene <BAR> startinsert <CR>", "New file" },
+	f = { ":Telescope find_files<cr>", "Find Files" },
+	r = { ":Telescope oldfiles<CR>", "Recent" },
   },
   l = {
     name = "LSP",
@@ -98,26 +111,15 @@ local mappings = {
     d = { '<cmd>lua vim.lsp.buf.definition()<cr>', "Go To Definition" },
     D = { '<cmd>lua vim.lsp.buf.declaration()<cr>', "Go To Declaration" },
     r = { '<cmd>lua vim.lsp.buf.references()<cr>', "References" },
-    R = { '<cmd>Lspsaga rename<cr>', "Rename" },
-    a = { '<cmd>Lspsaga code_action<cr>', "Code Action" },
-    e = { '<cmd>Lspsaga show_line_diagnostics<cr>', "Show Line Diagnostics" },
-    n = { '<cmd>Lspsaga diagnostic_jump_next<cr>', "Go To Next Diagnostic" },
-    N = { '<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic" }
   },
-  z = {
-    name = "Focus",
-    z = { ":ZenMode<cr>", "Toggle Zen Mode" },
-    t = { ":Twilight<cr>", "Toggle Twilight" }
-  },
+  z = { ":ZenMode<cr>", "Toggle Zen Mode" },
   p = {
-    name = "Packer",
-    r = { ":PackerClean<cr>", "Remove Unused Plugins" },
-    c = { ":PackerCompile profile=true<cr>", "Recompile Plugins" },
-    i = { ":PackerInstall<cr>", "Install Plugins" },
-    p = { ":PackerProfile<cr>", "Packer Profile" },
-    s = { ":PackerSync<cr>", "Sync Plugins" },
-    S = { ":PackerStatus<cr>", "Packer Status" },
-    u = { ":PackerUpdate<cr>", "Update Plugins" }
+    name = "Vim-Plug",
+    r = { ":PlugClean<cr>", "Remove Unused Plugins" },
+    d = { ":PlugDiff<cr>", "Examine Plugins" },
+    i = { ":PlugInstall<cr>", "Install Plugins" },
+    s = { ":PlugStatus<cr>", "Status Plugins" },
+    u = { ":PlugUpdate<cr>", "Update Plugins" }
   }
 }
 

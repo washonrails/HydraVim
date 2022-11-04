@@ -31,7 +31,7 @@ call plug#begin('~/.vim/vim.plug')
     Plug 'SolarVim/vim-snippets'
 
 	Plug 'folke/which-key.nvim'
-
+	Plug 'folke/zen-mode.nvim'
 	" temas --
     Plug 'navarasu/onedark.nvim'
     Plug 'tiagovla/tokyodark.nvim'
