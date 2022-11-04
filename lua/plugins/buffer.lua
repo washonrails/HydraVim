@@ -2,6 +2,7 @@ require('bufferline').setup {
     options = {
 		close_icon = '',
 -- 		close_icon = '',
+		show_close_icon = false,
 		offsets = {
             {filetype = "NvimTree", text = "Files", text_align = "center", separator = false}
         },
