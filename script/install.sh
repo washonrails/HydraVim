@@ -13,7 +13,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 
 cd /home/$USER/.config/
-git clone https://github.com/SolarVim/Solar.git --depth 1
+https://github.com/HydraVim/HydraVim.git --depth 1
 
 mv /home/$USER/.config/Solar /home/$USER/.config/nvim
 
