@@ -11,8 +11,8 @@ map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 -- salvar alterações
 map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>") 	-- salva alerações no modo normal
 
-map('n', '<A-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .Session.vim<CR><CMD>echo 'Session Save '<CR>") -- salva a sessao atual
-map('n', '<leader>ss', "<CMD>NvimTreeClose<CR> <CMD> :source .Session.vim<CR><CMD>echo 'Session Loaded '<CR>") --       abre a ultima sessao salva.
+map('n', '<A-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .solarvim_session.vim<CR><CMD>echo 'Saved Session '<CR>") -- salva a sessao atual
+map('n', '<leader>ss', "<CMD>NvimTreeClose<CR> <CMD> :source .solarvim_session.vim<CR><CMD>echo 'Loaded Session '<CR>") -- abre a ultima sessao salva.
 
 -- mover linhas
 map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
@@ -30,7 +30,7 @@ vc [[ vnoremap <S-k> <ESC> yyp:m .-1<CR>gv=gv ]]			-- copia para cima no modo vi
 
 -- dividir a tela - split mode
 map('n', '<A-n>', '<CMD>vsplit<CR>')						-- divide o buffer verticalmente 
-map('n', '<A-b>', '<CMD>split<CR>')						-- divide o buffer horizontalmente
+map('n', '<A-b>', '<CMD>split<CR>')							-- divide o buffer horizontalmente
 
 -- split resize
 vc [[ nnoremap <silent> <C-A-h> :vertical resize +3<CR> ]]	-- redimenciona o buffer vertical para a esquerda
@@ -99,17 +99,17 @@ vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
 
 -- terminal
 -- vim.cmd[[noremap <leader>t <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>]]
-map('n', '<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
-map('n', '<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
-map('n', '<A-i>', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
+map('n', '<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>') 	-- selecionar tudo no modo normal
+map('n', '<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>')								-- selecionar tudo no modo normal
+map('n', '<A-i>', '<CMD>ToggleTerm size=10 direction=float<CR>')								-- selecionar tudo no modo normal
 
-map('t', '<A-h>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
-map('t', '<A-m>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
-map('t', '<C-q>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
-map('t', '<A-i>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+map('t', '<A-h>', '<CMD>ToggleTerm<CR>')					-- fecha o terminal no modo terminal
+map('t', '<A-m>', '<CMD>ToggleTerm<CR>')					-- fecha o terminal no modo terminal
+map('t', '<C-q>', '<CMD>ToggleTerm<CR>')					-- fecha o terminal no modo terminal
+map('t', '<A-i>', '<CMD>ToggleTerm<CR>')					-- fecha o terminal no modo terminal
 
 -- ranger
-map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger
+map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")		-- abre o Ranger
 
 -- SUNvim script
 map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
