@@ -74,6 +74,7 @@ local mappings = {
   r = { ":Telescope live_grep<cr>", " Live Grep" },
   u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", " Update" },
   t = {
+	name = " Terminal",
     t = { ":ToggleTerm<cr>", "Horizontal" },
     m = { ":ToggleTerm size=45 direction=vertical<CR>", "Vertical" },
     f = { toggle_float, "Floating" },
