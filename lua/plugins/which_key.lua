@@ -113,6 +113,7 @@ local mappings = {
   },
   h = {
 	name = " Themes",
+	a = { ":silent colorscheme tokyodark | silent !echo 'vim.cmd [[ colorscheme tokyodark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Tokyodark" },
 	b = {
 		name = " Catppuccin",
 		a = { ":silent colorscheme catppuccin-mocha | silent !echo 'vim.cmd [[ colorscheme catppuccin-mocha ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Mocha" },
@@ -140,7 +141,13 @@ local mappings = {
 		b = { ":silent colorscheme gruvbox | set background=light | silent !echo $'vim.cmd [[ colorscheme gruvbox | set background=light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Light" },
 		c = { ":silent colorscheme gruvbox-baby | silent !echo $'vim.cmd [[ colorscheme gruvbox-baby ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Baby" },
 	},
-	a = { ":silent colorscheme tokyodark | silent !echo 'vim.cmd [[ colorscheme tokyodark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Tokyodark" },
+	f = {
+		name = " TokyoNight",
+		a = { ":silent colorscheme tokyonight-night | silent !echo 'vim.cmd [[ colorscheme tokyonight-night ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "TokyoNight Night" },
+		b = { ":silent colorscheme tokyonight-storm | silent !echo 'vim.cmd [[ colorscheme tokyonight-storm ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "TokyoNight Storm" },
+		c = { ":silent colorscheme tokyonight-day | silent !echo 'vim.cmd [[ colorscheme tokyonight-day ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "TokyoNight Day" },
+		d = { ":silent colorscheme tokyonight-moon | silent !echo 'vim.cmd [[ colorscheme tokyonight-moon ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Tokyo Night Moon" },
+	},
   },
 }
 
