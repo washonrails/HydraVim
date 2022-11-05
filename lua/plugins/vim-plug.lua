@@ -9,27 +9,26 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 call plug#begin('~/.vim/vim.plug')
-    Plug 'SolarVim/nvim-treesitter'
-    Plug 'SolarVim/nvim-tree.lua'
-    Plug 'SolarVim/nvim-lspconfig'
-    Plug 'SolarVim/lualine.nvim'
-    Plug 'SolarVim/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'SolarVim/gitsigns.nvim'
-    Plug 'SolarVim/vim-polyglot'
-    Plug 'SolarVim/bufferline.nvim'
-    Plug 'SolarVim/toggleterm.nvim'
-    Plug 'SolarVim/telescope.nvim'
-    Plug 'SolarVim/nvim-web-devicons'
-    Plug 'SolarVim/lazy-lsp.nvim'
-    Plug 'SolarVim/alpha-nvim'
-    Plug 'SolarVim/plenary.nvim'
-    Plug 'SolarVim/indent-blankline.nvim'
-    Plug 'SolarVim/vim-devicons'
-    Plug 'SolarVim/vim-visual-multi'
-    Plug 'SolarVim/nvim-colorizer.lua'
-    Plug 'SolarVim/indent-blankline.nvim'
-    Plug 'SolarVim/vim-snippets'
 
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'nvim-tree/nvim-tree.lua'
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lualine/lualine.nvim'
+	Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+	Plug 'lewis6991/gitsigns.nvim'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+	Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+	Plug 'nvim-tree/nvim-web-devicons'
+	Plug 'dundalek/lazy-lsp.nvim'
+	Plug 'goolord/alpha-nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'honza/vim-snippets'
+	Plug 'mg979/vim-visual-multi'
+	Plug 'norcalli/nvim-colorizer.lua'
 	Plug 'folke/which-key.nvim'
 	Plug 'folke/zen-mode.nvim'
 	" temas --
@@ -40,8 +39,8 @@ call plug#begin('~/.vim/vim.plug')
 	Plug 'folke/tokyonight.nvim'
 	Plug 'ellisonleao/gruvbox.nvim'
 	Plug 'luisiacc/gruvbox-baby'
-    Plug 'rafamadriz/neon'
-    Plug 'shaunsingh/nord.nvim'
+	Plug 'rafamadriz/neon'
+	Plug 'shaunsingh/nord.nvim'
     Plug 'rmehri01/onenord.nvim'
 
 call plug#end()
