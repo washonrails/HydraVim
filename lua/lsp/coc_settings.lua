@@ -5,8 +5,8 @@ vim.opt.updatetime = 300
 
 vim.opt.signcolumn = "yes"
 
-vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-lightbulb', 'coc-lua'] ]])
--- vim.cmd([[ let g:coc_global_extensions = [ 'coc-clangd', 'coc-json', 'coc-vimlsp' ] ]])
+vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-lightbulb' ] ]])
+-- vim.cmd([[ let g:coc_global_extensions = [ 'coc-clangd', 'coc-json', 'coc-vimlsp', 'coc-lua'] ]])
 
 local keyset = vim.keymap.set
 function _G.check_back_space()
