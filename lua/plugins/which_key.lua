@@ -25,8 +25,8 @@ wk.setup {
   },
   icons = {
     breadcrumb = "»",
-    separator = "➜",
-    group = "+",
+    separator = "",
+    group = "",
   },
   popup_mappings = {
     scroll_down = '<c-d>',
@@ -49,7 +49,7 @@ wk.setup {
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "},
   show_help = false,
   show_keys = false,
-  triggers = "auto",
+  triggers = "<leader>",
   triggers_blacklist = {
     i = { "j", "k" },
     v = { "j", "k" },
@@ -71,12 +71,12 @@ local toggle_lazygit = function()
 end
 
 local mappings = {
-  q = { ":q<cr>", "Quit" },
-  w = { ":w<cr>", "Save" },
-  e = { ":NvimTreeToggle<cr>", "Tree" },
-  E = { ":e ~/.config/nvim/init.lua<cr>", "Settings" },
-  r = { ":Telescope live_grep<cr>", "Live Grep" },
-  u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", "Update" },
+  q = { ":q<cr>", " Quit" },
+  w = { ":w<cr>", " Save" },
+  e = { ":NvimTreeToggle<cr>", "פּ Tree" },
+  s = { ":e ~/.config/nvim/init.lua<cr>", " Settings" },
+  r = { ":Telescope live_grep<cr>", " Live Grep" },
+  u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", " Update" },
   t = {
     t = { ":ToggleTerm<cr>", "Horizontal" },
     m = { ":ToggleTerm size=45 direction=vertical<CR>", "Vertical" },
@@ -84,42 +84,30 @@ local mappings = {
     l = { toggle_lazygit, "LazyGit" }
   },
   g = {
-	name = "Git",
-	c = { ":Telescope git_commits<cr>", "Commits" },
-	b = { ":Telescope git_branches<cr>", "Branches" },
-	s = { ":Telescope git_status<cr>", "Status" },
+	name = " Git",
+	c = { ":Telescope git_commits<cr>", " Commits" },
+	b = { ":Telescope git_branches<cr>", " Branches" },
+	s = { ":Telescope git_status<cr>", " Status" },
 	
   },
   f = {
-	name = "Files",
-	n = { ":ene <BAR> startinsert <CR>", "New file" },
-	f = { ":Telescope find_files<cr>", "Find Files" },
-	r = { ":Telescope oldfiles<CR>", "Recent" },
+	name = " Files",
+	n = { ":ene <BAR> startinsert <CR>", " New file" },
+	f = { ":Telescope find_files<cr>", " Find Files" },
+	r = { ":Telescope oldfiles<CR>", " Recent" },
   },
   l = {
-    name = "LSP",
-    i = { ":LspInfo<cr>", "Connected Language Servers" },
-    k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
-    K = { "<cmd>Lspsaga hover_doc<cr>", "Hover Commands" },
-    w = { '<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>', "Add Workspace Folder" },
-    W = { '<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>', "Remove Workspace Folder" },
-    l = {
-      '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>',
-      "List Workspace Folders"
-    },
-    t = { '<cmd>lua vim.lsp.buf.type_definition()<cr>', "Type Definition" },
-    d = { '<cmd>lua vim.lsp.buf.definition()<cr>', "Go To Definition" },
-    D = { '<cmd>lua vim.lsp.buf.declaration()<cr>', "Go To Declaration" },
-    r = { '<cmd>lua vim.lsp.buf.references()<cr>', "References" },
+    name = " LSP",
+    i = { ":LspInfo<cr>", " LSP Info" },
   },
-  z = { ":ZenMode<cr>", "Toggle Zen Mode" },
+  z = { ":ZenMode<cr>", " Zen Mode" },
   p = {
-    name = "Vim-Plug",
-    r = { ":PlugClean<cr>", "Remove Unused Plugins" },
-    d = { ":PlugDiff<cr>", "Examine Plugins" },
-    i = { ":PlugInstall<cr>", "Install Plugins" },
-    s = { ":PlugStatus<cr>", "Status Plugins" },
-    u = { ":PlugUpdate<cr>", "Update Plugins" }
+    name = "ﮣ Plugins",
+    r = { ":PlugClean<cr>", "ﮁ Remove Unused Plugins" },
+    e = { ":PlugDiff<cr>", " Examine Plugins" },
+    i = { ":PlugInstall<cr>", " Install Plugins" },
+    s = { ":PlugStatus<cr>", " Status Plugins" },
+    u = { ":PlugUpdate<cr>", " Update Plugins" }
   }
 }
 
