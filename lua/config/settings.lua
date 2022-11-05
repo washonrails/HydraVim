@@ -9,27 +9,19 @@ g.mapleader = ' '
 g.maplocalleader = ' '
 
 -- definições básicas
-opt.number = true						-- númeração das linhas
 opt.mouse = 'a'							-- ativa mouse
 opt.tabstop = 4							-- quantidade de espaços
+opt.number = true						-- númeração das linhas
 opt.shiftwidth = 4						-- Quantidade de caracteres que o Neovim usará para recuar uma linha
+opt.cursorline = true					-- destaca a linha atual do cursor
 opt.smartindent = true					-- auto indentação do code
+opt.termguicolors = true				--  melhor suporte a cores
 o.syntax = 'on'							-- ativa a sintaxe
 o.undofile = true						-- ativa o desfazer
+o.smartcase = true 						-- diferência letras maiúsculas e minúsculas
+o.ignorecase = true						-- ignorar letras maiúsculas ao executar uma pesquisa
+o.splitright = true 					-- move o cursor para o splitright
+o.splitbelow = true 					-- move o cursor para o splitbelow
 w.wrap = false 							-- desativa a quebra de linha
-
--- definições básicas - vimscript
-cmd [[ set cursorline ]]				-- destaca a linha atual do cursor
 cmd [[ set noshowmode ]]				-- oculta o modo na barra inferior
 cmd [[ set clipboard+=unnamedplus ]]	-- suporte à área de tranferência
-
--- configurações split - melhoria
-o.splitright = true
-o.splitbelow = true
-
--- tema
-opt.termguicolors = true				--  melhor suporte a cores
-
--- pesquisa
-o.ignorecase = true						-- ignorar letras maiúsculas ao executar uma pesquisa
-o.smartcase = true
