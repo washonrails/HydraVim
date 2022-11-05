@@ -43,7 +43,7 @@ wk.setup {
     height = { min = 4, max = 25 },
     width = { min = 20, max = 50 },
     spacing = 3,
-    align = "left",
+    align = "center",
   },
   ignore_missing = true,
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "},
@@ -72,6 +72,9 @@ end
 
 local mappings = {
   q = { ":q<cr>", " Quit" },
+  c = {
+	name = "ךּ COC",
+  },
   w = { ":w<cr>", " Save" },
   e = { ":NvimTreeToggle<cr>", "פּ Tree" },
   s = { ":e ~/.config/nvim/init.lua<cr>", " Settings" },
