@@ -100,7 +100,7 @@ local mappings = {
     name = " LSP",
     i = { ":LspInfo<cr>", " LSP Info" },
   },
-  z = { ":ZenMode<cr>", " Zen Mode" },
+  z = { ":ZenMode<cr>", " Zen Mode" },
   p = {
     name = "ﮣ Plugins",
     r = { ":PlugClean<cr>", "ﮁ Remove Unused Plugins" },
