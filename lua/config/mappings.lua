@@ -99,12 +99,13 @@ vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
 
 -- terminal
 -- vim.cmd[[noremap <leader>t <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>]]
-map('n', '<A-t>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
+map('n', '<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>')					-- selecionar tudo no modo normal
 map('n', '<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
 map('n', '<A-i>', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
-map('t', '<A-t>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+map('t', '<A-h>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
 map('t', '<A-m>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+map('t', '<C-q>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
 map('t', '<A-i>', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
 
 -- ranger
