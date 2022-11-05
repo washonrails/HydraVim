@@ -44,7 +44,7 @@ pip install pynvim
 ### (WSL/Linux)
 Após a instalação das dependências, execute o comando abaixo. Tenha o <a href="https://git-scm.com/" target="_blank"> Git </a> instalado.<p>
 ```shell
-curl https://raw.githubusercontent.com/SolarVim/Solar/main/script/install.sh > solarvim_install.sh && sh solarvim_install.sh
+curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh > HydraVim.sh && sh HydraVim.sh
 ```
 Após o termino da instalção: Execute o comando abaixo
 ```shell
