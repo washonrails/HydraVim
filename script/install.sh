@@ -14,7 +14,7 @@ rm -rf ~/.cache/nvim
 
 cd /home/$USER/.config/
 
-https://github.com/HydraVim/HydraVim.git --depth 1
+git clone https://github.com/HydraVim/HydraVim.git --depth 1
 
 mv /home/$USER/.config/HydraVim /home/$USER/.config/nvim
 
