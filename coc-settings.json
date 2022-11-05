@@ -1,7 +1,7 @@
 {
   "lightbulb.text": {
-    "default": "",
-    "quickfix": ""
+    "default": " ",
+    "quickfix": " "
   },
     "suggest.completionItemKindLabels": {
         "function"              : "",
