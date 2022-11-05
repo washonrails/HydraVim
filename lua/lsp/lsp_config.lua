@@ -1,5 +1,5 @@
 local nvim_lsp = require('lspconfig')
-local servers = {'ccls','clangd', 'pyright', 'tsserver', "html", "gopls", "jsonls", "rust_analyzer", "sumneko_lua", "vimls", "cssls"}
+local servers = {'ccls','clangd', 'pyright', 'tsserver', "html", "gopls", "jsonls", "rust_analyzer", "sumneko_lua", "vimls", "cssls", "jsonls"}
 
 -- local servers = {
 -- 	ccls = {},
