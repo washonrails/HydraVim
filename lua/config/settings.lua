@@ -16,7 +16,7 @@ opt.shiftwidth = 4						-- Quantidade de caracteres que o Neovim usará para rec
 opt.smartindent = true					-- auto indentação do code
 o.syntax = 'on'							-- ativa a sintaxe
 o.undofile = true						-- ativa o desfazer
-w.wrap = false
+w.wrap = false 							-- desativa a quebra de linha
 
 -- definições básicas - vimscript
 cmd [[ set cursorline ]]				-- destaca a linha atual do cursor
