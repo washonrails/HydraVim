@@ -56,7 +56,7 @@ wk.setup {
   },
   disable = {
     buftypes = {},
-    filetypes = { "TelescopePrompt", "NvimTree"},
+    filetypes = { "TelescopePrompt"},
   },
 }
 
