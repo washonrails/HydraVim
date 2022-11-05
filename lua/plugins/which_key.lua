@@ -74,6 +74,8 @@ local mappings = {
   q = { ":q<cr>", " Quit" },
   c = {
 	name = "ךּ COC",
+	e = { ":CocList extensions<cr>", "擄 Extensions" },
+	u = { ":CocUpdate<cr>", " Update" },
   },
   w = { ":w<cr>", " Save" },
   e = { ":NvimTreeToggle<cr>", "פּ Tree" },
