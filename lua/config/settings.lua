@@ -1,8 +1,8 @@
 local o = vim.o
 local g = vim.g
+local w = vim.wo
 local opt = vim.opt
 local cmd = vim.cmd
-local w = vim.wo
 
 -- key
 g.mapleader = ' '
