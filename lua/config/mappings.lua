@@ -103,6 +103,10 @@ map('n', '<leader>t', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=
 map('n', '<leader>m', '<CMD>ToggleTerm size=45 direction=vertical<CR>')						-- selecionar tudo no modo normal
 map('n', '<leader>i', '<CMD>ToggleTerm size=10 direction=float<CR>')						-- selecionar tudo no modo normal
 
+map('t', '<leader>t', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+map('t', '<leader>m', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+map('t', '<leader>i', '<CMD>ToggleTerm<CR>')						-- fecha o terminal no modo terminal
+
 -- ranger
 map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")								-- abre o Ranger
 
