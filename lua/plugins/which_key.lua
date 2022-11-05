@@ -113,14 +113,14 @@ local mappings = {
   },
   h = {
 	name = " Themes",
-	a = {
+	b = {
 		name = " Catppuccin",
 		a = { ":silent colorscheme catppuccin-mocha | silent !echo 'vim.cmd [[ colorscheme catppuccin-mocha ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Mocha" },
 		q = { ":silent colorscheme catppuccin-latte | silent !echo 'vim.cmd [[ colorscheme catppuccin-latte ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Latte" },
 		s = { ":silent colorscheme catppuccin-frappe | silent !echo 'vim.cmd [[ colorscheme catppuccin-frappe ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Frappe" },
 		w = { ":silent colorscheme catppuccin-macchiato | silent !echo 'vim.cmd [[ colorscheme catppuccin-macchiato ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Macchiato" },
 	},
-	b = {
+	c = {
 		name = " GitHub",
 		a = { ":silent colorscheme github_dark | silent !echo 'vim.cmd [[ colorscheme github_dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dark" },
 		b = { ":silent colorscheme github_dimmed | silent !echo 'vim.cmd [[ colorscheme github_dimmed ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dimmed" },
@@ -130,15 +130,17 @@ local mappings = {
 		f = { ":silent colorscheme github_light_default | silent !echo 'vim.cmd [[ colorscheme github_light_default ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_light_default" },
 		g = { ":silent colorscheme github_light_colorblind | silent !echo 'vim.cmd [[ colorscheme github_light_colorblind ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_light_colorblind" },
 	},
-	c = {
+	d = {
 		name = "ﱦ OneDark",
 		a = { ":silent colorscheme onedark | silent !echo 'vim.cmd [[ colorscheme onedark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "OneDark" },
 	},
-	d = {
+	e = {
 		name = "露 Gruvbox",
 		a = { ":silent colorscheme gruvbox | set background=dark | silent !echo 'vim.cmd [[ colorscheme gruvbox | set background=dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Dark" },
 		b = { ":silent colorscheme gruvbox | set background=light | silent !echo $'vim.cmd [[ colorscheme gruvbox | set background=light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Light" },
+		c = { ":silent colorscheme gruvbox-baby | silent !echo $'vim.cmd [[ colorscheme gruvbox-baby ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Baby" },
 	},
+	a = { ":silent colorscheme tokyodark | silent !echo 'vim.cmd [[ colorscheme tokyodark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Tokyodark" },
   },
 }
 
