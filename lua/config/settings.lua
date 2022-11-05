@@ -2,6 +2,7 @@ local o = vim.o
 local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
+local w = vim.wo
 
 -- key
 g.mapleader = ' '
@@ -15,6 +16,7 @@ opt.shiftwidth = 4						-- Quantidade de caracteres que o Neovim usará para rec
 opt.smartindent = true					-- auto indentação do code
 o.syntax = 'on'							-- ativa a sintaxe
 o.undofile = true						-- ativa o desfazer
+w.wrap = false
 
 -- definições básicas - vimscript
 cmd [[ set cursorline ]]				-- destaca a linha atual do cursor
