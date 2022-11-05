@@ -91,7 +91,6 @@ local mappings = {
 	c = { ":Telescope git_commits<cr>", " Commits" },
 	b = { ":Telescope git_branches<cr>", " Branches" },
 	s = { ":Telescope git_status<cr>", " Status" },
-	
   },
   f = {
 	name = " Files",
@@ -111,7 +110,36 @@ local mappings = {
     i = { ":PlugInstall<cr>", " Install Plugins" },
     s = { ":PlugStatus<cr>", " Status Plugins" },
     u = { ":PlugUpdate<cr>", " Update Plugins" }
-  }
+  },
+  h = {
+	name = " Themes",
+	a = {
+		name = " Catppuccin",
+		a = { ":silent colorscheme catppuccin-mocha | silent !echo 'vim.cmd [[ colorscheme catppuccin-mocha ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Mocha" },
+		q = { ":silent colorscheme catppuccin-latte | silent !echo 'vim.cmd [[ colorscheme catppuccin-latte ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Latte" },
+		s = { ":silent colorscheme catppuccin-frappe | silent !echo 'vim.cmd [[ colorscheme catppuccin-frappe ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Frappe" },
+		w = { ":silent colorscheme catppuccin-macchiato | silent !echo 'vim.cmd [[ colorscheme catppuccin-macchiato ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Macchiato" },
+	},
+	b = {
+		name = " GitHub",
+		a = { ":silent colorscheme github_dark | silent !echo 'vim.cmd [[ colorscheme github_dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dark" },
+		b = { ":silent colorscheme github_dimmed | silent !echo 'vim.cmd [[ colorscheme github_dimmed ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dimmed" },
+		c = { ":silent colorscheme github_dark_default | silent !echo 'vim.cmd [[ colorscheme github_dark_default ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dark_default" },
+		d = { ":silent colorscheme github_dark_colorblind | silent !echo 'vim.cmd [[ colorscheme github_dark_colorblind ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_dark_colorblind" },
+		e = { ":silent colorscheme github_light | silent !echo 'vim.cmd [[ colorscheme github_light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_light" },
+		f = { ":silent colorscheme github_light_default | silent !echo 'vim.cmd [[ colorscheme github_light_default ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_light_default" },
+		g = { ":silent colorscheme github_light_colorblind | silent !echo 'vim.cmd [[ colorscheme github_light_colorblind ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "github_light_colorblind" },
+	},
+	c = {
+		name = "ﱦ OneDark",
+		a = { ":silent colorscheme onedark | silent !echo 'vim.cmd [[ colorscheme onedark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "OneDark" },
+	},
+	d = {
+		name = "露 Gruvbox",
+		a = { ":silent colorscheme gruvbox | set background=dark | silent !echo 'vim.cmd [[ colorscheme gruvbox | set background=dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Dark" },
+		b = { ":silent colorscheme gruvbox | set background=light | silent !echo $'vim.cmd [[ colorscheme gruvbox | set background=light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Light" },
+	},
+  },
 }
 
 local opts = { prefix = '<leader>' }

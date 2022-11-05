@@ -33,7 +33,11 @@ call plug#begin('~/.vim/vim.plug')
 	Plug 'folke/which-key.nvim'
 	Plug 'folke/zen-mode.nvim'
 	" temas --
-    Plug 'navarasu/onedark.nvim'
+	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+	Plug 'projekt0n/github-nvim-theme'
+	Plug 'navarasu/onedark.nvim'
+
+
     Plug 'tiagovla/tokyodark.nvim'
     Plug 'folke/tokyonight.nvim'
     Plug 'ellisonleao/gruvbox.nvim'
@@ -41,9 +45,7 @@ call plug#begin('~/.vim/vim.plug')
     Plug 'rafamadriz/neon'
     Plug 'shaunsingh/nord.nvim'
     Plug 'rmehri01/onenord.nvim'
-    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'JoosepAlviste/palenightfall.nvim'
-    Plug 'projekt0n/github-nvim-theme'
     " opt
     " Plug 'makerj/vim-pdf'
     " Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
