@@ -114,9 +114,9 @@ local mappings = {
   h = {
 	name = " Themes",
 	a = { ":silent colorscheme tokyodark | silent !echo 'vim.cmd [[ colorscheme tokyodark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Tokyodark" },
-	b = { ":silent colorscheme neon | silent !echo 'vim.cmd [[ colorscheme neon ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " neon" },
-	c = { ":silent colorscheme onenord | silent !echo 'vim.cmd [[ colorscheme onenord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Onenord" },
-	d = { ":silent colorscheme nord | silent !echo 'vim.cmd [[ colorscheme nord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Nord" },
+	b = { ":silent colorscheme neon | silent !echo 'vim.cmd [[ colorscheme neon ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " neon" },
+	c = { ":silent colorscheme onenord | silent !echo 'vim.cmd [[ colorscheme onenord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Onenord" },
+	d = { ":silent colorscheme nord | silent !echo 'vim.cmd [[ colorscheme nord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", " Nord" },
 	e = {
 		name = " Catppuccin",
 		a = { ":silent colorscheme catppuccin-mocha | silent !echo 'vim.cmd [[ colorscheme catppuccin-mocha ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Catppuccin Mocha" },
@@ -139,7 +139,7 @@ local mappings = {
 		a = { ":silent colorscheme onedark | silent !echo 'vim.cmd [[ colorscheme onedark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "OneDark" },
 	},
 	h = {
-		name = "露 Gruvbox",
+		name = "﫛 Gruvbox",
 		a = { ":silent colorscheme gruvbox | set background=dark | silent !echo 'vim.cmd [[ colorscheme gruvbox | set background=dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Dark" },
 		b = { ":silent colorscheme gruvbox | set background=light | silent !echo $'vim.cmd [[ colorscheme gruvbox | set background=light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Light" },
 		c = { ":silent colorscheme gruvbox-baby | silent !echo $'vim.cmd [[ colorscheme gruvbox-baby ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>", "Gruvbox Baby" },

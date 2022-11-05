@@ -1,1 +1,1 @@
-vim.cmd [[ colorscheme neon ]]
+vim.cmd [[ colorscheme tokyonight-night ]]
