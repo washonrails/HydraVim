@@ -9,10 +9,10 @@ map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual
 map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 
 -- salvar alterações
-map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>", {silent = true, noremap = true}) 	-- salva alerações no modo normal
+map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>") 	-- salva alerações no modo normal
 
-map('n', '<A-s>', '<CMD>NvimTreeClose<CR> <CMD>mksession! .Session.vim<CR>', {silent = true, noremap = true}) -- salva a sessao atual
-map('n', '<leader>ss', '<CMD>NvimTreeClose<CR> <CMD> :source .Session.vim<CR>', {silent = true, noremap = true}) --       abre a ultima sessao salva.
+map('n', '<A-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .Session.vim<CR><CMD>echo 'Session Save '<CR>") -- salva a sessao atual
+map('n', '<leader>ss', "<CMD>NvimTreeClose<CR> <CMD> :source .Session.vim<CR><CMD>echo 'Session Loaded '<CR>") --       abre a ultima sessao salva.
 
 -- mover linhas
 map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
