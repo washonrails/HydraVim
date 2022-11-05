@@ -18,19 +18,10 @@ wk.setup {
     },
   },
   operators = { gc = "Comments" },
-  key_labels = {
-    -- ["<space>"] = "SPC",
-    -- ["<cr>"] = "RET",
-    -- ["<tab>"] = "TAB",
-  },
   icons = {
     breadcrumb = "»",
     separator = "",
     group = "",
-  },
-  popup_mappings = {
-    scroll_down = '<c-d>',
-    scroll_up = '<c-u>',
   },
   window = {
     border = "single", -- none, single, double, shadow

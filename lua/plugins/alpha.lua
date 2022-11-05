@@ -19,41 +19,6 @@ dashboard.section.header.val =
     "         ⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃     ",
 	" ",
 }
--- dashboard.section.header.val = 
--- {
--- 	"              --              ",
--- 	"     ..       --       ..     ",
--- 	"      ==. .:-==== :. .==      ",
--- 	"       :-==::==:. :===:       ",
--- 	"       -=.  -=.     .=-       ",
--- 	"      :=.   .=-      .=:      ",
--- 	" .======     .==.     ======. ",
--- 	"      :=:      -=.   :=:      ",
--- 	"       -=:     .=:  :=-       ",
--- 	"       .-==- .:==:-==-.       ",
--- 	"      ==    :----:   ==       ",
--- 	"     ..       --       ..     ",
--- 	"              --              ",
--- }
-
--- dashboard.section.header.val = ",
--- {
--- 	"               ::              ",
--- 	"               ::              ",
--- 	"     .:       ...        :.    ",
--- 	"       :. .::::--:  :. .:      ",
--- 	"        :-.  .-      .-.       ",
--- 	"       ::    ::        ::      ",
--- 	"      .-      -.        -.     ",
--- 	" :::: .-       ::       -. ::::",
--- 	"       =        .-      =      ",
--- 	"       :-        -:    -.      ",
--- 	"        .-:     .-   :-.       ",
--- 	"       :. .:. :-=:::. .:      ",
--- 	"     .:        ..        :.    ",
--- 	"               ::",
--- }
-
 dashboard.section.buttons.val = {
     dashboard.button( "1", "  - New file" , ":ene <BAR> startinsert <CR>"),
     dashboard.button( "2", "  - Find file", ":Telescope find_files<CR>"),
@@ -67,5 +32,3 @@ alpha.setup(dashboard.opts)
 vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])
-
-

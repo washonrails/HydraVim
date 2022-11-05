@@ -1,16 +1,14 @@
 require('bufferline').setup {
     options = {
-		close_icon = '',
--- 		close_icon = '',
 		show_close_icon = false,
 		offsets = {
             {filetype = "NvimTree", text = "Files", text_align = "center", separator = false}
         },
     	indicator = {
-            icon = '●', -- this should be omitted if indicator style is not 'icon'
-            style = 'none' -- 'icon' | 'underline' | 'none',
+            icon = '●',
+            style = 'none'
         },
-		diagnostics = "nvim_lsp", -- "nvim_lsp" | "coc"
+		diagnostics = "nvim_lsp",
     	diagnostics_update_in_insert = true,
 		separator_style = 'any',
         groups = {

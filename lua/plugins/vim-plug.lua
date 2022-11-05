@@ -36,19 +36,13 @@ call plug#begin('~/.vim/vim.plug')
 	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 	Plug 'projekt0n/github-nvim-theme'
 	Plug 'navarasu/onedark.nvim'
-Plug 'tiagovla/tokyodark.nvim'
-Plug 'folke/tokyonight.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
-Plug 'luisiacc/gruvbox-baby'
-
-
+	Plug 'tiagovla/tokyodark.nvim'
+	Plug 'folke/tokyonight.nvim'
+	Plug 'ellisonleao/gruvbox.nvim'
+	Plug 'luisiacc/gruvbox-baby'
     Plug 'rafamadriz/neon'
     Plug 'shaunsingh/nord.nvim'
     Plug 'rmehri01/onenord.nvim'
-    " opt
-    " Plug 'makerj/vim-pdf'
-    " Plug 'shaunsingh/oxocarbon.nvim', { 'do': './install.sh' }
-    " Plug 'andweeb/presence.nvim'
 
 call plug#end()
 ]])
