@@ -1,5 +1,10 @@
-<h1 align="center">HydraVim</h1>
+<p align="center"> <img src="https://i.imgur.com/hsyOrfN.gif" align="center" width="600" border-radius="10px" > </p>
 
+<p align="center"><img src="https://img.shields.io/github/issues/HydraVim/Hydravim?color=171b20&label=Issues%20%20&logo=gnubash&labelColor=e05f65&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/forks/Hydravim/HydraVim?color=171b20&label=Forks%20%20&logo=git&labelColor=f1cf8a&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/stars/HydraVim/HydraVim?color=171b20&label=Stargazers&logo=github&labelColor=70a5eb">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-Works on my machine-%2378dba9?style=flat&logo=linux&labelColor=171b20&logoColor=ffffff"></p>
+
+<p align="center"><b>Obrigado pela preferência ! </b><br>Bem vindo ao repositorio <b>  ️Hydra 🔥</b> ! Cuidadosamente projetado com usabilidade e funcionalidade em mente , mantendo a leveza nos recursos !</p>
+
+# Sumario
 <img src="https://raw.githubusercontent.com/HydraVim/HydraVim/main/.github/hydra_logo.png" min-width="50px" max-width="50px" width="200px" align="right" alt="Computador iuriCode">
 
 <a href="https://sunvim.netlify.app/" target="_blank"> 🚀 Site - beta</a>
@@ -149,6 +154,9 @@ Para usar siga a instruções abaixo <p>
 ## Atalhos gerais
 ## Navegação
 ## Geral
+<img src="https://img.shields.io/badge/Mantido:-Sim! (Bug fixes, Repositorio , Site..)-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/Estado:-Otimizado%20(Utilizavel%20para o dia a dia)-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/Uso RAM:-~800MB-brightgreen?style=flat">
 
 ## Navegação
 
