@@ -158,9 +158,9 @@ Para usar siga a instruções abaixo <p>
 Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade ;)
 
 <b>Ko-Fi:</b> <br>
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/) <br>
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/) <b>[In progress]</b> <br>
 
 <b>Librepay:</b> <br>
-<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> <b>[In progress]</b> 
 
 ## FAQ
