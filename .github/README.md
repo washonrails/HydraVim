@@ -26,12 +26,12 @@
 
 ## Screenshot
 
-![TNPrint](https://user-images.githubusercontent.com/98850074/200185939-45c1c7a7-b9cf-43f2-b4df-856ed92608b7.png)
+![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
 
 
 <hr>
 
-![CPPRINT](https://user-images.githubusercontent.com/98850074/200185212-91e242e3-b2af-40ae-a81e-e41574d1af30.png)
+![CPPRINT](https://user-images.githubusercontent.com/98850074/200186770-563c421b-6925-4df9-8d82-48f33f4a26d6.png)
 
 
 <hr>
