@@ -26,8 +26,10 @@
 
 ## Screenshot
 ![TNPrint](https://user-images.githubusercontent.com/98850074/200181252-0a715360-9617-43a4-874c-91884377fbb7.png)
+<hr>
 
 ![CPPRINT](https://user-images.githubusercontent.com/98850074/200182128-12cfa723-f668-4020-b032-32aa87cb3095.png)
+<hr>
 
 ![githubmode](https://user-images.githubusercontent.com/98850074/200182890-3cc9326e-811c-4bd4-a5bc-2cf2931b384b.png)
 
