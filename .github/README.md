@@ -25,7 +25,8 @@
 ## Introdução
 
 ## Screenshot
-![TNPrint](https://user-images.githubusercontent.com/98850074/200185878-f76526aa-fd67-4665-b42c-a1fc29652063.png)
+
+![TNPrint](https://user-images.githubusercontent.com/98850074/200185939-45c1c7a7-b9cf-43f2-b4df-856ed92608b7.png)
 
 
 <hr>
