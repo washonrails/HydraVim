@@ -174,7 +174,15 @@ Para usar siga a instruções abaixo <p>
 ## Navegação
 
 ## Contribuidores
+  <span>
+    <img src="https://user-images.githubusercontent.com/98850074/200189379-5b831bfd-a902-46c8-914e-284e53308dc2.png" width=100 height=100>
+  </span>
 
+  <span> 
+    <img src="https://user-images.githubusercontent.com/98850074/200189532-28bd2d72-76e8-4650-a293-9fdfa64c4b73.png" width=100 height=100>
+  </span>
+
+  
 ## Créditos
 Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade ;)
 
