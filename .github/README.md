@@ -34,7 +34,7 @@
 
 <br>
 
-![CPPRINT](https://user-images.githubusercontent.com/98850074/200186770-563c421b-6925-4df9-8d82-48f33f4a26d6.png)
+![CPPRINT](https://user-images.githubusercontent.com/98850074/200188164-d7ce95dd-cb35-40e8-b192-10aa02b18341.png)
 
 
 <hr>
