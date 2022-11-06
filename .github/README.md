@@ -25,10 +25,8 @@
 ## Introdução
 
 ## Screenshot
+``![TNPrint](https://user-images.githubusercontent.com/98850074/200181252-0a715360-9617-43a4-874c-91884377fbb7.png)
 
-## Dependências
-
-``
 nodejs ranger python3 yarn
 ``
 
