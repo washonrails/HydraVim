@@ -1,6 +1,6 @@
 # Simple Useful Nvim - HydraVim
 
-<img src="https://raw.githubusercontent.com/SolarVim/Solar/1b46c6d6c079ab7f94697186856cc69ac9ec424e/assets/logo.png" min-width="50px" max-width="50px" width="200px" align="right" alt="Computador iuriCode">
+<img src="https://raw.githubusercontent.com/HydraVim/HydraVim/8dd0773bbb11c71ed20dcee822a3b3032edbaf08/.github/hydra.png" min-width="50px" max-width="50px" width="200px" align="right" alt="Computador iuriCode">
 
 <a href="https://sunvim.netlify.app/" target="_blank"> 🚀 Site - beta</a>
 
