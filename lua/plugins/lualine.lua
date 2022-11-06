@@ -1,3 +1,21 @@
+icon = ' LSP:'
+
+local function lsp_p()
+    local msg = ': No LSP'
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+    if next(clients) == nil then
+      return msg
+    end
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        return string.format(": %s", client.name)
+      end
+    end
+    return msg
+  end
+
 require('lualine').setup {
   options = {
 	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
@@ -22,9 +40,9 @@ disabled_filetypes = {
   sections = {
     lualine_a = {{icon = '', 'mode'}},
     lualine_b = {{ icon = '','branch'}},
-    lualine_x = {'diagnostics'},
-    lualine_y = {'filetype'},
-    lualine_z = {{'location', icon = ''}},
+    lualine_x = {'diagnostics', 'filetype'},
+    lualine_y = {{ lsp_p }},
+    lualine_z = {{'progress', icon = ''}},
     lualine_c = {'diff'}
   },
   inactive_sections = {
