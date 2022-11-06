@@ -25,16 +25,21 @@
 ## Introdução
 
 ## Temas
+<br>
 
 ![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
 
 
 <hr>
 
+<br>
+
 ![CPPRINT](https://user-images.githubusercontent.com/98850074/200186770-563c421b-6925-4df9-8d82-48f33f4a26d6.png)
 
 
 <hr>
+
+<br>
 
 ![githubmode](https://user-images.githubusercontent.com/98850074/200182890-3cc9326e-811c-4bd4-a5bc-2cf2931b384b.png)
 
