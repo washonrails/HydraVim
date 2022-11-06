@@ -1,8 +1,4 @@
 {
-  "lightbulb.text": {
-    "default": " ",
-    "quickfix": " "
-  },
     "suggest.completionItemKindLabels": {
         "function"              : "",
         "method"                : "",

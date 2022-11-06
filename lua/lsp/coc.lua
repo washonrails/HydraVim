@@ -5,7 +5,7 @@ vim.opt.updatetime = 300
 
 vim.opt.signcolumn = "yes"
 
-vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-lightbulb' ] ]])
+vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-ultisnips', 'coc-neosnippet' ] ]])
 -- vim.cmd([[ let g:coc_global_extensions = [ 'coc-clangd', 'coc-json', 'coc-vimlsp', 'coc-lua'] ]])
 
 local keyset = vim.keymap.set

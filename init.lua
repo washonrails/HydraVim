@@ -20,7 +20,7 @@ require ('plugins.toggleterm')
 require ('plugins.which_key')
 
 -- lsp
-require ('lsp.coc_settings')
+require ('lsp.coc')
 require ('lsp.vim_treesitter')
 require ('lsp.lsp_config')
 
