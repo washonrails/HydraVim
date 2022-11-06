@@ -3,8 +3,8 @@ require('lualine').setup {
 	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
 disabled_filetypes = {
       'NvimTree','alpha',
       statusline = {},
@@ -20,12 +20,12 @@ disabled_filetypes = {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_x = {'filetype'},
-    lualine_y = {'location'},
-    lualine_z = {},
-    lualine_c = { "require'lsp-status'.status()", 'filename'}
+    lualine_a = {{icon = '', 'mode'}},
+    lualine_b = {{ icon = '','branch'}},
+    lualine_x = {'diagnostics'},
+    lualine_y = {'filetype'},
+    lualine_z = {{'location', icon = ''}},
+    lualine_c = {'diff'}
   },
   inactive_sections = {
     lualine_a = {},
