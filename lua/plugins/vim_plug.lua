@@ -10,7 +10,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/vim.plug')
 
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'nvim-treesitter/nvim-treesitter',
 	Plug 'nvim-tree/nvim-tree.lua'
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lualine/lualine.nvim'
