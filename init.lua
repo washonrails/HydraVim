@@ -25,6 +25,5 @@ require ('plugins.telescope')
 require ('plugins.toggleterm')
 require ('plugins.which_key')
 
-
 -- temas
 require ('theme.theme')
