@@ -168,7 +168,7 @@ Para usar siga a instruções abaixo <p>
 ## Geral
 <img src="https://img.shields.io/badge/Mantido:-Sim! (Bug fixes, Repositorio , Site..)-brightgreen?style=flat">
 <img src="https://img.shields.io/badge/Estado:-Otimizado%20(Utilizavel%20para o dia a dia)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/Uso RAM:-~800MB-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/Uso RAM:-~145MB/Max-brightgreen?style=flat">
 
 ## Navegação
 
