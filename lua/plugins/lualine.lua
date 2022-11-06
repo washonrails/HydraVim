@@ -1,7 +1,8 @@
-icon = ' LSP:'
 
 local function lsp_p()
-    local msg = ': No LSP'
+	local icon = ': '
+	local n_msg = 'No LSP'
+    local msg = string.format("%s %s", icon, n_msg)
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
