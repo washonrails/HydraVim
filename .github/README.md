@@ -155,5 +155,12 @@ Para usar siga a instruções abaixo <p>
 ## Contribuidores
 
 ## Créditos
+Se você gostou da nossa versão modificada do Vim e se de alguma maneira quiser contrubuir conosco fique avontade ;)
+
+<b>Ko-Fi:</b> <br>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/) <br>
+
+<b>Librepay:</b> <br>
+<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 
 ## FAQ
