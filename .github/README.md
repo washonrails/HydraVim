@@ -1,4 +1,4 @@
-# HydraVim - Simple Useful Nvim 🚀
+<h1 align="center">HydraVim</h1>
 
 <img src="https://raw.githubusercontent.com/HydraVim/HydraVim/main/.github/hydra_logo.png" min-width="50px" max-width="50px" width="200px" align="right" alt="Computador iuriCode">
 
