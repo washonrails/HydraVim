@@ -10,7 +10,7 @@ require ('config.settings')
 
 -- lsp
 require ('lsp.coc')
-require ('lsp.vim_treesitter')
+require ('lsp.treesitter')
 require ('lsp.lsp_config')
 
 -- plugins config
