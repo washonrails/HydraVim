@@ -21,7 +21,6 @@ call plug#begin('~/.vim/vim.plug')
 	Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 	Plug 'nvim-tree/nvim-web-devicons'
-	Plug 'dundalek/lazy-lsp.nvim'
 	Plug 'goolord/alpha-nvim'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lukas-reineke/indent-blankline.nvim'
