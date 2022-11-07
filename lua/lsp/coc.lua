@@ -6,7 +6,7 @@ vim.opt.updatetime = 300
 vim.opt.signcolumn = "yes"
 
 -- default extensions
-vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-ultisnips', 'coc-neosnippet' ] ]])
+vim.cmd([[ let g:coc_global_extensions = [ 'coc-pairs', 'coc-snippets', 'coc-ultisnips' ] ]])
 
 -- more support
 vim.cmd([[ let g:coc_global_extensions = [ 'coc-clangd', 'coc-pyright', 'coc-tsserver', 'coc-html', 'coc-go', 'coc-json', 'coc-vimlsp', 'coc-lua', 'coc-css'] ]])
