@@ -1,4 +1,8 @@
 {
+	"diagnostic.floatConfig": {
+		"border": true,
+		"rounded": true
+	},
     "suggest.completionItemKindLabels": {
         "function"              : "",
         "method"                : "",
