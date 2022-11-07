@@ -25,3 +25,4 @@ o.splitbelow = true 					-- move o cursor para o splitbelow
 w.wrap = false 							-- desativa a quebra de linha
 cmd [[ set noshowmode ]]				-- oculta o modo na barra inferior
 cmd [[ set clipboard+=unnamedplus ]]	-- suporte à área de tranferência
+cmd [[ au InsertEnter * :setlocal nohlsearch | au InsertLeave * :setlocal hlsearch ]] -- desativa/ativa cor da pesquisa
