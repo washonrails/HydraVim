@@ -163,15 +163,13 @@ Para usar siga a instruções abaixo <p>
 <br />
 
 
-## Atalhos
-## Atalhos gerais
+## Key-Binds
 ## Navegação
 ## Geral
 <img src="https://img.shields.io/badge/Mantido:-Sim! (Bug fixes, Repositorio , Site..)-brightgreen?style=flat">
 <img src="https://img.shields.io/badge/Estado:-Otimizado%20(Utilizavel%20para o dia a dia)-brightgreen?style=flat">
 <img src="https://img.shields.io/badge/Uso RAM:-~145MB/Max-brightgreen?style=flat">
 
-## Navegação
 
 ## Contribuidores
   <span>
@@ -184,7 +182,7 @@ Para usar siga a instruções abaixo <p>
 
   
 ## Créditos
-Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade ;)
+Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade 😊
 
 <b>Ko-Fi:</b> <br>
   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/) <b>[In progress]</b> <br>
@@ -193,3 +191,5 @@ Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser co
 <a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> <b>[In progress]</b> 
 
 ## FAQ
+  Todas as dúvidas e reports podem ser feito através do nosso site , elas serão respondidas o mais rapido possivel por nossa comunidade.
+EOF
