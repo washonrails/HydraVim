@@ -1,4 +1,10 @@
 {
+	"suggest.formatItems": [
+		"kind",
+		"abbr",
+		"menu"
+// 		"shortcut"
+	],
 	"diagnostic.floatConfig": {
 		"border": true,
 		"rounded": true
