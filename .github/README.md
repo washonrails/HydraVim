@@ -43,7 +43,7 @@
 
 ![githubmode](https://user-images.githubusercontent.com/98850074/200182890-3cc9326e-811c-4bd4-a5bc-2cf2931b384b.png)
 
-## Modulos
+## Módulos e Requirements
 
 nodejs ranger python3 yarn
 ``
