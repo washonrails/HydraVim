@@ -1,4 +1,5 @@
 {
+	"diagnostic.format": "%message",
 	"suggest.formatItems": [
 		"kind",
 		"abbr",
