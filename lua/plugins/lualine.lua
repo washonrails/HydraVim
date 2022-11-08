@@ -46,8 +46,7 @@ disabled_filetypes = {
     lualine_x = {'diagnostics'},
     lualine_y = {{ lsp_p }},
     lualine_z = {{'progress', icon = ''}},
-    lualine_c = {{file_icon},'diff'}
-  },
+    lualine_c = {{file_icon, symbols = { modified = '', readonly = '', unnamed = 'No Name', newfile = '' } },'diff'}},
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
