@@ -1,6 +1,5 @@
 #!bin/bash
 
-# logo SUNvim
 logo()
 {
 	clear
@@ -13,49 +12,6 @@ logo()
 	cd /home/$USER/.config/nvim 
 }
 
-# cheacar por atualização
-# function check()
-# {
-# 	git merge
-# 	if [ $(git status --porcelain | wc -l) -eq "0" ]; then
-#   		echo
-# 		echo -e "\033[32m Your SUNvim is last vesrion. \033[0m"
-# 	else
-# 		echo
-#   		echo " You SUNvim is old version"
-# 		update
-# 
-#   		exit 1
-# 	fi
-# }
-
-# opcões
-function update()
-{
-	while true; do
-
-	read -p $" Install update? (y/n) " yn
-
-	case $yn in 
-		[yY] ) 
-			install_update
-			break;;
-		[nN] ) 
-			echo
-			echo " Canceled - Type 'exit' or press 'CTRL + d' to close"
-			exit;;
-		* ) echo -e $"\033[0;31m Invaled option \033[0m";; 
-	esac
-
-	done
-}
-
-
-# function rs()
-# {
-# }
-
-# instalar atualização
 function install_update()
 {
 	git reset --hard @{u}
@@ -65,22 +21,17 @@ function install_update()
 	
 	while true; do
 	read -p " Restart now? (y/n) " yn
-
 	case $yn in 
-		[yY] ) 
+		[yY] )
 			killall nvim
-			break;;
-		[nN] ) 
-	 			echo -e "\033[32m OK! SUNvim upgrade finish. \033[0m"
-	 			exit;;
+			exit 1;;
+		[nN] )
+				echo -e "\033[32m OK! SUNvim upgrade finish. \033[0m"
+				exit;;
 		* ) echo -e $"\033[0;31m Invaled option \033[0m";; 
 	esac
-
 	done
-
 }
 
-# iniciar script
-# install_update
 logo
-update
+install_update
