@@ -1,6 +1,6 @@
 
 local function lsp_p()
-	local icon = ': '
+	local icon = ''
 	local n_msg = 'No LSP'
     local msg = string.format("%s %s", icon, n_msg)
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
@@ -19,7 +19,7 @@ local function lsp_p()
 
 require('lualine').setup {
   options = {
-	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
+	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
     icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = ''},
