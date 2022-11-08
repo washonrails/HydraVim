@@ -10,6 +10,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/vim.plug')
 
+	Plug 'terrortylor/nvim-comment'
 	Plug 'nvim-treesitter/nvim-treesitter',
 	Plug 'nvim-tree/nvim-tree.lua'
 	Plug 'neovim/nvim-lspconfig'

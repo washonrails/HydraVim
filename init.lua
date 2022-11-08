@@ -4,9 +4,9 @@ require ('plugins.vim_plug')
 
 -- config
 require ('config.autosave')
-require ('config.comment')
 require ('config.mappings')
 require ('config.settings')
+-- require ('config.comment')
 
 -- lsp
 require ('lsp.coc')
@@ -17,6 +17,7 @@ require ('lsp.lsp_config')
 require ('plugins.alpha')
 require ('plugins.buffer')
 require ('plugins.colorizer')
+require ('plugins.comment')
 require ('plugins.gitsigns')
 require ('plugins.indent_line')
 require ('plugins.lualine')
