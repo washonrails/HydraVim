@@ -11,7 +11,7 @@ local function lsp_p()
     for _, client in ipairs(clients) do
       local filetypes = client.config.filetypes
       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return string.format(": %s", client.name)
+        return string.format("%s %s",icon, client.name)
       end
     end
     return msg
