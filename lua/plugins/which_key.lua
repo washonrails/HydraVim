@@ -86,6 +86,10 @@ local mappings = {
 	b = { ":Telescope git_branches<cr>", " Branches" },
 	s = { ":Telescope git_status<cr>", " Status" },
   },
+  i = {
+	name = " UI",
+	i = { "<CMD>IndentBlanklineToggle<CR>", " Indent Line" },
+  },
   f = {
 	name = " Files",
 	n = { ":ene <BAR> startinsert <CR>", " New file" },
