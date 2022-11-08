@@ -1,3 +1,5 @@
+local file_icon = require('lualine.components.filename'):extend()
+file_icon.apply_icon = require('lualine.components.filetype').apply_icon
 
 local function lsp_p()
 	local icon = ''
@@ -41,10 +43,10 @@ disabled_filetypes = {
   sections = {
     lualine_a = {{icon = '', 'mode'}},
     lualine_b = {{ icon = '','branch'}},
-    lualine_x = {'diagnostics', 'filetype'},
+    lualine_x = {'diagnostics'},
     lualine_y = {{ lsp_p }},
     lualine_z = {{'progress', icon = ''}},
-    lualine_c = {'diff'}
+    lualine_c = {{file_icon},'diff'}
   },
   inactive_sections = {
     lualine_a = {},
