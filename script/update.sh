@@ -9,7 +9,7 @@ logo()
 ⠸⠿  ⠿  ⠸⠿  ⠿⠷⠶⠿⠃⠸⠿⠄⠙⠷⠤⠿⠉⠉⠿⠆
 	\033[0m"
 	
-	cd /home/$USER/.config/nvim 
+	cd ~/.config/nvim 
 }
 
 function install_update()
