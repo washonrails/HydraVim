@@ -61,3 +61,5 @@ while getopts ":ssh:" opt; do
       ;;
   esac
 done
+
+install
