@@ -63,6 +63,7 @@ end
 
 local mappings = {
   q = { ":q<cr>", " Quit" },
+  H = { "<CMD>NvimTreeClose<CR><CMD>BDelete all<CR><CMD>Alpha<CR><CMD>BDelete all<CR><CMD>echo' Home'<CR>", " Home" },
   c = {
 	name = "ךּ COC",
 	e = { ":CocList extensions<cr>", "擄 Extensions" },
