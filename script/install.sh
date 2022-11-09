@@ -48,10 +48,9 @@ function install(){
 	if [[ $ssh == 1 ]]; then
 		echo "HydraVim: ssh"
 		clone_ssh
-	else
-		echo "HydraVim: https"
-		clone_https
 	fi
+	echo "HydraVim: https"
+	clone_https
 }
 
 while getopts ":ssh:" opt; do
