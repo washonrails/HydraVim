@@ -26,40 +26,14 @@ function vim_plug() {
 }
 
 function clone_ssh() {
-	cd ~/.config/
-	git clone git@github.com:HydraVim/HydraVim.git --depth 1
-	mv /home/$USER/.config/HydraVim /home/$USER/.config/nvim
-	nvim -c 'PlugInstall'
-	exit 1
+	git clone git@github.com:HydraVim/HydraVim.git ~/.config/nvim --depth 1 && nvim -c 'PlugInstall'
 }
 
 function clone_https() {
-	cd ~/.config/
-	git clone https://github.com/HydraVim/HydraVim.git --depth 1
-	mv /home/$USER/.config/HydraVim /home/$USER/.config/nvim
-	nvim -c 'PlugInstall'
-	exit 1
+	git clone https://github.com/HydraVim/HydraVim.git --depth 1 && nvim -c 'PlugInstall'
 }
 
-function install(){
-	logo
-	rm_file
-	vim_plug
-	if [[ $ssh == 1 ]]; then
-		echo "HydraVim: ssh"
-		clone_ssh
-	fi
-	echo "HydraVim: https"
-	clone_https
-}
-
-while getopts ":ssh:" opt; do
-  case $opt in
-    :)
-	  ssh=1
-	  install
-      ;;
-  esac
-done
-
-install
+logo
+rm_file
+vim_plug
+clone_https
