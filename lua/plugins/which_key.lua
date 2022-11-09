@@ -73,7 +73,7 @@ local mappings = {
   e = { ":NvimTreeToggle<cr>", "פּ Tree" },
   s = { ":e ~/.config/nvim/init.lua<cr>", " Settings" },
   r = { ":Telescope live_grep<cr>", " Live Grep" },
-  u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", " Update" },
+  -- u = { ":TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>", " Update" },
   t = {
 	name = " Terminal",
     t = { ":ToggleTerm<cr>", "Horizontal" },

@@ -112,6 +112,6 @@ map('t', '<A-i>', '<CMD>ToggleTerm<CR>')														-- fecha o terminal no mod
 map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")		-- abre o Ranger
 
 -- SUNvim script
-map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
+-- map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
 map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim theme
 map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- SUNvim fix_list
