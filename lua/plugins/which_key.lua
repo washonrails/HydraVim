@@ -99,6 +99,9 @@ local mappings = {
   l = {
     name = " LSP",
     i = { ":LspInfo<cr>", " LSP Info" },
+    r = { ":LspRestart<cr>", " LSP Restart" },
+    b = { ":LspStop<cr>", " LSP Stop" },
+    s = { ":LspStart<cr>", " LSP Start" }
   },
   z = { ":ZenMode<cr>", " Zen Mode" },
   p = {
