@@ -75,15 +75,15 @@ map('v', '<S-TAB>', '<gv')									-- remove TAB do texto selecionado
 -- abas
 map('n', '<TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
 map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
-map('n', '<C-w>', '<CMD>BufferLinePickClose<CR>')			-- fechar aba
+map('n', '<C-w>', '<CMD>BDelete this<CR>')					-- fechar aba
 map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')		-- fechar aba
 
 -- atalho da abas
 vim.cmd([[
 nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
 nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
-nnoremap <silent><C-w> :BufferLinePickClose<CR>
-nnoremap <silent><C-w> :BufferLinePickClose<CR>
+" nnoremap <silent><C-w> :BufferLinePickClose<CR>
+" nnoremap <silent><C-w> :BufferLinePickClose<CR>
 ]])
 
 -- telescope
@@ -115,4 +115,3 @@ map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exi
 map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
 map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim theme
 map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- SUNvim fix_list
-
