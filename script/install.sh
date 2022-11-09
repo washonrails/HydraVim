@@ -29,12 +29,16 @@ function clone_ssh() {
 	cd ~/.config/
 	git clone git@github.com:HydraVim/HydraVim.git --depth 1
 	mv /home/$USER/.config/HydraVim /home/$USER/.config/nvim
+	nvim -c 'PlugInstall'
+	exit 1
 }
 
 function clone_https() {
 	cd ~/.config/
 	git clone https://github.com/HydraVim/HydraVim.git --depth 1
 	mv /home/$USER/.config/HydraVim /home/$USER/.config/nvim
+	nvim -c 'PlugInstall'
+	exit 1
 }
 
 function install(){
@@ -48,9 +52,6 @@ function install(){
 		echo "HydraVim: https"
 		clone_https
 	fi
-
-	nvim -c 'PlugInstall'
-	exit 1
 }
 
 while getopts ":ssh:" opt; do
