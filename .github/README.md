@@ -43,22 +43,15 @@
 
 ![githubmode](https://user-images.githubusercontent.com/98850074/200182890-3cc9326e-811c-4bd4-a5bc-2cf2931b384b.png)
 
-## Módulos e Requirements
+## Dependências obrigatórias
 
-nodejs ranger python3 yarn
-``
-
-pynvim:
-``
-pip install pynvim
-``
-
-<a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.7.0<p>
-<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 12.xx - Necessário para o autocomplete <p>
-<a href="https://github.com/junegunn/vim-plug" target="_blank"> Vim-Plug</a> - Instalador dos Plugins <p>
-<a href="https://www.nerdfonts.com/" target="_blank"> Nerd Fonts </a> - Necessário para os ícones <p>
-  
+<a href="https://neovim.io/" target="_blank"> Neovim </a> >= 0.8.0<p>
+<a href="https://nodejs.org" target="_blank"> Nodejs </a> >= 14.xx - Necessário para o autocomplete <p>
+<a href="https://github.com/neovim/pynvim" target="_blank"> pynvim </a> - Necessário para plugins <p>
+<a href="https://classic.yarnpkg.com/lang/en/docs/install/" target="_blank"> yarn </a> - Necessário para autocomplete install <p>
+ 
 ### Dependências opcionais:
+<a href="https://www.nerdfonts.com/" target="_blank"> Nerd Fonts </a> - Necessário para os ícones <p>
 <a href="https://github.com/jesseduffield/lazygit" target="_blank"> LazyGit</a> - Para facilitar o uso do Git<p>
 
 ## Instalação 
@@ -66,6 +59,11 @@ pip install pynvim
 Após a instalação das dependências, execute o comando abaixo. Tenha o <a href="https://git-scm.com/" target="_blank"> Git </a> instalado.<p>
 ```shell
 curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh > HydraVim.sh && sh HydraVim.sh
+```
+
+## Desinstalação 
+```shell
+rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
 ```
 
 ## Linguagens
