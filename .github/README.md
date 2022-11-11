@@ -25,6 +25,8 @@
 ## Introdução
 
 ## Temas
+catppuccin, github-theme onedark, tokyodark, tokyonight, gruvbox, gruvbox-baby, neon, nord, onenord
+
 <br>
 
 ![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
