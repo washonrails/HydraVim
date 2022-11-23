@@ -23,6 +23,7 @@ o.ignorecase = true						-- ignorar letras maiúsculas ao executar uma pesquisa
 o.splitright = true 					-- move o cursor para o splitright
 o.splitbelow = true 					-- move o cursor para o splitbelow
 w.wrap = false 							-- desativa a quebra de linha
+vim.wo.fillchars='eob: ' 				-- desativa o ~
 cmd [[ set noshowmode ]]				-- oculta o modo na barra inferior
 cmd [[ set clipboard+=unnamedplus ]]	-- suporte à área de tranferência
 cmd [[ au InsertEnter * :setlocal nohlsearch | au InsertLeave * :setlocal hlsearch ]] -- desativa/ativa cor da pesquisa
