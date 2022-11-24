@@ -25,7 +25,10 @@
 ## Introdução
 
 ## Temas
-catppuccin, github-theme, onedark, tokyodark, tokyonight, gruvbox, gruvbox-baby, neon, nord, onenord
+
+- Tokyo Night
+- Catppuccin
+- Git Theme
 
 <br>
 
