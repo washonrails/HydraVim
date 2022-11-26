@@ -37,8 +37,8 @@
         "constructor"           : " ",
         "typeParameter"         : " "
     },
+	"inlayHint.display": false,
     "suggest.floatConfig": {
-//      "maxWidth": 50,
       "border": true,
       "rounded": true,
       "highlight": "CocCustomPopup",
