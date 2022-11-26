@@ -37,6 +37,7 @@
         "constructor"           : " ",
         "typeParameter"         : " "
     },
+	"inlayHint.enable": false,
 	"inlayHint.display": false,
     "suggest.floatConfig": {
       "border": true,
