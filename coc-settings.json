@@ -35,7 +35,7 @@
         "operator"              : " ",
         "reference"             : " ",
         "constructor"           : " ",
-        "typeParameter"         : " "
+        "typeParameter"         : " ",
         "default".              : " D"
     },
 	"inlayHint.enable": false,
