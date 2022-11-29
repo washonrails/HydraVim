@@ -36,6 +36,7 @@
         "reference"             : " ",
         "constructor"           : " ",
         "typeParameter"         : " "
+        "default".              : " D"
     },
 	"inlayHint.enable": false,
 	"inlayHint.display": false,
