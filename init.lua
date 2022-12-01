@@ -15,6 +15,7 @@ require ('lsp.lsp_config')
 
 -- plugins config
 require ('plugins.alpha')
+require ('plugins.vim_multi')
 require ('plugins.buffer')
 require ('plugins.colorizer')
 require ('plugins.comment')
