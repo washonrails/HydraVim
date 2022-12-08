@@ -135,7 +135,42 @@ nvim -c 'CocInstall coc-python'
 ``` shell
 sudo apt install rustc
 ```
-2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+2° - Install rust-analyzer binary
+```
+  curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+```
+
+  Change permission to being executable
+```
+  chmod +x ~/.local/bin/rust-analyzer 
+```
+  Warning ! Read with caution :
+  If your ~/.local/bin is not in your path you should to add to your $PATH variable on Shell !
+  
+  To verify if exist <b>~/.local/bin</b> in your $PATH , type :
+  ```
+  echo $PATH
+  whereis rust-analyzer
+  which rust-analyzer
+  ```
+  if your $PATH contains something like 
+  ```
+    /home/$USER/.cargo/bin or /home/$USER/.local/bin
+  ```
+  Its already on your path , else
+  ```
+    export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
+  ```
+  and restart your shell to apply changes ! and done.
+  
+  BUT IF NOT WORKING , TRY THE YOUR LAST CHANCE WITH
+  ```
+  sudo ln -s ~/.local/bin/rust-analyzer /usr/local/bin
+  ```
+  To make a symlink to binary directory restart your shell and done.
+<br>
+
+3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -c 'CocInstall coc-rust-analyzer'
 ```
