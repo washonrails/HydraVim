@@ -11,8 +11,8 @@ map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 -- salvar alterações
 map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>") 	-- salva alerações no modo normal
 
-map('n', '<A-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .Session.vim<CR><CMD>echo 'Saved Session '<CR>") -- salva a sessao atual
-map('n', '<leader>ss', "<CMD>NvimTreeClose<CR> <CMD> :source .Session.vim<CR><CMD>echo 'Loaded Session '<CR>") -- abre a ultima sessao salva.
+map('n', '<A-S-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>") -- salva a sessao atual
+map('n', '<A-S-l>', "<CMD>NvimTreeClose<CR> <CMD> :source .hydra_session.vim<CR><CMD>echo 'Loaded Session '<CR>") -- abre a ultima sessao salva.
 
 -- mover linhas
 map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
