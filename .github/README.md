@@ -50,7 +50,7 @@ Após a instalação das dependências, execute o comando abaixo. Tenha o <a hre
 curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh > HydraVim.sh && sh HydraVim.sh
 ```
   
-## 🗑 Desinstalação
+## ⭕ Desinstalação
   
 ### 🐧 Linux
 ```shell
