@@ -248,8 +248,7 @@ Para usar siga a instruções abaixo <p>
 <img src="https://img.shields.io/badge/Estado:-Otimizado%20(Utilizavel%20para o dia a dia)-brightgreen?style=flat">
 <img src="https://img.shields.io/badge/Uso RAM:-~138MB/Max-brightgreen?style=flat">
 
-
-## Contribuidores
+## ❤️ Contribuidores
   <span>
     <img src="https://user-images.githubusercontent.com/98850074/200189379-5b831bfd-a902-46c8-914e-284e53308dc2.png" width=100 height=100>
   </span>
