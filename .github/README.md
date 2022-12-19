@@ -1,13 +1,13 @@
-# <p align="center"> HydraVim</p>
+<p align="center"><img width="auto" height="90" src="https://github.com/oddlama/minecraft-server/blob/pages/docs/logo.png"></p>
 
 <p align="center"><img src="https://img.shields.io/github/issues/HydraVim/Hydravim?color=171b20&label=Issues%20%20&logo=gnubash&labelColor=e05f65&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/forks/Hydravim/HydraVim?color=171b20&label=Forks%20%20&logo=git&labelColor=f1cf8a&logoColor=ffffff">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/github/stars/HydraVim/HydraVim?color=171b20&label=Stargazers&logo=github&labelColor=70a5eb">&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/-Works on my machine-%2378dba9?style=flat&logo=linux&labelColor=171b20&logoColor=ffffff"></p>
 
 </b><br>Bem vindo ao repositorio<b>  ️Hydra 🌊</b>! Cuidadosamente projetado com usabilidade e funcionalidade em mente, mantendo a leveza nos recursos!</p>
 
+<br />
 
 <details>
-  <summary>Temas</summary>
-<br>
+  <summary> <b> Temas </b> </summary>
 
 ![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
 
@@ -71,17 +71,17 @@ Cada linguagem precisa de seu compilador e do seu <a href="https://github.com/ne
 <details>
   <summary><b>Guia de Instalação</b></summary>
     
-1° - Instale o ```gcc```, ```g++``` e ```make```
+- Instale o ```gcc```, ```g++``` e ```make```
 
 ``` shell
 sudo apt-get install manpages-dev
 ```
-2° - Instale <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, para o autocomplete
+- Instale <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, para o autocomplete
   
 ``` shell
 sudo apt-get install clangd-12
 ```
-3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-clangd'
@@ -95,7 +95,7 @@ nvim -c 'CocInstall coc-clangd'
 <details>
   <summary><b>Guia de Instalação</b></summary>
   
-1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-html coc-css coc-tsserver'
@@ -108,9 +108,9 @@ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 <details>
   <summary><b>Guia de Instalação</b></summary>
   
-1° instale o <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> Java JDK </a >>= 11<p>
+- Instale o <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> Java JDK </a >>= 11<p>
 
-2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
 nvim -c 'CocInstall coc-java'
@@ -124,7 +124,7 @@ nvim -c 'CocInstall coc-java'
 
   <summary><b>Guia de Instalação</b></summary>
 
-1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
 nvim -c 'CocInstall coc-json'
@@ -137,7 +137,7 @@ nvim -c 'CocInstall coc-json'
 <details>
   <summary><b>Guia de Instalação</b></summary>
 
-1° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -c 'CocInstall coc-sumneko-lua'
 ```
@@ -148,13 +148,13 @@ nvim -c 'CocInstall coc-sumneko-lua'
 ### Python
 <details>
   <summary><b>Guia de Instalação</b></summary>
-1° Instale o <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
+- Instale o <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
   
 ``` shell
 sudo apt install python3
 ```
 
-2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-python'
@@ -166,15 +166,16 @@ nvim -c 'CocInstall coc-python'
 <br />
  
 ### Rust
-  <details>
-    <summary><b>Guia de Instalação</b></summary>
-1° - Instale o <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
+<details>
+  <summary><b>Guia de Instalação</b></summary>
+  
+- Instale o <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
     
 ``` shell
 sudo apt install rustc
 ```
     
-2° - Install rust-analyzer binary
+- Install rust-analyzer binary
     
 ```
   curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
@@ -189,15 +190,13 @@ sudo apt install rustc
   
   To verify if exist <b>~/.local/bin</b> in your $PATH , type :
   ```
-  echo $PATH
-  whereis rust-analyzer
-  which rust-analyzer
+  echo $PATH | whereis rust-analyzer
   ```
-  if your $PATH contains something like 
+If your $PATH contains something like the output below , its already on your path , 
   ```
     /home/$USER/.cargo/bin or /home/$USER/.local/bin
   ```
-  Its already on your path , else
+Else
   ```
     export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
   ```
@@ -210,7 +209,7 @@ sudo apt install rustc
   To make a symlink to binary directory restart your shell and done.
 <br>
 
-3° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
     
 ``` shell
 nvim -c 'CocInstall coc-rust-analyzer'
@@ -219,13 +218,13 @@ nvim -c 'CocInstall coc-rust-analyzer'
   
 <br />
 
-## Recomendações
+## 🗒️ Recomendações
 Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  comando abaixo.
 ``` shell
 echo 'stty -ixon' >> ~/.bashrc
 ```
 ## HTML, CSS e JS em termpo real
-1° - Instale o live server
+- Instale o live server
 ``` shell
 npm i -g live-server
 ```
@@ -234,13 +233,13 @@ Caso a instalção acima dê algum erro execute o código abaixo
 sudo npm i -g live-server
 ```
 
-2° - Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
 Para usar siga a instruções abaixo <p>
-1° - Acesse o `index.html` através do SUNvim e precione `F5`, uma aba será aberta automaticamente em seu navegador padrão <p>
-2° - O site será atualizado assim que as alterções forem salvas com `Ctrl` + `s`
+- Acesse o `index.html` através do SUNvim e precione `F5`, uma aba será aberta automaticamente em seu navegador padrão <p>
+- O site será atualizado assim que as alterções forem salvas com `Ctrl` + `s`
 <br />
 
 ## Geral
@@ -257,16 +256,14 @@ Para usar siga a instruções abaixo <p>
     <img src="https://user-images.githubusercontent.com/98850074/200189532-28bd2d72-76e8-4650-a293-9fdfa64c4b73.png" width=100 height=100>
   </span>
 
-  
-## Créditos
-Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade 😊
 
-<b>Ko-Fi:</b> <br>
-  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/) <b>[In progress]</b> <br>
+
+<b>Ko-Fi:</b><br>
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/)
 
 <b>Librepay:</b> <br>
-<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> <b>[In progress]</b> 
+<a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> 
 
-## FAQ
-  Todas as dúvidas e reports podem ser feito através do nosso site , elas serão respondidas o mais rapido possivel por nossa comunidade.
-EOF
+<br /> 
+
+<p align="center"><b> Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade 😊</b> </p>
