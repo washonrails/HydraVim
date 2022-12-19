@@ -67,7 +67,7 @@ Cada linguagem precisa de seu compilador e do seu <a href="https://github.com/ne
   
 ```C/C++```, ```HTML```, ```Java```, ```Javascript/Typescript```, ```JSON```, ```Lua``` e ```Python``` podem ser instaldas através dos comandos abaixo, instruções para outras linguagem <a href="" target="_blank"> aqui.</a><p>
 
-  ### C/C++
+  ### 🇨 C/C++
 <details>
   <summary><b>Guia de Instalação</b></summary>
     
@@ -90,7 +90,7 @@ nvim -c 'CocInstall coc-clangd'
   
 <br />
   
-### HTML, CSS e JS
+### 🌐 HTML, CSS e JS
   
 <details>
   <summary><b>Guia de Instalação</b></summary>
@@ -104,7 +104,7 @@ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 </details>
 <br />
 
-### Java
+### ♨️ Java
 <details>
   <summary><b>Guia de Instalação</b></summary>
   
