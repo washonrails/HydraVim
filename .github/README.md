@@ -119,7 +119,7 @@ nvim -c 'CocInstall coc-java'
 </details>
 <br />
 
-### JSON
+  ### <b> { } </b> JSON
 <details>
 
   <summary><b>Guia de Instalação</b></summary>
