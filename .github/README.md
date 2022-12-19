@@ -57,7 +57,15 @@ curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh 
 rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
 ```
   
-<br>
+<br />
+  
+## 🗒️ Recomendações
+Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  comando abaixo.
+``` shell
+echo 'stty -ixon' >> ~/.bashrc
+```
+
+<br />  
   
 ## 🔠 Linguagens
 Cada linguagem necessita de suporte indivídual para seu funcionamento no HydraVim, mas é simples. 
@@ -214,14 +222,6 @@ nvim -c 'CocInstall coc-rust-analyzer'
 ```
 </details>
   
-<br />
-
-## 🗒️ Recomendações
-Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  comando abaixo.
-``` shell
-echo 'stty -ixon' >> ~/.bashrc
-```
-
 <br />
 
 ## 🐙 Live Server
