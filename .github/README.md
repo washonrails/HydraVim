@@ -165,7 +165,7 @@ nvim -c 'CocInstall coc-python'
 
 <br />
  
-### Rust
+### 🦀 Rust
 <details>
   <summary><b>Guia de Instalação</b></summary>
   
