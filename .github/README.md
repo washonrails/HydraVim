@@ -192,12 +192,10 @@ sudo apt install rustc
   ```
   echo $PATH | whereis rust-analyzer
   ```
-If your $PATH contains something like the output below , its already on your path , 
-  ```
+  ```shell
+    # If your $PATH contains something like the output below , its already on your path , 
     /home/$USER/.cargo/bin or /home/$USER/.local/bin
-  ```
-Else
-  ```
+    # Else
     export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
   ```
   and restart your shell to apply changes ! and done.
