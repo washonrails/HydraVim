@@ -223,12 +223,15 @@ Para evitar travamentos adicione `stty -ixon` no `.bashrc`, faça isso com  coma
 ``` shell
 echo 'stty -ixon' >> ~/.bashrc
 ```
-## HTML, CSS e JS em termpo real
-- Instale o live server
+
+<br />
+
+## 🐙 Live Server
+- Instale o Live server
 ``` shell
 npm i -g live-server
 ```
-Caso a instalção acima dê algum erro execute o código abaixo
+- Caso a instalção acima dê algum erro execute o código abaixo
 ``` shell
 sudo npm i -g live-server
 ```
