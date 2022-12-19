@@ -145,7 +145,7 @@ nvim -c 'CocInstall coc-sumneko-lua'
 
 <br />
 
-### Python
+### 🐍 Python
 <details>
   <summary><b>Guia de Instalação</b></summary>
 - Instale o <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
