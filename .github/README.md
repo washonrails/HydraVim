@@ -133,7 +133,7 @@ nvim -c 'CocInstall coc-json'
   
 <br />
 
-### Lua
+### 🌓 Lua
 <details>
   <summary><b>Guia de Instalação</b></summary>
 
