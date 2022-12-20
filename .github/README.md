@@ -78,17 +78,17 @@ The autocomplete is <a href="https://github.com/neoclide/coc.nvim" target="_blan
 <details>
   <summary><b>Install Guide</b></summary>
     
-- Instale o ```gcc```, ```g++``` e ```make```
+- Install ```gcc```, ```g++``` and ```make```
 
 ``` shell
 sudo apt-get install manpages-dev
 ```
-- Instale <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, para o autocomplete
+- Install <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, to autocomplete
   
 ``` shell
 sudo apt-get install clangd-12
 ```
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install  <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-clangd'
@@ -102,7 +102,7 @@ nvim -c 'CocInstall coc-clangd'
 <details>
   <summary><b>Install Guide</b></summary>
   
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-html coc-css coc-tsserver'
@@ -117,7 +117,7 @@ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
   
 - Instale o <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank"> Java JDK </a >>= 11<p>
 
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
 nvim -c 'CocInstall coc-java'
@@ -131,7 +131,7 @@ nvim -c 'CocInstall coc-java'
 
   <summary><b>Install Guide</b></summary>
 
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
 nvim -c 'CocInstall coc-json'
@@ -144,7 +144,7 @@ nvim -c 'CocInstall coc-json'
 <details>
   <summary><b>Install Guide</b></summary>
 
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
 nvim -c 'CocInstall coc-sumneko-lua'
 ```
@@ -155,13 +155,13 @@ nvim -c 'CocInstall coc-sumneko-lua'
 ### 🐍 Python
 <details>
   <summary><b>Install Guide</b></summary>
-- Instale o <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
+- Install <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
   
 ``` shell
 sudo apt install python3
 ```
 
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the command below to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
 nvim -c 'CocInstall coc-python'
@@ -176,7 +176,7 @@ nvim -c 'CocInstall coc-python'
 <details>
   <summary><b>Install Guide</b></summary>
   
-- Instale o <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
+- Install <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
     
 ``` shell
 sudo apt install rustc
@@ -188,7 +188,7 @@ sudo apt install rustc
   curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 ```
 
-  Change permission to being executable
+  Change permission to be executable
 ```
   chmod +x ~/.local/bin/rust-analyzer 
 ```
@@ -218,7 +218,7 @@ sudo apt install rustc
   To make a symlink to binary directory restart your shell and done.
 <br>
 
-- Execute o comando abaixo para instalar o <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
     
 ``` shell
 nvim -c 'CocInstall coc-rust-analyzer'
@@ -232,12 +232,12 @@ nvim -c 'CocInstall coc-rust-analyzer'
 ``` shell
 npm i -g live-server
 ```
-- Case the install fails
+- Case install fails
 ``` shell
 sudo npm i -g live-server
 ```
 
-- Execute the comando below to install the <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
+- Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
 nvim -c 'CocInstall coc-html coc-css coc-tsserver'
