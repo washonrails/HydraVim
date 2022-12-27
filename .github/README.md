@@ -250,7 +250,7 @@ To use follow the instructions below <p>
 ### <img width="auto" height="20px" src="https://github.com/oddlama/vane/blob/main/docs/vane.png"> General
   
 <img src="https://img.shields.io/badge/Mantained:-Yes! (Bug fixes, Repository , Website..)-brightgreen?style=flat">
-<img src="https://img.shields.io/badge/State:-Optimized%20(Utilizable%20day-to-day)-brightgreen?style=flat">
+<img src="https://img.shields.io/badge/State:-Optimized (Utilizable)-brightgreen?style=flat">
 <img src="https://img.shields.io/badge/RAM usage:-~138MB/Max-brightgreen?style=flat">
 
 ## ❤️ Contributors
