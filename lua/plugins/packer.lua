@@ -14,32 +14,68 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd([[packadd packer.nvim]])
 end
 
-vim.cmd[[
-  augroup Packer_aug
-  autocmd!
-  autocmd BufWritePost plugins.lua PackerClean
-  autocmd BufWritePost plugins.lua PackerCompile
-  autocmd BufWritePost plugins.lua PackerSync
-  augroup END
-]]
-
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
 	return
 end
 
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost packer.lua source <afile> | PackerCompile
+--     autocmd BufWritePost packer.lua source <afile> | PackerInstall
+--     autocmd BufWritePost packer.lua source <afile> | PackerClean
+--   augroup end
+-- ]])
+
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost packer.lua source <afile> | PackerCompile | PackerInstall | PackerClean
+--   augroup end
+-- ]])
+
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost packer.lua source <afile> | PackerSync
+  augroup end
+]])
+
 packer.init({
+    -- auto_clean = true,
+	-- compile_on_sync = true,
+	-- auto_reload_compiled = true,
+    git = { clone_timeout = 6000 },
 	display = {
+      working_sym = "ﲊ",
+      error_sym = "✗ ",
+      done_sym = " ",
+      removed_sym = " ",
+      moved_sym = "",
 		open_fn = function()
 			return require("packer.util").float({ border = "rounded" })
 		end,
 	},
 })
 
-return packer.startup({
-    config = {clone_timeout = false},
-	function(use)
+-- compile -> install
 
+-- vim.cmd[[
+--   augroup Packer_aug
+--   autocmd!
+--   autocmd BufWritePost plugins.lua PackerCompile
+--   autocmd BufWritePost plugins.lua PackerInstall
+--   autocmd BufWritePost plugins.lua PackerClean
+--   augroup END
+-- ]]
+
+
+
+return packer.startup({
+	function(use)
+	use 'wbthomason/packer.nvim'
+	-- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 	use 'kazhala/close-buffers.nvim'
 	use 'terrortylor/nvim-comment'
 	use 'nvim-treesitter/nvim-treesitter'

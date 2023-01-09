@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/dio/.local/share/nvim/site/pack/packer/start/onenord.nvim",
     url = "https://github.com/rmehri01/onenord.nvim"
   },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/dio/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/dio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
