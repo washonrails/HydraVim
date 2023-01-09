@@ -1,4 +1,10 @@
-require"toggleterm".setup {
+local present, toggleterm = pcall(require, "toggleterm")
+
+if not present then
+    return
+end
+
+toggleterm.setup {
   size = 13,
   shade_filetypes = {},
   shade_terminals = true,

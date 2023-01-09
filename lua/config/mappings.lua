@@ -1,3 +1,9 @@
+local present, telescope = pcall(require, "telescope")
+
+if not present then
+    return
+end
+
 local vc = vim.cmd
 local function map(m, k, v, i)
     vim.keymap.set(m, k, v, i, { silent = true })
