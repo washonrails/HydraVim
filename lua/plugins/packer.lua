@@ -40,8 +40,8 @@ packer.init({
 	-- auto_reload_compiled = true,
     git = { clone_timeout = 6000 },
 	display = {
-      working_sym = "ﲊ",
-      error_sym = "✗ ",
+      working_sym = " ",
+      error_sym = " ",
       done_sym = " ",
       removed_sym = " ",
       moved_sym = "",
