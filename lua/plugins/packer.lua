@@ -21,17 +21,9 @@ end
 
 -- vim.cmd([[
 --   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost packer.lua source <afile> | PackerCompile
---     autocmd BufWritePost packer.lua source <afile> | PackerInstall
---     autocmd BufWritePost packer.lua source <afile> | PackerClean
---   augroup end
--- ]])
-
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost packer.lua source <afile> | PackerCompile | PackerInstall | PackerClean
+-- 	autocmd!
+-- 	autocmd BufWritePost packer.lua source <afile> | PackerCompile
+-- 	autocmd BufWritePost packer.lua source <afile> | PackerInstall
 --   augroup end
 -- ]])
 
@@ -43,7 +35,7 @@ vim.cmd([[
 ]])
 
 packer.init({
-    -- auto_clean = true,
+	-- auto_clean = true,
 	-- compile_on_sync = true,
 	-- auto_reload_compiled = true,
     git = { clone_timeout = 6000 },
@@ -59,23 +51,10 @@ packer.init({
 	},
 })
 
--- compile -> install
-
--- vim.cmd[[
---   augroup Packer_aug
---   autocmd!
---   autocmd BufWritePost plugins.lua PackerCompile
---   autocmd BufWritePost plugins.lua PackerInstall
---   autocmd BufWritePost plugins.lua PackerClean
---   augroup END
--- ]]
-
-
-
 return packer.startup({
 	function(use)
 	use 'wbthomason/packer.nvim'
-	-- use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 	use 'kazhala/close-buffers.nvim'
 	use 'terrortylor/nvim-comment'
 	use 'nvim-treesitter/nvim-treesitter'
@@ -112,6 +91,6 @@ return packer.startup({
     use 'rmehri01/onenord.nvim'
 
 	if PACKER_BOOTSTRAP then
-		require("packer").sync()
+		packer.sync()
 	end
 end})
