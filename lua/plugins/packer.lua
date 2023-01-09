@@ -1,40 +1,69 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local fn = vim.fn
+
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+	PACKER_BOOTSTRAP = fn.system({
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+	print("Installing packer close and reopen Neovim...")
+	vim.cmd([[packadd packer.nvim]])
 end
 
-local packer_bootstrap = ensure_packer()
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
 
-return require('packer').startup(function(use)
-	
-	use 'wbthomason/packer.nvim'
-	use 'SolarVim/nvim-treesitter'
-	use 'SolarVim/nvim-tree.lua'
-	use 'SolarVim/nvim-lspconfig'
-	use 'SolarVim/lualine.nvim'
-	use {'SolarVim/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-	use 'SolarVim/gitsigns.nvim'
-	use 'SolarVim/vim-polyglot'
-	use 'SolarVim/bufferline.nvim'
-	use 'SolarVim/toggleterm.nvim'
-	use 'SolarVim/telescope.nvim'
-	use 'SolarVim/nvim-web-devicons'
-	use 'SolarVim/lazy-lsp.nvim'
-	use 'SolarVim/alpha-nvim'
-	use 'SolarVim/plenary.nvim'
-	use 'SolarVim/indent-blankline.nvim'
-	use 'SolarVim/vim-devicons'
-	use 'SolarVim/vim-visual-multi'
-	use 'SolarVim/nvim-colorizer.lua'
-	use 'SolarVim/vim-snippets'
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+	return
+end
 
-	-- temas
+packer.init({
+	display = {
+		open_fn = function()
+			return require("packer.util").float({ border = "rounded" })
+		end,
+	},
+})
+
+return packer.startup({
+    config = {clone_timeout = false},
+	function(use)
+
+	use 'kazhala/close-buffers.nvim'
+	use 'terrortylor/nvim-comment'
+	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-tree/nvim-tree.lua'
+	use 'neovim/nvim-lspconfig'
+	use 'nvim-lualine/lualine.nvim'
+	use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+	use 'lewis6991/gitsigns.nvim'
+	use 'sheerun/vim-polyglot'
+	use {'akinsho/bufferline.nvim', tag = 'v3.*' }
+	use {'akinsho/toggleterm.nvim', tag = '*'}
+	use {'nvim-telescope/telescope.nvim', tag = '0.1.0' }
+	use 'nvim-tree/nvim-web-devicons'
+	use 'goolord/alpha-nvim'
+	use 'nvim-lua/plenary.nvim'
+	use 'lukas-reineke/indent-blankline.nvim'
+	use 'ryanoasis/vim-devicons'
+	use 'honza/vim-snippets'
+	use 'mg979/vim-visual-multi'
+	use 'norcalli/nvim-colorizer.lua'
+	use 'folke/which-key.nvim'
+	use 'folke/zen-mode.nvim'
+
+	-- temas --
+	use {'catppuccin/nvim', as = 'catppuccin' }
+	use 'projekt0n/github-nvim-theme'
 	use 'navarasu/onedark.nvim'
 	use 'tiagovla/tokyodark.nvim'
 	use 'folke/tokyonight.nvim'
@@ -42,12 +71,9 @@ return require('packer').startup(function(use)
 	use 'luisiacc/gruvbox-baby'
 	use 'rafamadriz/neon'
 	use 'shaunsingh/nord.nvim'
-	use 'rmehri01/onenord.nvim'
-	use { "catppuccin/nvim", as = "catppuccin" }
-	use 'JoosepAlviste/palenightfall.nvim'
-	use 'projekt0n/github-nvim-theme'
+    use 'rmehri01/onenord.nvim'
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
+end})

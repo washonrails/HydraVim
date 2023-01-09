@@ -1,6 +1,6 @@
 -- plugins
-require ('plugins.vim_plug')
--- require ('plugins.packer')
+-- require ('plugins.vim_plug')
+require ('plugins.packer')
 
 -- config
 require ('config.autosave')
