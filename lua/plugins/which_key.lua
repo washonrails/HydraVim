@@ -4,6 +4,12 @@ if not present then
     return
 end
 
+local present2, tm = pcall(require, "toggleterm.terminal")
+
+if not present2 then
+    return
+end
+
 wk.setup {
   plugins = {
     marks = false,
