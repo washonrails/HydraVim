@@ -111,18 +111,19 @@ local mappings = {
   l = {
     name = " LSP",
     i = { ":LspInfo<cr>", " LSP Info" },
-    r = { ":LspRestart<cr>", " LSP Restart" },
-    b = { ":LspStop<cr>", " LSP Stop" },
+    r = { ":LspRestart<cr>", "ﰇ LSP Restart" },
+    b = { ":LspStop<cr>", " LSP Stop" },
     s = { ":LspStart<cr>", " LSP Start" }
   },
   z = { ":ZenMode<cr>", " Zen Mode" },
   p = {
-    name = "ﮣ Plugins",
-    r = { ":PlugClean<cr>", "ﮁ Remove Unused Plugins" },
-    e = { ":PlugDiff<cr>", " Examine Plugins" },
-    i = { ":PlugInstall<cr>", " Install Plugins" },
-    s = { ":PlugStatus<cr>", " Status Plugins" },
-    u = { ":PlugUpdate<cr>", " Update Plugins" }
+    name = " Plugins",
+    r = { ":PackerClean<cr>", "ﮁ Remove Unused Plugins" },
+    e = { ":PackerSync<cr>", "痢 Plugins Sync" },
+    c = { ":PackerCompile<cr>", " Plugins Compile" },
+    i = { ":PackerInstall<cr>", " Plugins Install" },
+    s = { ":PackerStatus<cr>", " Plugins Status" },
+    u = { ":PackerUpdate<cr>", " Plugins Update" }
   },
   h = {
 	name = " Themes",
