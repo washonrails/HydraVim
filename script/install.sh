@@ -13,6 +13,6 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 rm -rf ~/.config/coc
 
-git clone https://github.com/HydraVim/HydraVim.git --depth 1 --branch fiz-start ~/.config/nvim
+git clone https://github.com/HydraVim/HydraVim.git --depth 1 --branch main ~/.config/nvim
 
 nvim
