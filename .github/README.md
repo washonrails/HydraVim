@@ -47,7 +47,7 @@
 After dependencies setup  , execute the command below . Make sure that <a href="https://git-scm.com/" target="_blank"> Git </a> is installed <p>
 
 ```shell
-$ curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh > HydraVim.sh && sh HydraVim.sh
+$ curl https://raw.githubusercontent.com/HydraVim/HydraVim/fiz-start/script/install.sh > HydraVim.sh && sh HydraVim.sh
 ```
   
 ## ⭕ Uninstall
