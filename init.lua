@@ -1,7 +1,3 @@
--- plugins
--- require ('config.comment')
--- require ('plugins.vim_plug')
-
 local modules = {
 	'plugins.packer',
 	'config.autosave',
@@ -25,7 +21,7 @@ local modules = {
 	'theme.theme',
 }
 
-for f, m in pairs(modules) do
-	package.loaded[m] = nil
-	require(m)
+for i, name in pairs(modules) do
+	package.loaded[name] = nil
+	require(name)
 end
