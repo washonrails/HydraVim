@@ -31,7 +31,7 @@
 ## 🔒 Mandatory Dependencies :
 
 - <a href="https://neovim.io/" target="_blank"> Neovim </a>
-- <a href="https://nodejs.org" target="_blank"> Nodejs </a>
+- <a href="https://nodejs.org" target="_blank"> Nodejs </a> > 16.0
 - <a href="https://github.com/neovim/pynvim" target="_blank"> Pynvim </a>
 - <a href="https://classic.yarnpkg.com/lang/en/docs/install/" target="_blank"> Yarn </a>
  
