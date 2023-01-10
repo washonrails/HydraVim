@@ -7,7 +7,7 @@
 <br />
 
 <details>
-  <summary> <b> Themes </b> </summary>
+  <summary> <b>Themes </b> </summary>
 
 ![TNPrint](https://user-images.githubusercontent.com/98850074/200186219-31bc10d3-8818-46ba-820e-ef8b7c5c9e40.png)
 
@@ -50,12 +50,14 @@ After dependencies setup  , execute the command below . Make sure that <a href="
 sh <(curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh)
 ```
 
-### 🪟 Windows
-⚠ - version test
+### 🪟 Windows - Test
+- Powershell
 ```powershell
 git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --depth 1 --branch main && nvim
 ```
-  
+          
+<br>
+          
 ## ⭕ Uninstall
   
 ### 🐧 Linux
@@ -64,6 +66,7 @@ rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.co
 ```
 
 ### 🪟 Windows
+- Powershell
 ```powershell
 Remove-Item -Path $HOME\AppData\Local\nvim -Force
 ```
