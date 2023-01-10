@@ -43,9 +43,9 @@
 
 ## 🛠 Installation 
 
-### 🐧 Linux/🍎macOS
-After dependencies setup  , execute the command below . Make sure that <a href="https://git-scm.com/" target="_blank"> Git </a> is installed <p>
+After dependencies setup  , execute the command below . Make sure that <a href="https://git-scm.com/" target="_blank"> Git </a> is installed
 
+### 🐧 Linux/🍎macOS
 ```shell
 sh <(curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh)
 ```
