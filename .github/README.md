@@ -43,7 +43,7 @@
 
 ## 🛠 Installation 
 
-### 🐧 Linux
+### 🐧 Linux/🍎macOS
 After dependencies setup  , execute the command below . Make sure that <a href="https://git-scm.com/" target="_blank"> Git </a> is installed <p>
 
 ```shell
@@ -60,7 +60,7 @@ git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --de
           
 ## ⭕ Uninstall
   
-### 🐧 Linux
+### 🐧 Linux/🍎macOS
 ```shell
 rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
 ```
