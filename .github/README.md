@@ -49,12 +49,26 @@ After dependencies setup  , execute the command below . Make sure that <a href="
 ```shell
 sh <(curl https://raw.githubusercontent.com/HydraVim/HydraVim/main/script/install.sh)
 ```
+
+### 🪟 Windows
+⚠ - version test
+```powershell
+git clone https://github.com/HydraVim/HydraVim.git $HOME\AppData\Local\nvim --depth 1 --branch main && nvim
+```
   
 ## ⭕ Uninstall
   
 ### 🐧 Linux
 ```shell
-$ rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
+rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.config/coc /home/$USER/.vim
+```
+
+### 🪟 Windows
+```powershell
+Remove-Item -Path $HOME\AppData\Local\nvim -Force
+```
+```powershell
+Remove-Item -Path $HOME\AppData\Local\nvim-data -Force
 ```
   
 <br />
@@ -62,7 +76,7 @@ $ rm -rf ~/.config/nvim ~/.local/share/nvim ~/.cache/nvim ~/.config/HydraVim ~/.
 ## 🗒️ Recomendations
 To avoid delays put `stty -ixon` on `.bashrc`, do this with command below
 ``` shell
-$ echo 'stty -ixon' >> ~/.bashrc
+echo 'stty -ixon' >> ~/.bashrc
 ```
 
 <br />  
@@ -81,17 +95,17 @@ The autocomplete is <a href="https://github.com/neoclide/coc.nvim" target="_blan
 - Install ```gcc```, ```g++``` and ```make```
 
 ``` shell
-$ sudo apt-get install manpages-dev
+sudo apt-get install manpages-dev
 ```
 - Install <a href="https://clangd.llvm.org/installation.html" target="_blank"> CLangd</a> >= 8.0, to autocomplete
   
 ``` shell
-$ sudo apt-get install clangd-12
+sudo apt-get install clangd-12
 ```
 - Run the below command to install  <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
-$ nvim -c 'CocInstall coc-clangd'
+nvim -c 'CocInstall coc-clangd'
 ```
 </details>
   
@@ -105,7 +119,7 @@ $ nvim -c 'CocInstall coc-clangd'
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
-$ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
+nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
   
 </details>
@@ -120,7 +134,7 @@ $ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
-$ nvim -c 'CocInstall coc-java'
+nvim -c 'CocInstall coc-java'
 ```
 
 </details>
@@ -134,7 +148,7 @@ $ nvim -c 'CocInstall coc-java'
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
-$ nvim -c 'CocInstall coc-json'
+nvim -c 'CocInstall coc-json'
 ```
 </details>
   
@@ -146,7 +160,7 @@ $ nvim -c 'CocInstall coc-json'
 
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 ``` shell
-$ nvim -c 'CocInstall coc-sumneko-lua'
+nvim -c 'CocInstall coc-sumneko-lua'
 ```
 </details>
 
@@ -158,13 +172,13 @@ $ nvim -c 'CocInstall coc-sumneko-lua'
 - Install <a href="https://www.python.org/downloads/" target="_blank"> Python3 </a>
   
 ``` shell
-$ sudo apt install python3
+sudo apt install python3
 ```
 
 - Run the command below to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
   
 ``` shell
-$ nvim -c 'CocInstall coc-python'
+nvim -c 'CocInstall coc-python'
 ```
 </details
 
@@ -179,19 +193,19 @@ $ nvim -c 'CocInstall coc-python'
 - Install <a href="https://www.ruby-lang.org/" target="_blank"> Ruby </a>
   
 ``` shell
-$ sudo apt install ruby
+sudo apt install ruby
 ```
 
 - Install <a href="https://solargraph.org/" target="_blank"> Solargraph - lsp</a>
   
 ``` shell
-$ gem install solargraph
+gem install solargraph
 ```
 
 - Run the command below to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> solargraph in COC.</a>
   
 ``` shell
-$ nvim -c 'CocInstall coc-solargraph'
+nvim -c 'CocInstall coc-solargraph'
 ```
 </details
 
@@ -206,25 +220,25 @@ $ nvim -c 'CocInstall coc-solargraph'
 - Install <a href="https://www.rust-lang.org" target="_blank"> Rust</a>
     
 ``` shell
-$ sudo apt install rustc
+sudo apt install rustc
 ```
     
 - Install rust-analyzer binary
     
 ```
- $ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
 ```
 
   Change permission to be executable
 ```
- $ chmod +x ~/.local/bin/rust-analyzer 
+ chmod +x ~/.local/bin/rust-analyzer 
 ```
   Read with caution :
   If your ~/.local/bin is not in your path you should to add to your $PATH variable on Shell !
   
   To verify if exist <b>~/.local/bin</b> in your $PATH , type :
   ```
- $ echo $PATH | whereis rust-analyzer
+ echo $PATH | whereis rust-analyzer
   ```
   
   ```shell
@@ -232,7 +246,7 @@ $ sudo apt install rustc
  $ /home/$USER/.cargo/bin or /home/$USER/.local/bin
     
     # Else
- $ export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
+ export PATH=~/.local/bin:$PATH or put in your .zshrc .bashrc and so on.
   ```
   
  Restart your shell to apply changes , and done.
@@ -240,7 +254,7 @@ $ sudo apt install rustc
   ⚠️ <b> ATTENTION ! </b> ⚠️
   ```shell
   # Case the options above doesn't work try this
- $ sudo ln -s ~/.local/bin/rust-analyzer /usr/local/bin
+ sudo ln -s ~/.local/bin/rust-analyzer /usr/local/bin
   ```
   To make a symlink to binary directory restart your shell and done.
 <br>
@@ -248,7 +262,7 @@ $ sudo apt install rustc
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
     
 ``` shell
-$ nvim -c 'CocInstall coc-rust-analyzer'
+nvim -c 'CocInstall coc-rust-analyzer'
 ```
 </details>
   
@@ -257,17 +271,17 @@ $ nvim -c 'CocInstall coc-rust-analyzer'
 ## 🐙 Live Server
 - Install Live-server
 ``` shell
-$ npm i -g live-server
+npm i -g live-server
 ```
 - Case install fails
 ``` shell
-$ sudo npm i -g live-server
+sudo npm i -g live-server
 ```
 
 - Run the below command to install <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank"> language servers.</a>
 
 ``` shell
-$ nvim -c 'CocInstall coc-html coc-css coc-tsserver'
+nvim -c 'CocInstall coc-html coc-css coc-tsserver'
 ```
 To use follow the instructions below <p>
 - Go to `index.html` on Hydravim and press `F5`, an window will open automatically on your default browser <p>
