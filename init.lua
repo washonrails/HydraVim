@@ -1,31 +1,27 @@
--- plugins
-require ('plugins.vim_plug')
--- require ('plugins.packer')
+local modules = {
+	'plugins.packer',
+	'config.autosave',
+	'config.mappings',
+	'config.settings',
+	'lsp.coc',
+	'lsp.treesitter',
+	'lsp.lsp_config',
+	'plugins.alpha',
+	'plugins.vim_multi',
+	'plugins.buffer',
+	'plugins.colorizer',
+	'plugins.comment',
+	'plugins.gitsigns',
+	'plugins.indent_line',
+	'plugins.lualine',
+	'plugins.nvim_tree',
+	'plugins.telescope',
+	'plugins.toggleterm',
+	'plugins.which_key',
+	'theme.theme',
+}
 
--- config
-require ('config.autosave')
-require ('config.mappings')
-require ('config.settings')
--- require ('config.comment')
-
--- lsp
-require ('lsp.coc')
-require ('lsp.treesitter')
-require ('lsp.lsp_config')
-
--- plugins config
-require ('plugins.alpha')
-require ('plugins.vim_multi')
-require ('plugins.buffer')
-require ('plugins.colorizer')
-require ('plugins.comment')
-require ('plugins.gitsigns')
-require ('plugins.indent_line')
-require ('plugins.lualine')
-require ('plugins.nvim_tree')
-require ('plugins.telescope')
-require ('plugins.toggleterm')
-require ('plugins.which_key')
-
--- temas
-require ('theme.theme')
+for i, name in pairs(modules) do
+	package.loaded[name] = nil
+	require(name)
+end

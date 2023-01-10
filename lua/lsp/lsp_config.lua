@@ -1,6 +1,10 @@
-local nvim_lsp = require('lspconfig')
-local servers = {'solargraph','ccls','clangd', 'pyright', 'tsserver', 'html', 'gopls', 'jsonls', 'sumneko_lua', 'vimls', 'cssls'}
+local present, nvim_lsp = pcall(require, "lspconfig")
 
+if not present then
+    return
+end
+
+local servers = {'solargraph','ccls','clangd', 'pyright', 'tsserver', 'html', 'gopls', 'jsonls', 'sumneko_lua', 'vimls', 'cssls'}
 
 vim.diagnostic.config({
   signs = true,

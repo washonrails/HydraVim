@@ -1,6 +1,10 @@
-local alpha = require("alpha")
-local dashboard = require("alpha.themes.dashboard")
+local present, alpha = pcall(require, "alpha")
 
+if not present then
+    return
+end
+
+local dashboard = require("alpha.themes.dashboard")
 
 dashboard.section.header.val =
 {

@@ -1,3 +1,9 @@
+local present, lualine = pcall(require, "lualine")
+
+if not present then
+    return
+end
+
 local file_icon = require('lualine.components.filename'):extend()
 file_icon.apply_icon = require('lualine.components.filetype').apply_icon
 
@@ -19,7 +25,7 @@ local function lsp_p()
     return msg
   end
 
-require('lualine').setup {
+lualine.setup {
   options = {
 	symbols = { added = ' ', modified = ' ', removed = ' ', error = ' ', warn = ' ', info = ' ', hint = ' '},
     icons_enabled = true,

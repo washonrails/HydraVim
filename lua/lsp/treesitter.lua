@@ -1,3 +1,9 @@
+local present, telescope = pcall(require, "nvim-treesitter.configs")
+
+if not present then
+    return
+end
+
 require'nvim-treesitter.configs'.setup {
   sync_install = true,
   auto_install = true,

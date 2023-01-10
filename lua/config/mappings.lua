@@ -24,7 +24,6 @@ vc [[ vnoremap <A-k> :m '<-2<CR>gv=gv ]]					-- move a linha atual para cima no 
 -- copiar para cima/baixo
 vc [[ nnoremap <S-j> yyp ]]									-- copia para baixo no modo normal
 vc [[ nnoremap <S-k> yyp :m .-2<CR>== ]]					-- copia para cima no modo normal
-
 vc [[ vnoremap <S-j> <ESC> yyp :m .+0<CR>v ]]				-- copia para baixo no modo visual
 vc [[ vnoremap <S-k> <ESC> yyp:m .-1<CR>gv=gv ]]			-- copia para cima no modo visual
 
@@ -63,8 +62,6 @@ vc([[xmap <leader>sp  <Plug>(coc-convert-snippet)]])
 -- lazygit
 map('n', '<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>")
 
--- map('n', '<leader>th', '<CMD>Telescope colorscheme <CR>')-- selecionar tudo no modo normal
-
 -- NvimTree
 map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
 
@@ -78,27 +75,7 @@ map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
 map('n', '<C-w>', '<CMD>BDelete this<CR>')					-- fechar aba
 map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')		-- fechar aba
 
--- atalho da abas
-vim.cmd([[
-nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
-nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
-" nnoremap <silent><C-w> :BufferLinePickClose<CR>
-" nnoremap <silent><C-w> :BufferLinePickClose<CR>
-]])
-
--- telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
-vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
-vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
-vim.keymap.set('n', '<leader>gt', builtin.git_status, {})
-
 -- terminal
--- vim.cmd[[noremap <leader>t <ESC>:split<CR>:resize -9<CR>:set nonumber<CR>:terminal<CR>]]
 map('n', '<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>') 	-- abr o terminal
 map('n', '<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>')								-- abr o terminal
 map('n', '<A-i>', '<CMD>ToggleTerm direction=float<CR>')										-- abr o terminal
@@ -111,7 +88,27 @@ map('t', '<A-i>', '<CMD>ToggleTerm<CR>')														-- fecha o terminal no mod
 -- ranger
 map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")		-- abre o Ranger
 
--- SUNvim script
--- map('n', '<leader>uu', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/update.sh && exit'<CR>") 	-- SUNvim update
-map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- SUNvim theme
-map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- SUNvim fix_list
+-- HydraVim script
+map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- HydarVim theme
+map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- HydarVim fix_list
+
+-- atalho da abas
+vc ([[
+nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
+nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
+" nnoremap <silent><C-w> :BufferLinePickClose<CR>
+" nnoremap <silent><C-w> :BufferLinePickClose<CR>
+]])
+
+local present, telescope = pcall(require, "telescope")
+
+if present then
+    local builtin = require('telescope.builtin')
+    map('n', '<leader>ff', builtin.find_files, {})
+    map('n', '<leader>fg', builtin.live_grep, {})
+    map('n', '<leader>fb', builtin.buffers, {})
+    map('n', '<leader>fh', builtin.help_tags, {})
+    map('n', '<leader>gc', builtin.git_commits, {})
+    map('n', '<leader>gb', builtin.git_branches, {})
+    map('n', '<leader>gt', builtin.git_status, {})
+end
