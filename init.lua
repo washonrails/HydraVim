@@ -1,31 +1,31 @@
 -- plugins
--- require ('plugins.vim_plug')
-require ('plugins.packer')
-
--- config
-require ('config.autosave')
-require ('config.mappings')
-require ('config.settings')
 -- require ('config.comment')
+-- require ('plugins.vim_plug')
 
--- lsp
-require ('lsp.coc')
-require ('lsp.treesitter')
-require ('lsp.lsp_config')
+local modules = {
+	'plugins.packer',
+	'config.autosave',
+	'config.mappings',
+	'config.settings',
+	'lsp.coc',
+	'lsp.treesitter',
+	'lsp.lsp_config',
+	'plugins.alpha',
+	'plugins.vim_multi',
+	'plugins.buffer',
+	'plugins.colorizer',
+	'plugins.comment',
+	'plugins.gitsigns',
+	'plugins.indent_line',
+	'plugins.lualine',
+	'plugins.nvim_tree',
+	'plugins.telescope',
+	'plugins.toggleterm',
+	'plugins.which_key',
+	'theme.theme',
+}
 
--- plugins config
-require ('plugins.alpha')
-require ('plugins.vim_multi')
-require ('plugins.buffer')
-require ('plugins.colorizer')
-require ('plugins.comment')
-require ('plugins.gitsigns')
-require ('plugins.indent_line')
-require ('plugins.lualine')
-require ('plugins.nvim_tree')
-require ('plugins.telescope')
-require ('plugins.toggleterm')
-require ('plugins.which_key')
-
--- temas
-require ('theme.theme')
+for f, m in pairs(modules) do
+	package.loaded[m] = nil
+	require(m)
+end
