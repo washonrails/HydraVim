@@ -42,30 +42,128 @@ packer.init({
 
 return packer.startup({
 	function(use)
-	use 'wbthomason/packer.nvim'
-	use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-	use 'kazhala/close-buffers.nvim'
-	use 'terrortylor/nvim-comment'
-	use 'nvim-treesitter/nvim-treesitter'
-	use 'nvim-tree/nvim-tree.lua'
-	use 'neovim/nvim-lspconfig'
-	use 'nvim-lualine/lualine.nvim'
-	use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-	use 'lewis6991/gitsigns.nvim'
-	use 'sheerun/vim-polyglot'
-	use {'akinsho/bufferline.nvim', tag = 'v3.*' }
-	use {'akinsho/toggleterm.nvim', tag = '*'}
-	use {'nvim-telescope/telescope.nvim', tag = '0.1.0' }
-	use 'nvim-tree/nvim-web-devicons'
-	use 'goolord/alpha-nvim'
-	use 'nvim-lua/plenary.nvim'
-	use 'lukas-reineke/indent-blankline.nvim'
-	use 'ryanoasis/vim-devicons'
-	use 'honza/vim-snippets'
-	use 'mg979/vim-visual-multi'
-	use 'norcalli/nvim-colorizer.lua'
-	use 'folke/which-key.nvim'
-	use 'folke/zen-mode.nvim'
+	use {'wbthomason/packer.nvim'}
+	use {
+		'iamcco/markdown-preview.nvim',
+		run = 'cd app && yarn install',
+		cmd = 'MarkdownPreview'
+	}
+
+	use {'kazhala/close-buffers.nvim'}
+	use {
+		'terrortylor/nvim-comment',
+		config = function ()
+			require('plugins.comment')
+		end
+		}
+	
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		config = function()
+			require('lsp.treesitter')
+		end
+	}
+
+	use {
+		'nvim-tree/nvim-tree.lua',
+		config = function()
+			require('plugins.nvim_tree')
+		end
+		}
+	
+	use {
+		'neovim/nvim-lspconfig',
+		config = function()
+			require('lsp.lsp_config')
+		end
+	}
+
+	use {
+		'nvim-lualine/lualine.nvim',
+		config = function()
+			require('plugins.lualine')
+		end
+		}
+
+	use {
+		'neoclide/coc.nvim',
+		branch = 'master',
+		run = 'yarn install --frozen-lockfile'
+	}
+
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('plugins.gitsigns')
+		end
+	}
+	use {'sheerun/vim-polyglot'}
+	
+	use {
+		'akinsho/bufferline.nvim',
+		tag = 'v3.*',
+		config = function()
+			require('plugins.buffer')
+		end
+		}
+	
+	use {
+		'akinsho/toggleterm.nvim',
+		tag = '*',
+		config = function()
+			require('plugins.toggleterm')
+		end
+	}
+
+	use {
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.0',
+		config = function()
+			require('plugins.telescope')
+		end
+	}
+
+	use {'nvim-tree/nvim-web-devicons'}
+	use {
+		'goolord/alpha-nvim',
+		config = function()
+			require('plugins.alpha')
+		end
+	}
+
+	use {'nvim-lua/plenary.nvim'}
+	use {
+		'lukas-reineke/indent-blankline.nvim',
+		config = function()
+			require('plugins.indent_line')
+		end
+	}
+
+	use {'ryanoasis/vim-devicons'}
+	use {'honza/vim-snippets'}
+	
+	use {
+		'mg979/vim-visual-multi',
+		config = function ()
+			require('plugins.vim_multi')
+		end
+	}
+
+	use {
+		'norcalli/nvim-colorizer.lua',
+		config = function ()
+			require('plugins.colorizer')
+		end
+	}
+
+	use {
+		'folke/which-key.nvim',
+		config = function()
+			require('plugins.which_key')
+		end
+	}
+
+	use {'folke/zen-mode.nvim'}
 
 	-- temas --
 	use {'catppuccin/nvim', as = 'catppuccin' }
