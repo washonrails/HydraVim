@@ -53,6 +53,7 @@ return packer.startup({
 	use {'kazhala/close-buffers.nvim'}
 	use {
 		'terrortylor/nvim-comment',
+		keys = {"v"},
 		config = function ()
 			require('plugins.comment')
 		end
