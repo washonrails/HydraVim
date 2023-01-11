@@ -166,7 +166,7 @@ return packer.startup({
 	use {'folke/zen-mode.nvim'}
 
 	-- temas --
-	use {'catppuccin/nvim', as = 'catppuccin' }
+	use {'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha"}
 	use 'projekt0n/github-nvim-theme'
 	use 'navarasu/onedark.nvim'
 	use 'tiagovla/tokyodark.nvim'
