@@ -45,6 +45,7 @@ return packer.startup({
 	use {'wbthomason/packer.nvim'}
 	use {
 		'iamcco/markdown-preview.nvim',
+		ft = {'markdown'},
 		run = 'cd app && yarn install',
 		cmd = 'MarkdownPreview'
 	}
@@ -56,16 +57,22 @@ return packer.startup({
 			require('plugins.comment')
 		end
 		}
-	
-	use {
-		'nvim-treesitter/nvim-treesitter',
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
 		config = function()
 			require('lsp.treesitter')
-		end
-	}
+		end,
+		run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
 	use {
 		'nvim-tree/nvim-tree.lua',
+		ft = "alpha",
+		cmd = { "NvimTreeToggle", "NvimTreeFocus"},
 		config = function()
 			require('plugins.nvim_tree')
 		end
@@ -108,8 +115,10 @@ return packer.startup({
 		}
 	
 	use {
+		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i"},
 		'akinsho/toggleterm.nvim',
 		tag = '*',
+		cmd = "ToggleTerm",
 		config = function()
 			require('plugins.toggleterm')
 		end
@@ -118,6 +127,7 @@ return packer.startup({
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
+		cmd = "Telescope",
 		config = function()
 			require('plugins.telescope')
 		end
