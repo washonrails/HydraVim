@@ -45,9 +45,9 @@ return packer.startup({
 	use {'wbthomason/packer.nvim'}
 	use {
 		'iamcco/markdown-preview.nvim',
-		ft = {'markdown'},
 		run = 'cd app && yarn install',
-		cmd = 'MarkdownPreview'
+		ft = {'markdown'},
+		-- cmd = 'MarkdownPreview'
 	}
 
 	use {'kazhala/close-buffers.nvim'}
@@ -81,6 +81,7 @@ return packer.startup({
 	
 	use {
 		'neovim/nvim-lspconfig',
+		event = "BufReadPre",
 		config = function()
 			require('lsp.lsp_config')
 		end
@@ -97,11 +98,14 @@ return packer.startup({
 		'neoclide/coc.nvim',
 		branch = 'master',
 		run = 'yarn install --frozen-lockfile',
-		event = "BufReadPre"
+		config = function()
+			require("lsp.coc")
+		end
 	}
 
 	use {
 		'lewis6991/gitsigns.nvim',
+		event = "BufReadPre",
 		config = function()
 			require('plugins.gitsigns')
 		end
@@ -120,8 +124,8 @@ return packer.startup({
 	use {
 		'akinsho/toggleterm.nvim',
 		tag = '*',
-		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i"},
-		-- cmd = "ToggleTerm",
+		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i", "<leader>"},
+		-- cmd = {":ToggleTerm"},
 		config = function()
 			require('plugins.toggleterm')
 		end
@@ -147,6 +151,7 @@ return packer.startup({
 	use {'nvim-lua/plenary.nvim'}
 	use {
 		'lukas-reineke/indent-blankline.nvim',
+		event = "BufReadPre",
 		config = function()
 			require('plugins.indent_line')
 		end
@@ -161,6 +166,7 @@ return packer.startup({
 	
 	use {
 		'mg979/vim-visual-multi',
+		event = "BufReadPre",
 		config = function ()
 			require('plugins.vim_multi')
 		end
@@ -168,6 +174,7 @@ return packer.startup({
 
 	use {
 		'norcalli/nvim-colorizer.lua',
+		event = "BufReadPre",
 		config = function ()
 			require('plugins.colorizer')
 		end
@@ -175,6 +182,8 @@ return packer.startup({
 
 	use {
 		'folke/which-key.nvim',
+		keys = "<leader>",
+		after = "toggleterm.nvim",
 		config = function()
 			require('plugins.which_key')
 		end

@@ -3,7 +3,7 @@ local modules = {
 	'config.autosave',
 	'config.mappings',
 	'config.settings',
-	'lsp.coc',
+	-- 'lsp.coc',
 	-- 'lsp.treesitter',
 	-- 'lsp.lsp_config',
 	-- 'plugins.alpha',
