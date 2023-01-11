@@ -87,7 +87,6 @@ return packer.startup({
 
 	use {
 		'nvim-lualine/lualine.nvim',
-		-- event = "BufReadPre",
 		config = function()
 			require('plugins.lualine')
 		end
