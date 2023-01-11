@@ -87,6 +87,7 @@ return packer.startup({
 
 	use {
 		'nvim-lualine/lualine.nvim',
+		-- event = "BufReadPre",
 		config = function()
 			require('plugins.lualine')
 		end
@@ -95,7 +96,8 @@ return packer.startup({
 	use {
 		'neoclide/coc.nvim',
 		branch = 'master',
-		run = 'yarn install --frozen-lockfile'
+		run = 'yarn install --frozen-lockfile',
+		event = "BufReadPre"
 	}
 
 	use {
@@ -109,16 +111,17 @@ return packer.startup({
 	use {
 		'akinsho/bufferline.nvim',
 		tag = 'v3.*',
+		event = "BufReadPre",
 		config = function()
 			require('plugins.buffer')
 		end
 		}
 	
 	use {
-		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i"},
 		'akinsho/toggleterm.nvim',
 		tag = '*',
-		cmd = "ToggleTerm",
+		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i"},
+		-- cmd = "ToggleTerm",
 		config = function()
 			require('plugins.toggleterm')
 		end
@@ -149,7 +152,11 @@ return packer.startup({
 		end
 	}
 
-	use {'ryanoasis/vim-devicons'}
+	use {
+		'ryanoasis/vim-devicons',
+		after = "coc.nvim"
+	}
+
 	use {'honza/vim-snippets'}
 	
 	use {
