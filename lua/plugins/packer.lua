@@ -81,7 +81,6 @@ return packer.startup({
 	
 	use {
 		'neovim/nvim-lspconfig',
-		event = "BufReadPre",
 		config = function()
 			require('lsp.lsp_config')
 		end
