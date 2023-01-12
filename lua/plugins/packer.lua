@@ -104,7 +104,7 @@ return packer.startup({
 
 	use {
 		'lewis6991/gitsigns.nvim',
-		event = "BufReadPre",
+		event = {'BufReadPre', 'BufWritePre'},
 		config = function()
 			require('plugins.gitsigns')
 		end
@@ -114,7 +114,7 @@ return packer.startup({
 	use {
 		'akinsho/bufferline.nvim',
 		tag = 'v3.*',
-		event = "BufReadPre",
+		event = {'BufReadPre'},
 		config = function()
 			require('plugins.buffer')
 		end
