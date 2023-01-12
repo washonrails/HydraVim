@@ -32,14 +32,14 @@ lualine.setup {
     theme = 'auto',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-disabled_filetypes = {
-      'NvimTree','alpha',
+    disabled_filetypes = {
+      'alpha',
       statusline = {},
       winbar = {},
     },
     ignore_focus = {},
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true,
     refresh = {
       statusline = 1000,
       tabline = 1000,
@@ -52,7 +52,7 @@ disabled_filetypes = {
     lualine_x = {'diagnostics'},
     lualine_y = {{ lsp_p }},
     lualine_z = {{'progress', icon = ''}},
-    lualine_c = {{file_icon, symbols = { modified = '', readonly = '', unnamed = 'No Name', newfile = '' } },'diff'}},
+    lualine_c = {{file_icon, symbols = { modified = '', readonly = '', unnamed = 'No Name', newfile = '' } },'diff'}},
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
