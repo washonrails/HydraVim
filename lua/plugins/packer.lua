@@ -150,7 +150,7 @@ return packer.startup({
 	use {'nvim-lua/plenary.nvim'}
 	use {
 		'lukas-reineke/indent-blankline.nvim',
-		event = "BufReadPre",
+		event = {'BufReadPre', 'BufNewFile'},
 		config = function()
 			require('plugins.indent_line')
 		end
@@ -162,7 +162,6 @@ return packer.startup({
 	
 	use {
 		'mg979/vim-visual-multi',
-		event = "BufReadPre",
 		config = function ()
 			require('plugins.vim_multi')
 		end
@@ -170,7 +169,6 @@ return packer.startup({
 
 	use {
 		'norcalli/nvim-colorizer.lua',
-		event = "BufReadPre",
 		config = function ()
 			require('plugins.colorizer')
 		end
