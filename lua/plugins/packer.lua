@@ -156,12 +156,9 @@ return packer.startup({
 		end
 	}
 
-	use {
-		'ryanoasis/vim-devicons',
-		after = "coc.nvim"
-	}
+	use {'ryanoasis/vim-devicons'}
 
-	use {'honza/vim-snippets'}
+	use {'honza/vim-snippets',}
 	
 	use {
 		'mg979/vim-visual-multi',
