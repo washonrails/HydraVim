@@ -236,7 +236,7 @@ sudo apt install rustc
 ```
  chmod +x ~/.local/bin/rust-analyzer 
 ```
-  Read with caution :
+  ⚠️ <b>Read with caution</b> :
   If your ~/.local/bin is not in your path you should to add to your $PATH variable on Shell !
   
   To verify if exist <b>~/.local/bin</b> in your $PATH , type :
