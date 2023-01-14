@@ -47,7 +47,7 @@ lualine.setup {
     }
   },
   sections = {
-    lualine_a = {{icon = '', 'mode'}},
+    lualine_a = {{icon = '', 'mode'}},
     lualine_b = {{ icon = '','branch'}},
     lualine_x = {'diagnostics'},
     lualine_y = {{ lsp_p }},
