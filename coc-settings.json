@@ -4,7 +4,6 @@
 		"kind",
 		"abbr",
 		"menu"
-// 		"shortcut"
 	],
 	"diagnostic.floatConfig": {
 		"border": true,
