@@ -2,6 +2,8 @@ local vc = vim.cmd
 local function map(m, k, v, i)
     vim.keymap.set(m, k, v, i, { silent = true })
 end
+-- limpa pesquisa
+vc [[ nnoremap <silent> <Esc><Esc> :let @/=""<CR> ]]
 
 -- forçar saída
 map('n', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode normal
