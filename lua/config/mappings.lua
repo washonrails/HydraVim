@@ -8,6 +8,12 @@ map('n', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode normal
 map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual	
 map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
 
+-- navegar no modo insert
+map('i', '<C-h>', '<Left>')
+map('i', '<C-j>', '<Down>')
+map('i', '<C-k>', '<Up>')
+map('i', '<C-l>', '<Right>')
+
 -- salvar alterações
 map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>") 	-- salva alerações no modo normal
 
