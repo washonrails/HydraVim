@@ -73,6 +73,7 @@ local toggle_lazygit = function()
 end
 
 local mappings = {
+  u = { ":UpdateSync<CR>", " Update" },
   q = { ":q<cr>", " Quit" },
   H = { "<CMD>NvimTreeClose<CR><CMD>BDelete all<CR><CMD>Alpha<CR><CMD>BDelete all<CR><CMD>echo' Home'<CR>", " Home" },
   c = {
