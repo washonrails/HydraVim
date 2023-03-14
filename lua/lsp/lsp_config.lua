@@ -4,7 +4,7 @@ if not present then
     return
 end
 
-local servers = {'solargraph','ccls','clangd', 'pyright', 'tsserver', 'html', 'gopls', 'jsonls', 'lua_ls', 'vimls', 'cssls'}
+local servers = {'solargraph','ccls','clangd', 'pyright', 'tsserver', 'html', 'gopls', 'jsonls', 'lua_ls', 'vimls', 'cssls', 'rust_analyzer'}
 
 vim.diagnostic.config({
   signs = true,

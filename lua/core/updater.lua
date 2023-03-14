@@ -1,6 +1,13 @@
 local function sync_config_repo()
     local branch = "main"
-    local nvim_config_path = os.getenv("HOME") .. "/.config/nvim"
+
+    local nvim_config_path
+    if package.config:sub(1,1) == '\\' then
+        nvim_config_path = os.getenv("USERPROFILE") .. "\\AppData\\Local\\nvim"
+    else
+        nvim_config_path = os.getenv("HOME") .. "/.config/nvim"
+    end
+
     local git_fetch_command = "git -C " .. nvim_config_path .. " fetch -q"
     local git_pull_command = "git -C " .. nvim_config_path .. " pull -q"
     local git_status_command = "git -C " .. nvim_config_path .. " status -s -b"
@@ -35,3 +42,4 @@ local function sync_config_repo()
 end
 
 vim.api.nvim_create_user_command("UpdateSync", sync_config_repo, {})
+
