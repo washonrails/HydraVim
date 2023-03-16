@@ -1,7 +1,14 @@
-vim.cmd([[
-autocmd BufNewFile,BufRead *.md :autocmd TextChanged,TextChangedI <buffer> silent write
-autocmd BufNewFile,BufRead *.js :autocmd TextChanged,TextChangedI <buffer> silent write
-autocmd BufNewFile,BufRead *.css :autocmd TextChanged,TextChangedI <buffer> silent write
-autocmd BufNewFile,BufRead *.html :autocmd TextChanged,TextChangedI <buffer> silent write
-autocmd BufNewFile,BufRead *.php :autocmd TextChanged,TextChangedI <buffer> silent write
-]])
+local filetypes = {
+	"*.css",
+	"*.html",
+	"*.js",
+	"*.php",
+	"*.md"
+}
+
+vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+	pattern = filetypes,
+	callback = function()
+		vim.cmd "silent write"
+	end
+})
