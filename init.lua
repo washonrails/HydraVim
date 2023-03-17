@@ -5,6 +5,7 @@ local modules = {
 	'config.settings',
 	'core.updater',
 	'theme.theme',
+	'plugins.folding',
 }
 
 for i, name in pairs(modules) do
