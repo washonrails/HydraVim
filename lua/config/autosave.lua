@@ -1,9 +1,16 @@
 local filetypes = {
-	"*.css",
-	"*.html",
-	"*.js",
-	"*.php",
-	"*.md"
+    "*.html",
+    "*.htm",
+    "*.css",
+    "*.scss",
+    "*.less",
+    "*.js",
+    "*.jsx",
+    "*.ts",
+    "*.tsx",
+    "*.vue",
+    "*.md",
+    "*.mdx",
 }
 
 vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
