@@ -54,6 +54,7 @@ return packer.startup({
 	use {
 		'terrortylor/nvim-comment',
 		keys = {"v"},
+		event = {"ModeChanged"},
 		config = function ()
 			require('plugins.comment')
 		end
@@ -97,6 +98,7 @@ return packer.startup({
 		'neoclide/coc.nvim',
 		branch = 'master',
 		run = 'yarn install --frozen-lockfile',
+		event = {"UIEnter"},
 		config = function()
 			require("lsp.coc")
 		end
@@ -123,6 +125,7 @@ return packer.startup({
 	use {
 		'akinsho/toggleterm.nvim',
 		tag = '*',
+		event = {"UIEnter"},
 		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i", "<leader>"},
 		-- cmd = {":ToggleTerm"},
 		config = function()
