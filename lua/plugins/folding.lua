@@ -1,6 +1,6 @@
 vim.o.foldlevel = 99
 vim.o.foldcolumn = '1'
-vim.wo.foldnestmax = 3
+vim.wo.foldnestmax = 1
 vim.wo.foldminlines = 1
 vim.o.foldenable = true
 vim.o.foldlevelstart = 99
