@@ -54,7 +54,7 @@ return packer.startup({
 	use {
 		'terrortylor/nvim-comment',
 		keys = {"v"},
-		event = {"ModeChanged"},
+		event = {'BufReadPre', 'BufNewFile'},
 		config = function ()
 			require('plugins.comment')
 		end
@@ -130,8 +130,6 @@ return packer.startup({
 		'akinsho/toggleterm.nvim',
 		tag = '*',
 		event = {"UIEnter"},
-		-- keys = { "<A-h>", "<A-m>", "<A-i>", "<leader>i", "<leader>"},
-		-- cmd = {":ToggleTerm"},
 		config = function()
 			require('plugins.toggleterm')
 		end
@@ -169,6 +167,7 @@ return packer.startup({
 	
 	use {
 		'mg979/vim-visual-multi',
+		event = {'BufReadPre', 'BufNewFile'},
 		config = function ()
 			require('plugins.vim_multi')
 		end
@@ -189,8 +188,6 @@ return packer.startup({
 			require('plugins.which_key')
 		end
 	}
-
-	use {'folke/zen-mode.nvim'}
 
 	-- temas --
 	use {'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha"}
