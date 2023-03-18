@@ -102,7 +102,7 @@ return packer.startup({
 		'neoclide/coc.nvim',
 		branch = 'master',
 		run = 'yarn install --frozen-lockfile',
-		event = {"UIEnter"},
+		-- event = {"UIEnter"},
 		config = function()
 			require("lsp.coc")
 		end
