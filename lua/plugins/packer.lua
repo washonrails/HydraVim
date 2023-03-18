@@ -138,7 +138,6 @@ return packer.startup({
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0',
-		cmd = "Telescope",
 		config = function()
 			require('plugins.telescope')
 		end
