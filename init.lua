@@ -1,6 +1,6 @@
 local modules = {
 	'plugins.packer',
-	'config.autosave',
+	'config.autocmd',
 	'config.mappings',
 	'config.settings',
 	'core.updater',
