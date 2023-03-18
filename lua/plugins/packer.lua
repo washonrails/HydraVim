@@ -80,6 +80,10 @@ return packer.startup({
 		}
 	
 	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+	}
+	use {
 		'neovim/nvim-lspconfig',
 		config = function()
 			require('lsp.lsp_config')
