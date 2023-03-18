@@ -7,23 +7,15 @@ end
 local file_icon = require('lualine.components.filename'):extend()
 file_icon.apply_icon = require('lualine.components.filetype').apply_icon
 
-local function lsp_p()
-	local icon = ''
-	local n_msg = 'No LSP'
-    local msg = string.format("%s %s", icon, n_msg)
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return string.format("%s %s",icon, client.name)
-      end
-    end
-    return msg
+local function lsp_name()
+  local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+  local clients = vim.lsp.get_active_clients()
+  local client_name = next(clients) and clients[1].config.filetypes and vim.fn.index(clients[1].config.filetypes, buf_ft) ~= -1 and clients[1].name or ''
+  if not client_name or client_name == '' then
+    return client_name
   end
+  return string.format(" %s", client_name)
+end
 
 lualine.setup {
   options = {
@@ -50,7 +42,7 @@ lualine.setup {
     lualine_a = {{icon = '', 'mode'}},
     lualine_b = {{ icon = '','branch'}},
     lualine_x = {'diagnostics'},
-    lualine_y = {{ lsp_p }},
+    lualine_y = {{ lsp_name }},
     lualine_z = {{'progress', icon = ''}},
     lualine_c = {{file_icon, symbols = { modified = '', readonly = '', unnamed = 'No Name', newfile = '' } },'diff'}},
   inactive_sections = {
