@@ -1,7 +1,6 @@
 local vc = vim.cmd
-local function map(m, k, v, i)
-    vim.keymap.set(m, k, v, i, { silent = true })
-end
+local map = require("core.utils").Map
+
 -- limpa pesquisa
 vc [[ nnoremap <silent> <Esc><Esc> :let @/=""<CR> ]]
 
