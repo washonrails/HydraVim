@@ -12,6 +12,30 @@ cmp.setup({
     end,
   },
 
+  mapping = {
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
+    -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<Esc>'] = cmp.mapping.abort(),
+    -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end
+
+  },
+
     formatting = {
       fields = { 'kind', 'abbr'},
       format = function(_, vim_item)
@@ -38,30 +62,6 @@ cmp.setup({
         border = border('CmpBorder'),
       },
     },
-
-  mapping = cmp.mapping.preset.insert({
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-d>'] = cmp.mapping.scroll_docs(4),
-    -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<Esc>'] = cmp.mapping.abort(),
-    -- ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback()
-      end
-    end
-
-  }),
 })
 
 cmp.setup.filetype('gitcommit', {
