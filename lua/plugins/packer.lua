@@ -47,7 +47,6 @@ return packer.startup({
 		'iamcco/markdown-preview.nvim',
 		run = 'cd app && yarn install',
 		ft = {'markdown'},
-		-- cmd = 'MarkdownPreview'
 	}
 
 	use {'kazhala/close-buffers.nvim'}
@@ -97,16 +96,6 @@ return packer.startup({
 			require('plugins.lualine')
 		end
 		}
-
-	use {
-		'neoclide/coc.nvim',
-		branch = 'master',
-		run = 'yarn install --frozen-lockfile',
-		-- event = {"UIEnter"},
-		config = function()
-			require("lsp.coc")
-		end
-	}
 
 	use {
 		'lewis6991/gitsigns.nvim',
@@ -188,7 +177,25 @@ return packer.startup({
 		end
 	}
 
-	-- temas --
+use {
+	'hrsh7th/nvim-cmp',
+	requires =  {
+		'neovim/nvim-lspconfig',
+		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-cmdline',
+		'windwp/nvim-autopairs',
+
+		'SirVer/ultisnips',
+		'quangnguyen30192/cmp-nvim-ultisnips',
+		'rafamadriz/friendly-snippets',
+		},
+	config = function ()
+		require('lsp.cmp')
+	end
+	}
+
 	use {'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha"}
 	use 'projekt0n/github-nvim-theme'
 	use 'navarasu/onedark.nvim'

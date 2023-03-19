@@ -17,6 +17,7 @@ opt.cursorline = true	-- destaca a linha atual do cursor
 opt.smartindent = true	-- auto indentação do code
 opt.termguicolors = true	--  melhor suporte a cores
 o.syntax = 'on'	-- ativa a sintaxe
+o.updatetime = 250
 o.undofile = true	-- ativa o desfazer
 o.smartcase = true 	-- diferência letras maiúsculas e minúsculas
 o.ignorecase = true	-- ignorar letras maiúsculas ao executar uma pesquisa
