@@ -1,4 +1,6 @@
-local function sync_config_repo()
+local H = {}
+
+H.sync_config_repo = function()
     local branch = "main"
 
     local nvim_config_path
@@ -41,5 +43,4 @@ local function sync_config_repo()
     vim.cmd[[ PackerSync ]]
 end
 
-vim.api.nvim_create_user_command("UpdateSync", sync_config_repo, {})
-
+return H

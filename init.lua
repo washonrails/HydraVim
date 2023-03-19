@@ -4,7 +4,6 @@ local modules = {
 	'config.mappings',
 	'config.settings',
 	'config.command',
-	'core.updater',
 	'theme.theme',
 	'plugins.folding',
 }
