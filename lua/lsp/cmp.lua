@@ -1,11 +1,18 @@
-local cmp = require'cmp'
-local border = require("core.border").rouded 
+local preset, cmp = pcall(require, 'cmp')
+local border = require("core.border").rouded
 local kind_icons = require("core.ui.icons").icons.kind_icons
+local preset_p, autopairs = pcall(require, "nvim-autopairs")
 
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-require("nvim-autopairs").setup {}
+if not preset then
+  return
+end
+
+if preset_p then
+  autopairs.setup({})
+end
 
 cmp.setup({
+  confirmation = { completeopt = 'menu, menuone, noinsert' },
   snippet = {
     expand = function(args)
       vim.fn["UltiSnips#Anon"](args.body)
