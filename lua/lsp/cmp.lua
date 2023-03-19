@@ -12,7 +12,7 @@ cmp.setup({
     end,
   },
 
-  mapping = {
+  mapping = cmp.mapping.preset.insert{
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     -- ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -33,7 +33,6 @@ cmp.setup({
         fallback()
       end
     end
-
   },
 
     formatting = {
@@ -73,14 +72,20 @@ cmp.setup.filetype('gitcommit', {
 })
 
 cmp.setup.cmdline({ '/', '?' }, {
-  mapping = cmp.mapping.preset.cmdline(),
+    mapping = cmp.mapping.preset.cmdline({
+        ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
+        ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
+    }),
   sources = {
     { name = 'buffer' }
   }
 })
 
 cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
+    mapping = cmp.mapping.preset.cmdline({
+        ['<Down>'] = { c = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }) },
+        ['<Up>'] = { c = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }) },
+    }),
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
