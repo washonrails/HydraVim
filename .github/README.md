@@ -290,6 +290,9 @@ To use follow the instructions below <p>
 - The server will be updated as soon as the files are saved
 <br />
 
+## 💫 Thanks to
+We are grateful to the repositories, plugin authors and the Neovim community for making HydraVim possible.  They offer special thanks to AstroVim, NvChad, LunarVim and CosmicVim for their inspiration and resources, as well as to all the plugin developers who have created useful tools for Neovim.
+
 ### <img width="auto" height="20px" src="https://github.com/oddlama/vane/blob/main/docs/vane.png"> General
   
 <img src="https://img.shields.io/badge/Mantained:-Yes! (Bug fixes, Repository , Website..)-brightgreen?style=flat">
@@ -313,6 +316,6 @@ To use follow the instructions below <p>
 <b>Librepay:</b> <br>
 <a href="https://liberapay.com/"><img alt="Donate usando liberepay" src="https://liberapay.com/assets/widgets/donate.svg"></a> 
 
-<br /> 
+<br />
 
 <p align="center"><b> Se você gostou da nossa versão modificada do Vim e de alguma maneira quiser contrubuir com a nossa equipe fique avontade 😊</b> </p>
