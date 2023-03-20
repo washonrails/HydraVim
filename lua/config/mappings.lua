@@ -46,7 +46,14 @@ local local_mappings = {
 	    {'<leader>gc', ':Telescope git_commits<cr>'},
 	    {'<leader>gb', ':Telescope git_branches<cr>'},
 	    {'<leader>gt', ':Telescope git_status<cr>'},
-        {'<Esc><Esc>', ':let @/=""<CR>'}
+        {'<Esc><Esc>', ':let @/=""<CR>'},
+        {'<C-A-PageUp>', ':BufferLineMoveNext<CR>',},
+        {'<C-A-PageDown>', ':BufferLineMovePrev<CR>'},
+        {'<C-A-h>', ':vertical resize +3<CR>'},
+        {'<C-A-l>', ':vertical resize -3<CR>'},
+        {'<C-A-j>', ':resize -3<CR>'},
+        {'<C-A-k>', ':resize +3<CR>'},
+        {'<S-j>', 'yyp'},
     },
 
     v = {

@@ -5,7 +5,7 @@ H.ReloadVimrc = function ()
 end
 
 H.Map = function(mode, keys, comd, desc)
-    vim.keymap.set(mode, keys, comd, desc, { silent = true })
+    vim.keymap.set(mode, keys, comd, desc, { silent = true, noremap = true })
 end
 
 return H
