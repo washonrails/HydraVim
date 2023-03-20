@@ -42,6 +42,11 @@ local local_mappings = {
         {'gl', '<cmd>lua vim.diagnostic.open_float()<cr>'},
         {'[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>'},
         {']d', '<cmd>lua vim.diagnostic.goto_next()<cr>'},
+	    {'<leader>ff', ':Telescope find_files<cr>'},
+	    {'<leader>gc', ':Telescope git_commits<cr>'},
+	    {'<leader>gb', ':Telescope git_branches<cr>'},
+	    {'<leader>gt', ':Telescope git_status<cr>'},
+        -- {'<leader>ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<CR>'}
     },
 
     v = {
