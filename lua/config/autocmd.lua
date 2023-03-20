@@ -29,3 +29,8 @@ autocmd({ "TextChanged", "TextChangedI" }, {
 	pattern = filetypes,
     command = "silent write"
 })
+
+autocmd({ "BufWritePost" }, {
+	pattern = '*',
+	command = "FormatWrite"
+})
