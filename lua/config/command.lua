@@ -3,7 +3,8 @@ local updater = require("core.updater")
 
 local commands = {
     { "ReloadVim", utils.ReloadVimrc, {}, "Reloading HydraVim" },
-    { "UpdateSync", updater.sync_config_repo, {}, "Update HydarVim" }
+    { "UpdateSync", updater.sync_config_repo, {}, "Update HydarVim" },
+    { "Errors", utils.GetError , {}, "Getting Error Messages" }
 }
 
 for _, command in ipairs(commands) do
