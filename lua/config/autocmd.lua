@@ -1,36 +1,36 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 local filetypes = {
-    "*.html",
-    "*.htm",
-    "*.css",
-    "*.scss",
-    "*.less",
-    "*.js",
-    "*.jsx",
-    "*.ts",
-    "*.tsx",
-    "*.vue",
-    "*.md",
-    "*.mdx",
+	"*.html",
+	"*.htm",
+	"*.css",
+	"*.scss",
+	"*.less",
+	"*.js",
+	"*.jsx",
+	"*.ts",
+	"*.tsx",
+	"*.vue",
+	"*.md",
+	"*.mdx",
 }
 
-autocmd({ "InsertEnter"}, {
-	pattern = '*',
-    command = "setlocal nohlsearch"
+autocmd({ "InsertEnter" }, {
+	pattern = "*",
+	command = "setlocal nohlsearch",
 })
 
-autocmd({ "InsertLeave"}, {
-	pattern = '*',
-    command = "setlocal hlsearch",
+autocmd({ "InsertLeave" }, {
+	pattern = "*",
+	command = "setlocal hlsearch",
 })
 
 autocmd({ "TextChanged", "TextChangedI" }, {
 	pattern = filetypes,
-    command = "silent write"
+	command = "silent write",
 })
 
 autocmd({ "BufWritePost" }, {
-	pattern = '*',
-	command = "FormatWrite"
+	pattern = "*",
+	command = "FormatWrite",
 })
