@@ -46,7 +46,7 @@ local local_mappings = {
 	    {'<leader>gc', ':Telescope git_commits<cr>'},
 	    {'<leader>gb', ':Telescope git_branches<cr>'},
 	    {'<leader>gt', ':Telescope git_status<cr>'},
-        -- {'<leader>ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<CR>'}
+        {'<Esc><Esc>', ':let @/=""<CR>'}
     },
 
     v = {
