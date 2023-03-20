@@ -28,6 +28,8 @@ local options = {
     g = {
     mapleader = ' ',
     maplocalleader = ' ',
+    neovide_scale_factor = 0.7,
+    neovide_hide_mouse_when_typing = true,
     }
 }
 

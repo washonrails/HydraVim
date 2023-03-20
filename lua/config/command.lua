@@ -2,8 +2,8 @@ local utils = require("core.utils")
 local updater = require("core.updater")
 
 local commands = {
-    {"HydraVimReload", utils.ReloadVimrc, {}, "Reload HydraVim"},
-    {"UpdateSync", updater.sync_config_repo, {}, "Update HydarVim"}
+    { "ReloadVim", utils.ReloadVimrc, {}, "Reloading HydraVim" },
+    { "UpdateSync", updater.sync_config_repo, {}, "Update HydarVim" }
 }
 
 for _, command in ipairs(commands) do
