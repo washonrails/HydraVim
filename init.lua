@@ -1,5 +1,7 @@
+
 local modules = {
-	'plugins.packer',
+	-- 'plugins.packer',
+	'plugins.lazy',
 	'config.autocmd',
 	'config.mappings',
 	'config.settings',
