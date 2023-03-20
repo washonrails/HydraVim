@@ -46,10 +46,10 @@ lazy.setup({
    { 'iamcco/markdown-preview.nvim',run = 'cd app && yarn install', ft = {'markdown' } },
 
    { 'terrortylor/nvim-comment',  keys = {"v"},  event = {'BufReadPre', 'BufNewFile' },
-		config = function () require('plugins.comment') end 
+		config = function () require('plugins.comment') end
    },
 
-   { 'nvim-treesitter/nvim-treesitter', 
+   { 'nvim-treesitter/nvim-treesitter',
 		config = function() require('lsp.treesitter') end,
 		run = function() local ts_update = require('nvim-treesitter.install').update({ with_sync = true }) ts_update() end,
    },
@@ -90,7 +90,7 @@ lazy.setup({
 		end
    },
 
-	
+
 	{
 		'akinsho/bufferline.nvim',
 		tag = 'v3.*',
@@ -117,7 +117,7 @@ lazy.setup({
 		end
 	},
 
-	
+
 	{
 		'goolord/alpha-nvim',
 		config = function()
@@ -162,7 +162,7 @@ lazy.setup({
 				require('plugins.which_key')
 		end
 	},
-	
+
 	-- Themes
 	{ 'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha" },
 	'projekt0n/github-nvim-theme',
