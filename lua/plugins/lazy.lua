@@ -23,6 +23,10 @@ lazy.setup({
    'nvim-lua/plenary.nvim',
    'ryanoasis/vim-devicons',
    'honza/vim-snippets',
+   { 'mhartington/formatter.nvim',
+		event = "BufWritePost",
+		config = function() require("plugins.formatter") end
+	},
 
 	-- LSP REQUIRES -- DONT TOUCH THIS YOUR MOTHERFUCKER !!!
    'neovim/nvim-lspconfig',
