@@ -12,180 +12,168 @@ end
 
 vim.cmd("set rtp+=" .. lazypath)
 
--- Example using a list of specs with the default options
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-
 local lazy = require("lazy")
 lazy.setup({
-   "folke/neodev.nvim",
-   "folke/which-key.nvim",
+   'wbthomason/packer.nvim',
+   'folke/neodev.nvim',
+   'folke/which-key.nvim',
+   'kazhala/close-buffers.nvim',
+   'sheerun/vim-polyglot',
+   'nvim-tree/nvim-web-devicons',
+   'nvim-lua/plenary.nvim',
+   'ryanoasis/vim-devicons',
+   'honza/vim-snippets',
+
+	-- LSP REQUIRES -- DONT TOUCH THIS YOUR MOTHERFUCKER !!!
+   'neovim/nvim-lspconfig',
+   'hrsh7th/cmp-nvim-lsp',
+   'hrsh7th/cmp-buffer',
+   'hrsh7th/cmp-path',
+   'hrsh7th/cmp-cmdline',
+   'windwp/nvim-autopairs',
+
+   'SirVer/ultisnips',
+   'quangnguyen30192/cmp-nvim-ultisnips',
+   'rafamadriz/friendly-snippets',
+{
+   'hrsh7th/nvim-cmp',
+	config = function ()
+		require('lsp.cmp')
+	end
+},
+
    { "folke/neoconf.nvim", cmd = "Neoconf" },
-   { 'iamcco/markdown-preview.nvim',run = 'cd app && yarn install', ft = {'markdown'} },
-   {'kazhala/close-buffers.nvim'},
-  {
-   'terrortylor/nvim-comment',
-   keys = {"v"},
-   event = {'BufReadPre', 'BufNewFile'},
-   config = function ()
-           require('plugins.comment')
-   end
+   { 'iamcco/markdown-preview.nvim',run = 'cd app && yarn install', ft = {'markdown' } },
+
+   { 'terrortylor/nvim-comment',  keys = {"v"},  event = {'BufReadPre', 'BufNewFile' },
+		config = function () require('plugins.comment') end 
    },
 
-{
-'nvim-treesitter/nvim-treesitter',
-        config = function()
-                require('lsp.treesitter')
-        end,
-        run = function()
-    local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-    ts_update()
-end,
-},
+   { 'nvim-treesitter/nvim-treesitter', 
+		config = function() require('lsp.treesitter') end,
+		run = function() local ts_update = require('nvim-treesitter.install').update({ with_sync = true }) ts_update() end,
+   },
 
-{
-                'nvim-tree/nvim-tree.lua',
-                ft = "alpha",
-                cmd = { "NvimTreeToggle", "NvimTreeFocus"},
-                config = function()
-                        require('plugins.nvim_tree')
-                end
-                },
+   {
+	 'nvim-tree/nvim-tree.lua',
+		ft = "alpha",
+		cmd = { "NvimTreeToggle", "NvimTreeFocus"},
+		config = function()
+			require('plugins.nvim_tree')
+		end
+   },
 
-{
-                "williamboman/mason.nvim",
-                "williamboman/mason-lspconfig.nvim",
-},
+   {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+   },
 
+   {
+		'neovim/nvim-lspconfig',
+		config = function()
+			require('lsp.lsp_config')
+		end
+   },
 
-{
-                'neovim/nvim-lspconfig',
-                config = function()
-                        require('lsp.lsp_config')
-                end
-},
+   {
+		'nvim-lualine/lualine.nvim',
+		config = function()
+			require('plugins.lualine')
+		end
+   },
 
-{
-                'nvim-lualine/lualine.nvim',
-                config = function()
-                        require('plugins.lualine')
-                end
-},
+   {
+		'lewis6991/gitsigns.nvim',
+		event = {'BufReadPre', 'BufWritePre'},
+		config = function()
+			require('plugins.gitsigns')
+		end
+   },
 
-{
-                'lewis6991/gitsigns.nvim',
-                event = {'BufReadPre', 'BufWritePre'},
-                config = function()
-                        require('plugins.gitsigns')
-                end
-},
+	
+	{
+		'akinsho/bufferline.nvim',
+		tag = 'v3.*',
+		event = {'BufReadPre'},
+		config = function()
+				require('plugins.buffer')
+		end
+	},
 
-{'sheerun/vim-polyglot'},
-{
-                'akinsho/bufferline.nvim',
-                tag = 'v3.*',
-                event = {'BufReadPre'},
-                config = function()
-                        require('plugins.buffer')
-                end
-},
+	{
+		'akinsho/toggleterm.nvim',
+		tag = '*',
+		event = {"UIEnter"},
+		config = function()
+				require('plugins.toggleterm')
+		end
+	},
 
-{
-                'akinsho/toggleterm.nvim',
-                tag = '*',
-                event = {"UIEnter"},
-                config = function()
-                        require('plugins.toggleterm')
-                end
-},
+	{
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.0',
+		config = function()
+				require('plugins.telescope')
+		end
+	},
 
-{
-                'nvim-telescope/telescope.nvim',
-                tag = '0.1.0',
-                config = function()
-                        require('plugins.telescope')
-                end
-},
+	
+	{
+		'goolord/alpha-nvim',
+		config = function()
+				require('plugins.alpha')
+		end
+	},
 
-{'nvim-tree/nvim-web-devicons'},
-{
-                'goolord/alpha-nvim',
-                config = function()
-                        require('plugins.alpha')
-                end
-},
- {
-                'goolord/alpha-nvim',
-                config = function()
-                        require('plugins.alpha')
-                end
-},
+	{
+		'goolord/alpha-nvim',
+		config = function()
+				require('plugins.alpha')
+		end
+	},
 
-        {'nvim-lua/plenary.nvim'},
-        {
-                'lukas-reineke/indent-blankline.nvim',
-                event = {'BufReadPre', 'BufNewFile'},
-                config = function()
-                        require('plugins.indent_line')
-                end
-        },
+	{
+		'lukas-reineke/indent-blankline.nvim',
+		event = {'BufReadPre', 'BufNewFile'},
+		config = function()
+				require('plugins.indent_line')
+		end
+	},
+	{
+		'mg979/vim-visual-multi',
+		event = {'BufReadPre', 'BufNewFile'},
+		config = function ()
+				require('plugins.vim_multi')
+		end
+	},
 
-        {'ryanoasis/vim-devicons'},
+	{
+		'norcalli/nvim-colorizer.lua',
+		config = function ()
+				require('plugins.colorizer')
+		end
+	},
 
-        {'honza/vim-snippets'},
-        
-        {
-                'mg979/vim-visual-multi',
-                event = {'BufReadPre', 'BufNewFile'},
-                config = function ()
-                        require('plugins.vim_multi')
-                end
-        },
-
-        {
-                'norcalli/nvim-colorizer.lua',
-                config = function ()
-                        require('plugins.colorizer')
-                end
-        },
-
-        {
-                'folke/which-key.nvim',
-                keys = "<leader>",
-                after = "toggleterm.nvim",
-                config = function()
-                        require('plugins.which_key')
-                end
-        },
-
-{
-        'hrsh7th/nvim-cmp',
-        requires =  {
-                'neovim/nvim-lspconfig',
-                'hrsh7th/cmp-nvim-lsp',
-                'hrsh7th/cmp-buffer',
-                'hrsh7th/cmp-path',
-                'hrsh7th/cmp-cmdline',
-                'windwp/nvim-autopairs',
-
-                'SirVer/ultisnips',
-                'quangnguyen30192/cmp-nvim-ultisnips',
-                'rafamadriz/friendly-snippets',
-                },
-        config = function ()
-                require('lsp.cmp')
-        end
-        },
-
-        {'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha"},
-        'projekt0n/github-nvim-theme',
-        'navarasu/onedark.nvim',
-        'tiagovla/tokyodark.nvim',
-        'folke/tokyonight.nvim',
-        'ellisonleao/gruvbox.nvim',
-        'luisiacc/gruvbox-baby',
-        'rafamadriz/neon',
-        'shaunsingh/nord.nvim',
-        'rmehri01/onenord.nvim',
+	{
+		'folke/which-key.nvim',
+		keys = "<leader>",
+		after = "toggleterm.nvim",
+		config = function()
+				require('plugins.which_key')
+		end
+	},
+	
+	-- Themes
+	{ 'catppuccin/nvim', as = 'catppuccin', run = ":colorscheme catppuccin-mocha" },
+	'projekt0n/github-nvim-theme',
+	'navarasu/onedark.nvim',
+	'tiagovla/tokyodark.nvim',
+	'folke/tokyonight.nvim',
+	'ellisonleao/gruvbox.nvim',
+	'luisiacc/gruvbox-baby',
+	'rafamadriz/neon',
+	'shaunsingh/nord.nvim',
+	'rmehri01/onenord.nvim',
 
 })
 
