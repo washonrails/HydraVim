@@ -1,146 +1,80 @@
-local vc = vim.cmd
-local map = require("core.utils").Map
+local map = require('core.utils').Map
 
--- limpa pesquisa
-vc [[ nnoremap <silent> <Esc><Esc> :let @/=""<CR> ]]
+local local_mappings = {
+    n = {
+        {'<C-Q>', '<ESC><CMD>q!<CR>'},
+        {'<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>"},
+        {'<A-S-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>"},
+        {'<A-S-l>', "<CMD>NvimTreeClose<CR> <CMD> :source .hydra_session.vim<CR><CMD>echo 'Loaded Session '<CR>"},
+        {'<A-j>', '<CMD>m .+1<CR>=='},
+        {'<A-k>', '<CMD>m .-2<CR>=='},
+        {'<A-n>', '<CMD>vsplit<CR>'},
+        {'<A-b>', '<CMD>split<CR>'},
+        {'<C-h>', '<C-w>h'},
+        {'<C-l>', '<C-w>l'},									-- move o cursor para a esquerda
+        {'<C-k>', '<C-w>k'},									-- move o cursor para baixo
+        {'<C-j>', '<C-w>j'},									-- move o cursor para cima
+        {'<C-z>', 'u'},										-- desfaz alterações no modo normal
+        {'<C-v>', 'p<ESC>'},									-- colar no modo normal
+        {'<C-a>', 'ggVG'},									-- selecionar tudo no modo normal
+        {'<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>"},
+        {'<leader>e', '<CMD>NvimTreeToggle <CR>'},			-- selecionar tudo no modo normal
+        {'<TAB>', '<CMD>BufferLineCycleNext<CR>'},			-- selecionnar aba esuqerda
+        {'<S-TAB>', '<CMD>BufferLineCyclePrev<CR>'},			-- selecionar aba direita
+        {'<C-w>', '<CMD>BDelete this<CR>'},					-- fechar aba
+        {'<leader>p', '<CMD>BufferLineTogglePin<CR>'},		-- fechar aba
+        {'<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>'}, 	-- abr o terminal
+        {'<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>'},								-- abr o terminal
+        {'<A-i>', '<CMD>ToggleTerm direction=float<CR>'},										-- abr o terminal
+        {'<leader>i', '<CMD>ToggleTerm direction=float<CR>'},									-- abr o terminal
+        {'<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>"},		-- abre o Ranger
+        {'<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>"}, 	-- HydarVim theme
+        {'<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>"}, 	 		-- HydarVim fix_list
+        {'K', '<cmd>lua vim.lsp.buf.hover()<cr>'},
+        {'gd', '<cmd>lua vim.lsp.buf.definition()<cr>'},
+        {'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>'},
+        {'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>'},
+        {'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>'},
+        {'gr', '<cmd>lua vim.lsp.buf.references()<cr>'},
+        {'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>'},
+        {'<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>'},
+        {'<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>'},
+        {'gl', '<cmd>lua vim.diagnostic.open_float()<cr>'},
+        {'[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>'},
+        {']d', '<cmd>lua vim.diagnostic.goto_next()<cr>'},
+    },
 
--- forçar saída
-map('n', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode normal
-map('v', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode visual	
-map('i', '<C-Q>', '<ESC><CMD>q!<CR>')						-- força saída no mode inserir
+    v = {
+        {'<C-Q>', '<ESC><CMD>q!<CR>'},						-- força saída no mode visual	
+        {'<C-z>', '<ESC>u<ESC>gv=gv'},						-- desfaz alterações no modo visual
+        {'<C-c>', 'y<ESC>'},									-- copia o texto o selecionado
+        {'<C-v>', 'p<ESC>gv=gv'},							-- colar no modo visual
+        {'<C-a>', 'ggVG'},									-- selecionar tudo no modo visual
+        {'<S-TAB>', '<gv'},									-- remove TAB do texto selecionado
+        {'<TAB>', '>gv'},									-- adiciona TAB do texto selecionado
 
--- navegar no modo insert
-map('i', '<C-h>', '<Left>')
-map('i', '<C-j>', '<Down>')
-map('i', '<C-k>', '<Up>')
-map('i', '<C-l>', '<Right>')
+    },
 
--- salvar alterações
-map('n', '<C-s>', "<CMD>w<CR><CMD>echo 'Save '<CR>") 	-- salva alerações no modo normal
+    i = {
+        {'<C-Q>', '<ESC><CMD>q!<CR>'},						-- força saída no mode inserir
+        {'<C-h>', '<Left>'},
+        {'<C-j>', '<Down>'},
+        {'<C-k>', '<Up>'},
+        {'<C-l>', '<Right>'},
+    },
 
-map('n', '<A-S-s>', "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>") -- salva a sessao atual
-map('n', '<A-S-l>', "<CMD>NvimTreeClose<CR> <CMD> :source .hydra_session.vim<CR><CMD>echo 'Loaded Session '<CR>") -- abre a ultima sessao salva.
+    t = {
+        {'<A-h>', '<CMD>ToggleTerm<CR>'},														-- fecha o terminal no modo terminal
+        {'<A-m>', '<CMD>ToggleTerm<CR>'},														-- fecha o terminal no modo terminal
+        {'<A-i>', '<CMD>ToggleTerm<CR>'},														-- fecha o terminal no modo terminal
+    },
+    x = {
+        {'<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>'},
+    }
+}
 
--- mover linhas
-map('n', '<A-j>', '<CMD>m .+1<CR>==')						-- move a linha atual para baixo no modo normal
-map('n', '<A-k>', '<CMD>m .-2<CR>==')						-- move a linha atual para cima no modo normal
-
-vc [[ vnoremap <A-j> :m '>+1<CR>gv=gv ]]					-- move a linha atual para baixo no modo visual
-vc [[ vnoremap <A-k> :m '<-2<CR>gv=gv ]]					-- move a linha atual para cima no modo visual
-
--- copiar para cima/baixo
-vc [[ nnoremap <S-j> yyp ]]									-- copia para baixo no modo normal
-vc [[ nnoremap <S-k> yyp :m .-2<CR>== ]]					-- copia para cima no modo normal
-vc [[ vnoremap <S-j> <ESC> yyp :m .+0<CR>v ]]				-- copia para baixo no modo visual
-vc [[ vnoremap <S-k> <ESC> yyp:m .-1<CR>gv=gv ]]			-- copia para cima no modo visual
-
--- dividir a tela - split mode
-map('n', '<A-n>', '<CMD>vsplit<CR>')						-- divide o buffer verticalmente 
-map('n', '<A-b>', '<CMD>split<CR>')							-- divide o buffer horizontalmente
-
--- split resize
-vc [[ nnoremap <silent> <C-A-h> :vertical resize +3<CR> ]]	-- redimenciona o buffer vertical para a esquerda
-vc [[ nnoremap <silent> <C-A-l> :vertical resize -3<CR> ]]	-- redimendiona o buffer vertical para a direita
-vc [[ nnoremap <silent> <C-A-j> :resize -3<CR> ]]			-- redimensiona o buffer horizontal para baixo
-vc [[ nnoremap <silent> <C-A-k> :resize +3<CR> ]]			-- redimensiona o buffer horizontal para cima
-
--- navegação
-map('n', '<C-h>', '<C-w>h')									-- move o cursor para a direita
-map('n', '<C-l>', '<C-w>l')									-- move o cursor para a esquerda
-map('n', '<C-k>', '<C-w>k')									-- move o cursor para baixo
-map('n', '<C-j>', '<C-w>j')									-- move o cursor para cima
-
--- desfazer
-map('n', '<C-z>', 'u')										-- desfaz alterações no modo normal
-map('v', '<C-z>', '<ESC>u<ESC>gv=gv')						-- desfaz alterações no modo visual
-
--- copiar e colar
-map('v', '<C-c>', 'y<ESC>')									-- copia o texto o selecionado
-map('v', '<C-v>', 'p<ESC>gv=gv')							-- colar no modo visual
-map('n', '<C-v>', 'p<ESC>')									-- colar no modo normal
-
--- selecionar tudo
-map('v', '<C-a>', 'ggVG')									-- selecionar tudo no modo visual
-map('n', '<C-a>', 'ggVG')									-- selecionar tudo no modo normal
-
--- snippets
-vc([[xmap <leader>sp  <Plug>(coc-convert-snippet)]])
-
--- lazygit
-map('n', '<leader>lg', "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>")
-
--- NvimTree
-map('n', '<leader>e', '<CMD>NvimTreeToggle <CR>')			-- selecionar tudo no modo normal
-
--- add/rm TAB em texto
-map('v', '<TAB>', '>gv')									-- adiciona TAB do texto selecionado
-map('v', '<S-TAB>', '<gv')									-- remove TAB do texto selecionado
-
--- abas
-map('n', '<TAB>', '<CMD>BufferLineCycleNext<CR>')			-- selecionnar aba esuqerda
-map('n', '<S-TAB>', '<CMD>BufferLineCyclePrev<CR>')			-- selecionar aba direita
-map('n', '<C-w>', '<CMD>BDelete this<CR>')					-- fechar aba
-map('n', '<leader>p', '<CMD>BufferLineTogglePin<CR>')		-- fechar aba
-
--- terminal
-map('n', '<A-h>', '<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>') 	-- abr o terminal
-map('n', '<A-m>', '<CMD>ToggleTerm size=45 direction=vertical<CR>')								-- abr o terminal
-map('n', '<A-i>', '<CMD>ToggleTerm direction=float<CR>')										-- abr o terminal
-map('n', '<leader>i', '<CMD>ToggleTerm direction=float<CR>')									-- abr o terminal
-
-map('t', '<A-h>', '<CMD>ToggleTerm<CR>')														-- fecha o terminal no modo terminal
-map('t', '<A-m>', '<CMD>ToggleTerm<CR>')														-- fecha o terminal no modo terminal
-map('t', '<A-i>', '<CMD>ToggleTerm<CR>')														-- fecha o terminal no modo terminal
-
--- ranger
-map('n', '<leader>rr', "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>")		-- abre o Ranger
-
--- HydraVim script
-map('n', '<leader>th', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>") 	-- HydarVim theme
-map('n', '<leader>uf', "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>") 	 		-- HydarVim fix_list
-
--- atalho da abas
-vc ([[
-nnoremap <silent><C-A-PageUp> :BufferLineMoveNext<CR>
-nnoremap <silent><C-A-PageDown> :BufferLineMovePrev<CR>
-" nnoremap <silent><C-w> :BufferLinePickClose<CR>
-" nnoremap <silent><C-w> :BufferLinePickClose<CR>
-]])
-
-local present, telescope = pcall(require, "telescope")
-
-if present then
-    local builtin = require('telescope.builtin')
-    map('n', '<leader>ff', builtin.find_files, {})
-    map('n', '<leader>fg', builtin.live_grep, {})
-    map('n', '<leader>fb', builtin.buffers, {})
-    map('n', '<leader>fh', builtin.help_tags, {})
-    map('n', '<leader>gc', builtin.git_commits, {})
-    map('n', '<leader>gb', builtin.git_branches, {})
-    map('n', '<leader>gt', builtin.git_status, {})
+for type, mappings in pairs(local_mappings) do
+    for _, maps in ipairs(mappings) do
+        map(type, maps[1], maps[2])
+    end
 end
-
-map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
-
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
-
-map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
-
-map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
-
-map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
-
-map('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
-
-map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
-
-map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
-
-map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
-
-map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-
-map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
