@@ -4,7 +4,7 @@ local local_mappings = {
 	n = {
 		{ "n", "<space>ft", "<CMD> :Format<CR>" },
 		{ "<A-p>", "<CMD>ChatGPT<CR>" }, -- abre o chatgpt no modo normal pergunta e resposta
-		{ "<A-o>", "ChatGPTActAs<CR>" }, -- abre o chatgpt no modo de options
+		{ "<A-o>", "<CMD<ChatGPTActAs<CR>" }, -- abre o chatgpt no modo de options
 		{ "<A-e>", "<CMD>ChatGPTEditWithInstructions<CR>" }, -- abre o chatgpt no modo resposta direta sem explicacoes
 		{ "<C-b>", "<CMD>SearchBoxMatchAll<CR>" }, -- abre o campo de pesquisa no arquivo
 		{ "<C-Q>", "<ESC><CMD>q!<CR>" },

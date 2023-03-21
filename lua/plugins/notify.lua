@@ -21,10 +21,10 @@ local function delayed_load()
 	-- Armazena o número de seguidores atual
 	local followers_count = nil
 
-	-- Armazena o tempo em que a última notificação foi exibida
-	local last_notification_time = 0
-
-	-- Função que verifica se o usuário tem notificações ou mudanças em seus seguidores no Github
+	-- Função que verifica se o usuário tem notificações ou , token
+	--
+	-- verifica mudanças em seus seguidores no Github
+	--
 	local function check_notifications(token)
 		-- Verifica o número de notificações
 		local cmd = "curl -s -H 'Authorization: token " .. token .. "' https://api.github.com/notifications"
@@ -33,8 +33,9 @@ local function delayed_load()
 		handle:close()
 
 		local json = vim.fn.json_decode(result)
-		local notifications_count = #json
+		notifications_count = #json
 
+		notify(notifications_count .. " notificações no Github", "info")
 		-- Verifica o número de seguidores
 		cmd = "curl -s -H 'Authorization: token " .. token .. "' https://api.github.com/user"
 		handle = io.popen(cmd)
@@ -48,17 +49,10 @@ local function delayed_load()
 		if followers_count ~= nil and current_followers_count ~= followers_count then
 			local message = "Você agora tem " .. current_followers_count .. " seguidores no GitHub!"
 			notify(message, "info")
-			last_notification_time = vim.loop.now()
 		end
 
 		-- Atualiza o número de seguidores
 		followers_count = current_followers_count
-
-		-- Exibe a notificação com a quantidade de notificações, se a última notificação foi exibida há mais de 5 minutos
-		if notifications_count > 0 and (vim.loop.now() - last_notification_time) > 300000 then
-			notify(notifications_count .. " notificações no Github", "info")
-			last_notification_time = vim.loop.now()
-		end
 	end
 
 	-- Lê o token do arquivo, se existir
@@ -67,7 +61,7 @@ local function delayed_load()
 
 	-- Se o token não estiver vazio, executa a função check_notifications
 	if token ~= "" then
-		check_notifications(token)
+		notify("Autenticado com sucesso!")
 	end
 
 	-- Pede a entrada do usuário para a token e executa a função check_notifications

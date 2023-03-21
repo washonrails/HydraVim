@@ -1,0 +1,68 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	number	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/iamwash/.config/nvim/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+GetError	lua/core/utils.lua	11;"	f	unknown:H
+Map	lua/core/utils.lua	7;"	f	unknown:H
+ReloadVimrc	lua/core/utils.lua	3;"	f	unknown:H
+["<localleader>l"]	plugin/lazy_compiled.lua	56;"	f
+["<localleader>t"]	plugin/lazy_compiled.lua	61;"	f
+['<S-Tab>']	lua/lsp/cmp.lua	36;"	f
+['<Tab>']	lua/lsp/cmp.lua	29;"	f
+after_mount	lua/plugins/search_box.lua	33;"	f
+before_mount	lua/plugins/search_box.lua	30;"	f
+callback	lua/lsp/lsp_config.lua	27;"	f
+check_back_space	lua/lsp/coc.lua	23;"	f	unknown:_G
+check_notifications	lua/plugins/notify.lua	28;"	f
+config	lua/plugins/lazy.lua	107;"	f
+config	lua/plugins/lazy.lua	119;"	f
+config	lua/plugins/lazy.lua	126;"	f
+config	lua/plugins/lazy.lua	134;"	f
+config	lua/plugins/lazy.lua	143;"	f
+config	lua/plugins/lazy.lua	152;"	f
+config	lua/plugins/lazy.lua	160;"	f
+config	lua/plugins/lazy.lua	167;"	f
+config	lua/plugins/lazy.lua	175;"	f
+config	lua/plugins/lazy.lua	182;"	f
+config	lua/plugins/lazy.lua	189;"	f
+config	lua/plugins/lazy.lua	198;"	f
+config	lua/plugins/lazy.lua	224;"	f
+config	lua/plugins/lazy.lua	232;"	f
+config	lua/plugins/lazy.lua	239;"	f
+config	lua/plugins/lazy.lua	32;"	f
+config	lua/plugins/lazy.lua	38;"	f
+config	lua/plugins/lazy.lua	44;"	f
+config	lua/plugins/lazy.lua	50;"	f
+config	lua/plugins/lazy.lua	57;"	f
+config	lua/plugins/lazy.lua	75;"	f
+config	lua/plugins/lazy.lua	87;"	f
+config	lua/plugins/lazy.lua	94;"	f
+default	lua/plugins/navigator.lua	31;"	f
+delayed_load	lua/plugins/notify.lua	20;"	f
+diagnostics_indicator	lua/plugins/buffer.lua	25;"	f
+expand	lua/lsp/cmp.lua	17;"	f
+format	lua/lsp/cmp.lua	47;"	f
+format	lua/lsp/lsp_config.lua	19;"	f
+go	lua/plugins/navigator.lua	27;"	f
+height	lua/plugins/toggleterm.lua	13;"	f
+lsp_name	lua/plugins/lualine.lua	11;"	f
+map	lua/plugins/runner.lua	2;"	f
+on_break_complete	lua/plugins/nomodoro.lua	12;"	f
+on_done	lua/plugins/search_box.lua	36;"	f
+on_work_complete	lua/plugins/nomodoro.lua	11;"	f
+rouded	lua/core/border.lua	3;"	f	unknown:M
+run	lua/plugins/lazy.lua	97;"	f
+run_check_notifications	lua/plugins/notify.lua	68;"	f
+setup	lua/plugins/lazy.lua	216;"	f
+show_docs	lua/lsp/coc.lua	28;"	f	unknown:_G
+sync_config_repo	lua/core/updater.lua	3;"	f	unknown:H
+toggle_float	lua/plugins/which_key.lua	66;"	f
+toggle_lazygit	lua/plugins/which_key.lua	70;"	f
+width	lua/plugins/toggleterm.lua	10;"	f

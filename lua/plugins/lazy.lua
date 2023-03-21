@@ -224,11 +224,19 @@ lazy.setup({
 			require("plugins.guihua")
 		end,
 	},
+
 	{
 		"ray-x/navigator.lua",
 		run = "cd lua/fzy && make",
 		config = function()
 			require("plugins.navigator")
+		end,
+	},
+
+	{
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("plugins.chatgpt")
 		end,
 	},
 })

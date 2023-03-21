@@ -15,6 +15,6 @@ require("nomodoro").setup({
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<leader>nw", "<cmd>NomoWork<cr>", opts)
-map("n", "<leader>nb", "<cmd>NomoBreak<cr>", opts)
-map("n", "<leader>ns", "<cmd>NomoStop<cr>", opts)
+map("n", "<space>nw", "<cmd>NomoWork<cr>", opts)
+map("n", "<space>nb", "<cmd>NomoBreak<cr>", opts)
+map("n", "<space>ns", "<cmd>NomoStop<cr>", opts)
