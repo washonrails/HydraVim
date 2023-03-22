@@ -28,10 +28,9 @@ local options = {
 	g = {
 		mapleader = " ",
 		maplocalleader = " ",
-		neovide_scale_factor = 0.7,
+		neovide_scale_factor = 0.8,
 		neovide_hide_mouse_when_typing = true,
 		neovide_transparency = 0.8,
-		navigator_definition_icon = "🦊",
 	},
 }
 
