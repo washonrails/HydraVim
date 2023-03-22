@@ -14,6 +14,8 @@ vim.cmd("set rtp+=" .. lazypath)
 
 local lazy = require("lazy")
 lazy.setup({
+	-- Define as opções de configuração
+
 	"MunifTanjim/nui.nvim",
 	"folke/neodev.nvim",
 	"folke/which-key.nvim",
@@ -26,6 +28,18 @@ lazy.setup({
 	"nvim-lua/popup.nvim",
 	"sar/illuminate.nvim",
 	"sindrets/diffview.nvim",
+	{
+		"voldikss/vim-floaterm",
+		config = function()
+			require("plugins.floaterm")
+		end
+	},
+	{
+		"tamton-aquib/mpv.nvim",
+		config = function()
+			require("plugins.mpv")
+		end,
+	},
 	{
 		"VonHeikemen/searchbox.nvim",
 		config = function()
@@ -137,7 +151,6 @@ lazy.setup({
 
 	{
 		"akinsho/bufferline.nvim",
-		tag = "v3.*",
 		event = { "BufReadPre" },
 		config = function()
 			require("plugins.buffer")
@@ -146,7 +159,6 @@ lazy.setup({
 
 	{
 		"akinsho/toggleterm.nvim",
-		tag = "*",
 		event = { "UIEnter" },
 		config = function()
 			require("plugins.toggleterm")
@@ -240,5 +252,34 @@ lazy.setup({
 		end,
 	},
 })
+
+local ui = {
+	size = { width = 0.8, height = 0.8 },
+	wrap = true,
+	border = "single",
+	icons = {
+		cmd = " ",
+		config = "",
+		event = "",
+		ft = " ",
+		init = " ",
+		import = " ",
+		keys = " ",
+		lazy = "󰒲 ",
+		loaded = "●",
+		not_loaded = "○",
+		plugin = " ",
+		runtime = " ",
+		source = " ",
+		start = "",
+		task = "✔ ",
+		list = {
+			"●",
+			"➜",
+			"★",
+			"‒",
+		},
+	},
+}
 
 lazy:setup()

@@ -8,5 +8,8 @@
         "teardown",
         "pending",
         "requir"
+    ],
+    "diagnostics.disable": [
+        "unused-local"
     ]
 }

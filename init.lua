@@ -8,7 +8,7 @@ local modules = {
 	"plugins.folding",
 }
 
-for i, name in pairs(modules) do
+for _, name in pairs(modules) do
 	package.loaded[name] = nil
 	require(name)
 end

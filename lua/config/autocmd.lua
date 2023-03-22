@@ -32,5 +32,5 @@ autocmd({ "TextChanged", "TextChangedI" }, {
 
 autocmd({ "BufWritePost" }, {
 	pattern = "*",
-	command = "FormatWrite",
+	command = "lua require('notify')('Saved File                                     🥶', 'info')",
 })

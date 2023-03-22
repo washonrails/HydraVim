@@ -22,8 +22,8 @@ local local_mappings = {
 		{ "<C-z>", "u" }, -- desfaz alterações no modo normal
 		{ "<C-v>", "p<ESC>" }, -- colar no modo normal
 		{ "<C-a>", "ggVG" }, -- selecionar tudo no modo normal
-		{ "<space>lg", "<CMD>TermExec size=10 direction=float cmd='lazygit && exit'<CR>" },
-		{ "<space>e", "<CMD>NvimTreeToggle <CR>" }, -- selecionar tudo no modo normal
+		{ "<space>ld", '<CMD>FloatermNew --width=120 --height=20 lazydocker<CR> <CMD>:lua require("notify")("Loading Docker 🐳", "info")<CR>' },
+		{ "<space>e", "<CMD>NvimTreeToggle <CR>" },
 		{ "<TAB>", "<CMD>BufferLineCycleNext<CR>" }, -- selecionnar aba esuqerda
 		{ "<S-TAB>", "<CMD>BufferLineCyclePrev<CR>" }, -- selecionar aba direita
 		{ "<C-w>", "<CMD>BDelete this<CR>" }, -- fechar aba
@@ -31,10 +31,7 @@ local local_mappings = {
 		{ "<A-h>", "<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>" }, -- abr o terminal
 		{ "<A-m>", "<CMD>ToggleTerm size=45 direction=vertical<CR>" }, -- abr o terminal
 		{ "<A-i>", "<CMD>ToggleTerm direction=float<CR>" }, -- abr o terminal
-		{ "<space>i", "<CMD>ToggleTerm direction=float<CR>" }, -- abr o terminal
-		{ "<space>rr", "<CMD>TermExec size=10 direction=float cmd='ranger && exit'<CR>" }, -- abre o Ranger
-		{ "<space>th", "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/lua/theme/theme.sh && exit'<CR>" }, -- HydarVim theme
-		{ "<space>uf", "<CMD>TermExec size=10 direction=float cmd='sh ~/.config/nvim/script/fix_list.sh'<CR>" }, -- HydarVim fix_list
+		{ "<space>i", "<CMD>FloatermNew<CR>" }, -- abr o terminal
 		{ "K", "<cmd>lua vim.lsp.buf.hover()<cr>" },
 		{ "gd", "<cmd>lua vim.lsp.buf.definition()<cr>" },
 		{ "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>" },
@@ -47,10 +44,10 @@ local local_mappings = {
 		{ "gl", "<cmd>lua vim.diagnostic.open_float()<cr>" },
 		{ "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>" },
 		{ "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>" },
-		{ "<space>ff", ":Telescope find_files<cr>" },
-		{ "<space>gc", ":Telescope git_commits<cr>" },
-		{ "<space>gb", ":Telescope git_branches<cr>" },
-		{ "<space>gt", ":Telescope git_status<cr>" },
+		{ "ff", "<CMD>:Telescope find_files<cr>" },
+		{ "fc", ":Telescope git_commits<cr>" },
+		{ "fb", ":Telescope git_branches<cr>" },
+		{ "fgs", ":Telescope git_status<cr>" },
 		{ "<Esc><Esc>", ':let @/=""<CR>' },
 		{ "<C-A-PageUp>", ":BufferLineMoveNext<CR>" },
 		{ "<C-A-PageDown>", ":BufferLineMovePrev<CR>" },

@@ -1,10 +1,12 @@
 local utils = require("core.utils")
 local updater = require("core.updater")
+local recicle = require("core.recicle")
 
 local commands = {
-    { "ReloadVim", utils.ReloadVimrc, {}, "Reloading HydraVim" },
-    { "UpdateSync", updater.sync_config_repo, {}, "Update HydarVim" },
-    { "Errors", utils.GetError , {}, "Getting Error Messages" }
+    { "ReloadVim", utils.ReloadVimrc, {}},
+    { "UpdateSync", updater.sync_config_repo, {}},
+    { "Errors", utils.GetError , {}},
+	{ "Runner", recicle.runnerWindow, {}}
 }
 
 for _, command in ipairs(commands) do

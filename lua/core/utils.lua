@@ -12,4 +12,7 @@ H.GetError = function ()
   vim.cmd "redir @+ | messages | redir END"
 end
 
+H.Lazydocker = function()
+end
+
 return H
