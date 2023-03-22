@@ -34,7 +34,7 @@ local local_mappings = {
 		{ "<TAB>", "<CMD>BufferLineCycleNext<CR>" }, -- selecionnar aba esuqerda
 		{ "<S-TAB>", "<CMD>BufferLineCyclePrev<CR>" }, -- selecionar aba direita
 		{ "<C-w>", "<CMD>BDelete this<CR>" }, -- fechar aba
-		{ "<space>p", "<CMD>BufferLineTogglePin<CR>" }, -- fechar aba
+		{ "<space>p", "<CMD>BufferLineTogglePin<CR>" }, -- Pinar aba
 		{ "<A-h>", "<CMD>NvimTreeClose<CR> <CMD>ToggleTerm size=15 direction=horizontal<CR>" }, -- abr o terminal
 		{ "<A-m>", "<CMD>ToggleTerm size=45 direction=vertical<CR>" }, -- abr o terminal
 		{ "<A-i>", "<CMD>ToggleTerm direction=float<CR>" }, -- abr o terminal
