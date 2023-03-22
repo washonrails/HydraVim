@@ -28,7 +28,7 @@ local local_mappings = {
 		},
 		{
 			"<space>ld",
-			'<CMD>FloatermNew --width=120 --height=20 lazydocker<CR> <CMD>:lua require("notify")("Loading Containers                                🐳", "info")<CR>',
+			'<CMD>FloatermNew --width=120 --height=20 lazydocker<CR> <CMD>:lua require("notify")("Opening Lazydocker                                 🐳", "info")<CR>',
 		},
 		{ "<space>e", "<CMD>NvimTreeToggle <CR>" },
 		{ "<TAB>", "<CMD>BufferLineCycleNext<CR>" }, -- selecionnar aba esuqerda
