@@ -4,16 +4,6 @@ notify.setup({
 	stages = "slide",
 	render = "minimal",
 	timeout = 2000,
-	 ignore_list = {
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/.git',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/.github',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/lua',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/plugin',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/script',
-		'Could not start the fs_event watcher for path /home/iamwash/.config/nvim/core',
-		-- adicione outras mensagens que você deseja bloquear aqui
-	  }
 })
 
 local uv = vim.loop
@@ -94,13 +84,3 @@ local function init()
 end
 
 init()
-
--- As mudanças que fiz incluem:
-
--- Substituí a biblioteca plenary.path pela função os_homedir() da biblioteca vim.loop, que retorna o diretório home do usuário.
--- Removi a configuração do notify, pois ela já é a configuração padrão.
---Substituí a biblioteca http pela função io.popen(), que abre um processo para executar o comando curl e retorna um handle que pode ser usado para ler o resultado da execução.
--- Movi as funções check_notifications() e check_followers() para o escopo global, para que possam ser chamadas de dentro do token_handler()
--- Adicionei uma variável followers_count no escopo global para armazenar o número de seguidores e poder compará-lo na função check_followers()
--- Alterei o timer para executar a function token
---

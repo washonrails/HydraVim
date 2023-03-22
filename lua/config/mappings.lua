@@ -22,7 +22,14 @@ local local_mappings = {
 		{ "<C-z>", "u" }, -- desfaz alterações no modo normal
 		{ "<C-v>", "p<ESC>" }, -- colar no modo normal
 		{ "<C-a>", "ggVG" }, -- selecionar tudo no modo normal
-		{ "<space>ld", '<CMD>FloatermNew --width=120 --height=20 lazydocker<CR> <CMD>:lua require("notify")("Loading Docker 🐳", "info")<CR>' },
+		{
+			"<space>lg",
+			'<CMD>FloatermNew --width=120 --height=20 lazygit<CR> <CMD>:lua require("notify")("Opening Lazygit                                       ", "info")<CR>',
+		},
+		{
+			"<space>ld",
+			'<CMD>FloatermNew --width=120 --height=20 lazydocker<CR> <CMD>:lua require("notify")("Loading Containers                                🐳", "info")<CR>',
+		},
 		{ "<space>e", "<CMD>NvimTreeToggle <CR>" },
 		{ "<TAB>", "<CMD>BufferLineCycleNext<CR>" }, -- selecionnar aba esuqerda
 		{ "<S-TAB>", "<CMD>BufferLineCyclePrev<CR>" }, -- selecionar aba direita
