@@ -35,7 +35,9 @@ wk.setup({
 		group = "",
 	},
 	window = {
-		border = "single", -- none, single, double, shadow
+		border = "rounded", -- none, single, double, shadow
+		border_chars = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		border_width = 1,
 		position = "bottom",
 		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
 		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -44,7 +46,7 @@ wk.setup({
 	layout = {
 		height = { min = 4, max = 25 },
 		width = { min = 20, max = 50 },
-		spacing = 3,
+		spacing = 10,
 		align = "center",
 	},
 	ignore_missing = true,
