@@ -92,7 +92,6 @@ local mappings = {
 		t = { ":ToggleTerm<cr>", "Horizontal" },
 		m = { ":ToggleTerm size=45 direction=vertical<CR>", "Vertical" },
 		f = { toggle_float, "Floating" },
-		l = { toggle_lazygit, "LazyGit" },
 	},
 	g = {
 		name = " Git",
