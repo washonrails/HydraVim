@@ -3,10 +3,10 @@ local map = require("core.utils").Map
 local local_mappings = {
 	n = {
 		{ "n", "<space>ft", "<CMD> :Format<CR>" },
-		{ "<A-p>", "<CMD>ChatGPT<CR>" }, -- abre o chatgpt no modo normal pergunta e resposta
-		{ "<A-o>", "<CMD<ChatGPTActAs<CR>" }, -- abre o chatgpt no modo de options
-		{ "<A-e>", "<CMD>ChatGPTEditWithInstructions<CR>" }, -- abre o chatgpt no modo resposta direta sem explicacoes
-		{ "<C-b>", "<CMD>SearchBoxMatchAll<CR>" }, -- abre o campo de pesquisa no arquivo
+		{ "<A-p>", "<CMD>ChatGPT<CR>" }, -- open chatgpt in normal question and answer mode
+		{ "<A-o>", "<CMD<ChatGPTActAs<CR>" }, -- open chatgpt in options mode
+		{ "<A-e>", "<CMD>ChatGPTEditWithInstructions<CR>" }, -- opens chatgpt in direct response mode without explanations
+		{ "<C-b>", "<CMD>SearchBoxMatchAll<CR>" }, -- opens the search field in the file
 		{ "<C-Q>", "<ESC><CMD>q!<CR>" },
 		{ "<C-s>", "<CMD>w<CR><CMD>echo 'Save '<CR>" },
 		{ "<A-S-s>", "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>" },
@@ -16,8 +16,8 @@ local local_mappings = {
 		{ "<A-n>", "<CMD>vsplit<CR>" },
 		{ "<A-b>", "<CMD>split<CR>" },
 		{ "<C-h>", "<C-w>h" },
-		{ "<C-l>", "<C-w>l" }, -- move o cursor para a esquerda
-		{ "<C-k>", "<C-w>k" }, -- move o cursor para baixo
+		{ "<C-l>", "<C-w>l" }, -- move the cursor to the left
+		{ "<C-k>", "<C-w>k" }, -- move the cursor down
 		{ "<C-j>", "<C-w>j" }, -- move o cursor para cima
 		{ "<C-z>", "u" }, -- desfaz alterações no modo normal
 		{ "<C-v>", "p<ESC>" }, -- colar no modo normal

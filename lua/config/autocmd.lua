@@ -6,8 +6,6 @@ local filetypes = {
 	"*.css",
 	"*.scss",
 	"*.less",
-	"*.js",
-	"*.jsx",
 	"*.ts",
 	"*.tsx",
 	"*.vue",
