@@ -1,1 +1,1 @@
-vim.cmd [[ colorscheme mariana_lighter ]]
+vim.cmd [[ colorscheme tokyonight ]]
