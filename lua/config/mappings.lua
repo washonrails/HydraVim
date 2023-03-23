@@ -51,6 +51,7 @@ local local_mappings = {
 		{ "gl", "<cmd>lua vim.diagnostic.open_float()<cr>" },
 		{ "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>" },
 		{ "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>" },
+		{ "th", "<CMD>:Telescope colorscheme <cr>" },
 		{ "ff", "<CMD>:Telescope find_files<cr>" },
 		{ "fc", ":Telescope git_commits<cr>" },
 		{ "fb", ":Telescope git_branches<cr>" },
