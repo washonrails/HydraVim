@@ -18,7 +18,6 @@ lazy.setup({
 
 	"MunifTanjim/nui.nvim",
 	"folke/neodev.nvim",
-	"folke/which-key.nvim",
 	"kazhala/close-buffers.nvim",
 	"sheerun/vim-polyglot",
 	"nvim-tree/nvim-web-devicons",
@@ -204,8 +203,7 @@ lazy.setup({
 
 	{
 		"folke/which-key.nvim",
-		keys = "<leader>",
-		after = "toggleterm.nvim",
+		keys = "<space>",
 		config = function()
 			require("plugins.which_key")
 		end,
