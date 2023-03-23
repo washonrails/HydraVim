@@ -31,7 +31,7 @@ lazy.setup({
 		"voldikss/vim-floaterm",
 		config = function()
 			require("plugins.floaterm")
-		end
+		end,
 	},
 	{
 		"tamton-aquib/mpv.nvim",
@@ -239,6 +239,14 @@ lazy.setup({
 		"jackMort/ChatGPT.nvim",
 		config = function()
 			require("plugins.chatgpt")
+		end,
+	},
+
+	{
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("plugins.todo-comments")
 		end,
 	},
 })
