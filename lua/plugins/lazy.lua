@@ -27,6 +27,7 @@ lazy.setup({
 	"nvim-lua/popup.nvim",
 	"sar/illuminate.nvim",
 	"sindrets/diffview.nvim",
+	'voldikss/vim-translator',
 	{
 		"voldikss/vim-floaterm",
 		config = function()
