@@ -157,14 +157,6 @@ lazy.setup({
 	},
 
 	{
-		"akinsho/toggleterm.nvim",
-		event = { "UIEnter" },
-		config = function()
-			require("plugins.toggleterm")
-		end,
-	},
-
-	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
 		config = function()
