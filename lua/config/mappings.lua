@@ -3,8 +3,8 @@ local map = require("core.utils").Map
 local local_mappings = {
 	n = {
 		{ "n", "<space>ft", "<CMD> :Format<CR>" },
-		{ "<A-p>", "<CMD>ChatGPT<CR>" }, -- open chatgpt in normal question and answer mode
-		{ "<A-o>", "<CMD<ChatGPTActAs<CR>" }, -- open chatgpt in options mode
+		{ "<A-p>", "<CMD>ChatGPT<CR>" }, -- NOTE: open chatgpt in normal question and answer mode
+		{ "<A-o>", "<CMD<ChatGPTActAs<CR>" }, -- NOTE: open chatgpt in options mode
 		{ "<A-e>", "<CMD>ChatGPTEditWithInstructions<CR>" }, -- opens chatgpt in direct response mode without explanations
 		{ "<C-b>", "<CMD>SearchBoxMatchAll<CR>" }, -- opens the search field in the file
 		{ "<C-Q>", "<ESC><CMD>q!<CR>" },
