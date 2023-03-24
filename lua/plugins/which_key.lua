@@ -4,7 +4,7 @@ if not present then
 	return
 end
 
-local present2, tm = pcall(require, "toggleterm.terminal")
+local present2, tm = pcall(require, "toggleterm.terminal") -- NOTE: Still using toggleterm
 
 if not present2 then
 	return
@@ -53,7 +53,7 @@ wk.setup({
 	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " },
 	show_help = false,
 	show_keys = false,
-	triggers = "<leader>",
+	triggers = "<space>wk",
 	triggers_blacklist = {
 		i = { "j", "k" },
 		v = { "j", "k" },
@@ -126,117 +126,7 @@ local mappings = {
 		s = { ":PackerStatus<cr>", " Plugins Status" },
 		u = { ":PackerUpdate<cr>", " Plugins Update" },
 	},
-	h = {
-		name = " Themes",
-		a = {
-			":silent colorscheme tokyodark | silent !echo 'vim.cmd [[ colorscheme tokyodark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-			" Tokyodark",
-		},
-		b = {
-			":silent colorscheme neon | silent !echo 'vim.cmd [[ colorscheme neon ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-			" neon",
-		},
-		c = {
-			":silent colorscheme onenord | silent !echo 'vim.cmd [[ colorscheme onenord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-			" Onenord",
-		},
-		d = {
-			":silent colorscheme nord | silent !echo 'vim.cmd [[ colorscheme nord ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-			" Nord",
-		},
-		e = {
-			name = " Catppuccin",
-			a = {
-				":silent colorscheme catppuccin-mocha | silent !echo 'vim.cmd [[ colorscheme catppuccin-mocha ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Catppuccin Mocha",
-			},
-			b = {
-				":silent colorscheme catppuccin-latte | silent !echo 'vim.cmd [[ colorscheme catppuccin-latte ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Catppuccin Latte",
-			},
-			c = {
-				":silent colorscheme catppuccin-frappe | silent !echo 'vim.cmd [[ colorscheme catppuccin-frappe ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Catppuccin Frappe",
-			},
-			d = {
-				":silent colorscheme catppuccin-macchiato | silent !echo 'vim.cmd [[ colorscheme catppuccin-macchiato ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Catppuccin Macchiato",
-			},
-		},
-		f = {
-			name = " GitHub",
-			a = {
-				":silent colorscheme github_dark | silent !echo 'vim.cmd [[ colorscheme github_dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_dark",
-			},
-			b = {
-				":silent colorscheme github_dimmed | silent !echo 'vim.cmd [[ colorscheme github_dimmed ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_dimmed",
-			},
-			c = {
-				":silent colorscheme github_dark_default | silent !echo 'vim.cmd [[ colorscheme github_dark_default ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_dark_default",
-			},
-			d = {
-				":silent colorscheme github_dark_colorblind | silent !echo 'vim.cmd [[ colorscheme github_dark_colorblind ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_dark_colorblind",
-			},
-			e = {
-				":silent colorscheme github_light | silent !echo 'vim.cmd [[ colorscheme github_light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_light",
-			},
-			f = {
-				":silent colorscheme github_light_default | silent !echo 'vim.cmd [[ colorscheme github_light_default ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_light_default",
-			},
-			g = {
-				":silent colorscheme github_light_colorblind | silent !echo 'vim.cmd [[ colorscheme github_light_colorblind ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"github_light_colorblind",
-			},
-		},
-		g = {
-			name = "ﱦ OneDark",
-			a = {
-				":silent colorscheme onedark | silent !echo 'vim.cmd [[ colorscheme onedark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"OneDark",
-			},
-		},
-		h = {
-			name = "﫛 Gruvbox",
-			a = {
-				":silent colorscheme gruvbox | set background=dark | silent !echo 'vim.cmd [[ colorscheme gruvbox | set background=dark ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Gruvbox Dark",
-			},
-			b = {
-				":silent colorscheme gruvbox | set background=light | silent !echo $'vim.cmd [[ colorscheme gruvbox | set background=light ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Gruvbox Light",
-			},
-			c = {
-				":silent colorscheme gruvbox-baby | silent !echo $'vim.cmd [[ colorscheme gruvbox-baby ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Gruvbox Baby",
-			},
-		},
-		i = {
-			name = " TokyoNight",
-			a = {
-				":silent colorscheme tokyonight-night | silent !echo 'vim.cmd [[ colorscheme tokyonight-night ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"TokyoNight Night",
-			},
-			b = {
-				":silent colorscheme tokyonight-storm | silent !echo 'vim.cmd [[ colorscheme tokyonight-storm ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"TokyoNight Storm",
-			},
-			c = {
-				":silent colorscheme tokyonight-day | silent !echo 'vim.cmd [[ colorscheme tokyonight-day ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"TokyoNight Day",
-			},
-			d = {
-				":silent colorscheme tokyonight-moon | silent !echo 'vim.cmd [[ colorscheme tokyonight-moon ]]' > ~/.config/nvim/lua/theme/theme.lua<CR>",
-				"Tokyo Night Moon",
-			},
-		},
-	},
 }
 
-local opts = { prefix = "<leader>" }
+local opts = { prefix = "<space>wk" }
 wk.register(mappings, opts)
