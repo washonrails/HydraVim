@@ -21,7 +21,7 @@ local local_mappings = {
 		{ "<C-j>", "<C-w>j" }, -- move o cursor para cima
 		{ "<C-z>", "u" }, -- desfaz alterações no modo normal
 		{ "<C-v>", "p<ESC>" }, -- colar no modo normal
-		{ "<C-a>", "ggVG" }, -- selecionar tudo no modo normal
+		{ "<C-a>", "ggVG" }, -- select all in normal mode
 		{
 			"<space>lg",
 			'<CMD>FloatermNew --width=120 --height=20 lazygit<CR> <CMD>:lua require("notify")("Opening Lazygit                                       ", "info")<CR>',

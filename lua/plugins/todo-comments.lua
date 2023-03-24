@@ -1,3 +1,12 @@
+-- BUG: : SIMPLE DEMO OF BUG COMMENT 
+-- FIXED: : SIMPLE DEMO OF FIXED COMMENT
+-- TODO: : SIMPLE DEMO OF TODO COMMENT
+-- HACK: : SIMPLE DEMO OF HACK COMMENT
+-- WARN: : SIMPLE DEMO OF WARN COMMENT
+-- PERF: : SIMPLE DEMO OF PERF COMMENT
+-- NOTE: : SIMPLE DEMO OF NOTE COMMENT
+-- TEST: : SIMPLES DEMO OF TEST COMMENT
+
 local todo = require("todo-comments")
 
 todo.setup({
@@ -12,7 +21,7 @@ todo.setup({
 			-- signs = false, -- configure signs for some keywords individually
 		},
 		FIXED = { icon = "🛡️", color = "#10B981", alt = { "RESOLVED", "SUCCESS" } },
-		TODO = { icon = "", color = "info" },
+		TODO = { icon = "", color = "info" }, -- TODO: DEMONSTRATION
 		HACK = { icon = " ", color = "#7C3AED" },
 		WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
 		PERF = { icon = "🎌", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
