@@ -8,15 +8,14 @@ require("navigator").setup({
 	mason = true, -- set to true if you would like use the lsp installed by williamboman/mason
 	lsp = {
 		enable = true, -- skip lsp setup, and only use treesitter in navigator.
-		code_action = { enable = true, sign = true, sign_priority = 40, virtual_text = true },
-		code_lens_action = { enable = true, sign = true, sign_priority = 40, virtual_text = true },
+		code_action = { enable = true, sign = true, sign_priority = 40, virtual_text = false},
+		code_lens_action = { enable = true, sign = true, sign_priority = 40, virtual_text = false},
 		document_highlight = true, -- LSP reference highlight,
 		format_on_save = true, -- {true|false} set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
 		format_options = { async = false }, -- async: disable by default, the option used in vim.lsp.buf.format({async={true|false}, name = 'xxx'})
-		disable_format_cap = { "sqls", "lua_ls", "gopls" }, -- a list of lsp disable format capacity (e.g. if you using efm or vim-codeformat etc), empty {} by default
 		diagnostic = {
 			underline = true,
-			virtual_text = true, -- show virtual for diagnostic message
+			virtual_text = true , -- show virtual for diagnostic message
 			update_in_insert = false, -- update diagnostic message in insert mode
 		},
 
