@@ -27,43 +27,45 @@ lazy.setup({
 	"nvim-lua/popup.nvim",
 	"sar/illuminate.nvim",
 	"sindrets/diffview.nvim",
-	'voldikss/vim-translator',
+	"voldikss/vim-translator",
+
+	{ "washonrails/mpv.nvim", config=true },
+
 	{
 		"voldikss/vim-floaterm",
 		config = function()
 			require("plugins.floaterm")
 		end,
 	},
-	{
-		"tamton-aquib/mpv.nvim",
-		config = function()
-			require("plugins.mpv")
-		end,
-	},
+
 	{
 		"VonHeikemen/searchbox.nvim",
 		config = function()
 			require("plugins.search_box")
 		end,
 	},
+
 	{
 		"rcarriga/nvim-notify",
 		config = function()
 			require("plugins.notify")
 		end,
 	},
+
 	{
 		"MarcHamamji/runner.nvim",
 		config = function()
 			require("plugins.runner")
 		end,
 	},
+
 	{
 		"dbinagi/nomodoro",
 		config = function()
 			require("plugins.nomodoro")
 		end,
 	},
+
 	{
 		"mhartington/formatter.nvim",
 		event = "BufWritePost",
@@ -115,7 +117,7 @@ lazy.setup({
 
 	{
 		"nvim-tree/nvim-tree.lua",
-		ft = "alpha",
+		ft = "veil",
 		cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 		config = function()
 			require("plugins.nvim_tree")
@@ -150,6 +152,11 @@ lazy.setup({
 	},
 
 	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	},
+
+	{
 		"akinsho/bufferline.nvim",
 		event = { "BufReadPre" },
 		config = function()
@@ -166,10 +173,13 @@ lazy.setup({
 	},
 
 	{
-		"goolord/alpha-nvim",
-		config = function()
-			require("plugins.alpha")
-		end,
+		'willothy/veil.nvim',
+		config = true,
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-file-browser.nvim"
+		}
 	},
 
 	{
@@ -213,6 +223,7 @@ lazy.setup({
 	"rafamadriz/neon",
 	"shaunsingh/nord.nvim",
 	"rmehri01/onenord.nvim",
+	"lunarvim/horizon.nvim",
 	{
 		"ray-x/starry.nvim",
 		setup = function()
@@ -280,5 +291,3 @@ local ui = {
 		},
 	},
 }
-
-lazy:setup()
