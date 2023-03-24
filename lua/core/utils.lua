@@ -1,7 +1,7 @@
 local H = {}
 
 H.ReloadVimrc = function ()
-  vim.cmd "luafile $MYVIMRC"
+  vim.cmd "source ~/.config/nvim/init.lua"
 end
 
 H.Map = function(mode, keys, comd, desc)
