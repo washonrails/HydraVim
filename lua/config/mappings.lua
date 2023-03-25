@@ -2,26 +2,27 @@ local map = require("core.utils").Map
 
 local local_mappings = {
 	n = {
-		{ "n",       "<space>ft",                                                                                     "<CMD> :Format<CR>" },
-		{ "<A-p>",   "<CMD>ChatGPT<CR>" },               -- NOTE: open chatgpt in normal question and answer mode
-		{ "<A-o>",   "<CMD<ChatGPTActAs<CR>" },          -- NOTE: open chatgpt in options mode
-		{ "<A-e>",   "<CMD>ChatGPTEditWithInstructions<CR>" }, -- opens chatgpt in direct response mode without explanations
-		{ "<C-b>",   "<CMD>SearchBoxMatchAll<CR>" },     -- opens the search field in the file
-		{ "<C-Q>",   "<ESC><CMD>q!<CR>" },
-		{ "<C-s>",   "<CMD>w<CR><CMD>echo 'Save '<CR>" },
-		{ "<A-S-s>", "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>" },
-		{ "<A-S-l>", "<CMD>NvimTreeClose<CR> <CMD> :source .hydra_session.vim<CR><CMD>echo 'Loaded Session '<CR>" },
-		{ "<A-j>",   "<CMD>m .+1<CR>==" },
-		{ "<A-k>",   "<CMD>m .-2<CR>==" },
-		{ "<A-n>",   "<CMD>vsplit<CR>" },
-		{ "<A-b>",   "<CMD>split<CR>" },
-		{ "<C-h>",   "<C-w>h" },
-		{ "<C-l>",   "<C-w>l" }, -- move the cursor to the left
-		{ "<C-k>",   "<C-w>k" }, -- move the cursor down
-		{ "<C-j>",   "<C-w>j" }, -- move o cursor para cima
-		{ "<C-z>",   "u" }, -- desfaz alterações no modo normal
-		{ "<C-v>",   "p<ESC>" }, -- colar no modo normal
-		{ "<C-a>",   "ggVG" }, -- select all in normal mode
+		-- { ":", "<CMD>"},
+		{ "<space>ft", "<CMD>Format<CR>" },
+		{ "<A-p>",     "<CMD>ChatGPT<CR>" },               -- NOTE: open chatgpt in normal question and answer mode
+		{ "<A-o>",     "<CMD<ChatGPTActAs<CR>" },          -- NOTE: open chatgpt in options mode
+		{ "<A-e>",     "<CMD>ChatGPTEditWithInstructions<CR>" }, -- opens chatgpt in direct response mode without explanations
+		{ "<C-b>",     "<CMD>SearchBoxMatchAll<CR>" },     -- opens the search field in the file
+		{ "<C-Q>",     "<ESC><CMD>q!<CR>" },
+		{ "<C-s>",     "<CMD>w<CR><CMD>echo 'Save '<CR>" },
+		{ "<A-S-s>",   "<CMD>NvimTreeClose<CR> <CMD>mksession! .hydra_session.vim<CR><CMD>echo 'Saved Session '<CR>" },
+		{ "<A-S-l>",   "<CMD>NvimTreeClose<CR> <CMD> :source .hydra_session.vim<CR><CMD>echo 'Loaded Session '<CR>" },
+		{ "<A-j>",     "<CMD>m .+1<CR>==" },
+		{ "<A-k>",     "<CMD>m .-2<CR>==" },
+		{ "<A-n>",     "<CMD>vsplit<CR>" },
+		{ "<A-b>",     "<CMD>split<CR>" },
+		{ "<C-h>",     "<C-w>h" },
+		{ "<C-l>",     "<C-w>l" }, -- move the cursor to the left
+		{ "<C-k>",     "<C-w>k" }, -- move the cursor down
+		{ "<C-j>",     "<C-w>j" }, -- move o cursor para cima
+		{ "<C-z>",     "u" }, -- desfaz alterações no modo normal
+		{ "<C-v>",     "p<ESC>" }, -- colar no modo normal
+		{ "<C-a>",     "ggVG" }, -- select all in normal mode
 		{
 			"<space>lg",
 			'<CMD>FloatermNew --width=120 --height=20 lazygit<CR> <CMD>:lua require("notify")("Opening Lazygit                                       ", "info")<CR>',
