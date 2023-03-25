@@ -128,5 +128,5 @@ local mappings = {
 	},
 }
 
-local opts = { prefix = "<space>wk" }
+local opts = { prefix = "<space>" }
 wk.register(mappings, opts)
