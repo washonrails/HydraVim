@@ -9,8 +9,8 @@ nvim_comment.setup({
 	comment_empty = false,
 	comment_empty_trim_whitespace = false,
 	create_mappings = true,
-	line_mapping = ";",
-	operator_mapping = ";",
-	comment_chunk_text_object = "<leader>;",
+	line_mapping = "c",
+	operator_mapping = "c",
+	comment_chunk_text_object = "<leader>c",
 	hook = nil,
 })
