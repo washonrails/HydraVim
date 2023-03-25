@@ -2,7 +2,6 @@ local map = require("core.utils").Map
 
 local local_mappings = {
 	n = {
-		-- { ":", "<CMD>"},
 		{ "<space>ft", "<CMD>Format<CR>" },
 		{ "<A-p>",     "<CMD>ChatGPT<CR>" },               -- NOTE: open chatgpt in normal question and answer mode
 		{ "<A-o>",     "<CMD<ChatGPTActAs<CR>" },          -- NOTE: open chatgpt in options mode
@@ -60,8 +59,9 @@ local local_mappings = {
 		{ "<Esc><Esc>",     ':let @/=""<CR>' },
 		{ "<C-A-PageUp>",   ":BufferLineMoveNext<CR>" },
 		{ "<C-A-PageDown>", ":BufferLineMovePrev<CR>" },
-		{ "<C-A-h>",        ":vertical resize +3<CR>" },
-		{ "<C-A-l>",        ":vertical resize -3<CR>" },
+		{ "<A-1>",          ":vertical resize +3<CR>" },
+		{ "<A-2>",          ":vertical resize -3<CR>" },
+		{ "C-r",            "<CMD>:ReloadVim<CR>" },
 		{ "<C-A-j>",        ":resize -3<CR>" },
 		{ "<C-A-k>",        ":resize +3<CR>" },
 		{ "<S-j>",          "yyp" },
