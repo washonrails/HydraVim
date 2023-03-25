@@ -29,7 +29,7 @@ lazy.setup({
 	"sindrets/diffview.nvim",
 	"voldikss/vim-translator",
 
-	{ "washonrails/mpv.nvim", config=true },
+	{ "washonrails/mpv.nvim",         config = true },
 
 	{
 		"voldikss/vim-floaterm",
@@ -92,7 +92,7 @@ lazy.setup({
 		end,
 	},
 
-	{ "folke/neoconf.nvim", cmd = "Neoconf" },
+	{ "folke/neoconf.nvim",           cmd = "Neoconf" },
 	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", ft = { "markdown" } },
 
 	{
@@ -153,7 +153,7 @@ lazy.setup({
 
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	},
 
 	{
@@ -173,13 +173,13 @@ lazy.setup({
 	},
 
 	{
-		'willothy/veil.nvim',
+		"willothy/veil.nvim",
 		config = true,
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope-file-browser.nvim"
-		}
+			"nvim-telescope/telescope-file-browser.nvim",
+		},
 	},
 
 	{
@@ -259,6 +259,17 @@ lazy.setup({
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("plugins.todo-comments")
+		end,
+	},
+
+	{
+		"folke/noice.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+		config = function()
+			require("plugins.noice")
 		end,
 	},
 })
