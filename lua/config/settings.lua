@@ -1,4 +1,5 @@
 local cmd = vim.cmd
+vim.api.nvim_set_keymap('n', ';', ':', { noremap = true })
 
 local options = {
 	opt = {
@@ -28,11 +29,9 @@ local options = {
 	g = {
 		mapleader = " ",
 		maplocalleader = " ",
-
 		neovide_scale_factor = 0.8,
 		neovide_hide_mouse_when_typing = true,
 		neovide_transparency = 0.8,
-
 		terminal_color_0 = "#282828",
 		terminal_color_1 = "#ff6961",
 		terminal_color_2 = "#77dd77",
