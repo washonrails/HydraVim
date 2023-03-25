@@ -27,8 +27,3 @@ autocmd({ "TextChanged", "TextChangedI" }, {
 	pattern = filetypes,
 	command = "silent write",
 })
-
-autocmd({ "BufWritePost" }, {
-	pattern = "*",
-	command = "lua require('notify')('Saved File                                     🥶', 'info')",
-})
