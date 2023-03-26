@@ -206,7 +206,7 @@ lazy.setup({
 
 	{
 		"folke/which-key.nvim",
-		keys = "<space>",
+		keys = "<leader>",
 		config = function()
 			require("plugins.which_key")
 		end,
@@ -214,15 +214,9 @@ lazy.setup({
 
 	-- Themes
 	{ "catppuccin/nvim", as = "catppuccin", run = ":colorscheme catppuccin-mocha" },
-	"projekt0n/github-nvim-theme",
-	"navarasu/onedark.nvim",
 	"tiagovla/tokyodark.nvim",
 	"folke/tokyonight.nvim",
 	"ellisonleao/gruvbox.nvim",
-	"luisiacc/gruvbox-baby",
-	"rafamadriz/neon",
-	"shaunsingh/nord.nvim",
-	"rmehri01/onenord.nvim",
 	"lunarvim/horizon.nvim",
 	{
 		"ray-x/starry.nvim",
