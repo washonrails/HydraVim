@@ -12,9 +12,9 @@ local function lsp_name()
 	local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
 	local clients = vim.lsp.get_active_clients()
 	local client_name = next(clients)
-			and clients[1].config.filetypes
-			and vim.fn.index(clients[1].config.filetypes, buf_ft) ~= -1
-			and clients[1].name
+		and clients[1].config.filetypes
+		and vim.fn.index(clients[1].config.filetypes, buf_ft) ~= -1
+		and clients[1].name
 		or ""
 	if not client_name or client_name == "" then
 		return client_name
@@ -35,8 +35,8 @@ lualine.setup({
 		},
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = " ", right = " " },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			-- "alpha",
 			statusline = {},
@@ -53,12 +53,16 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { { icon = "", "mode" } },
-		lualine_b = { { icon = "", "branch" } },
+		lualine_b = { { icon = "", "branch", color = { fg = "#FFB86C" } } },
 		lualine_x = { "diagnostics", nomodoro.status },
-		lualine_y = { { lsp_name } },
+		lualine_y = { { lsp_name, color = { fg = "#F4F4F4" } } },
 		lualine_z = { { "progress", icon = "" } },
 		lualine_c = {
-			{ file_icon, symbols = { modified = "", readonly = "", unnamed = "No Name", newfile = "" } },
+			{
+				file_icon,
+				color = { fg = "#F4F4F4" },
+				symbols = { modified = "", readonly = "", unnamed = "No Name", newfile = "" }
+			},
 			"diff",
 		},
 	},
