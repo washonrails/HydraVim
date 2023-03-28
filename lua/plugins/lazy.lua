@@ -137,11 +137,19 @@ lazy.setup({
 	},
 
 	{
-		"nvim-lualine/lualine.nvim",
+		"feline-nvim/feline.nvim",
+		branch = "0.5-compat",
 		config = function()
-			require("plugins.lualine")
-		end,
+			require("plugins.feline")
+		end
 	},
+
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	config = function()
+	-- 		require("plugins.lualine")
+	-- 	end,
+	-- },
 
 	{
 		"lewis6991/gitsigns.nvim",
@@ -218,10 +226,18 @@ lazy.setup({
 	"folke/tokyonight.nvim",
 	"ellisonleao/gruvbox.nvim",
 	"lunarvim/horizon.nvim",
+	"EdenEast/nightfox.nvim",
 	{
 		"ray-x/starry.nvim",
 		setup = function()
 			vim.g.starry_italic_comments = true
+		end,
+	},
+
+	{
+		"olivercederborg/poimandres.nvim",
+		config = function()
+			require("poimandres").setup({})
 		end,
 	},
 
