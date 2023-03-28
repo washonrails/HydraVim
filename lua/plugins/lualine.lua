@@ -34,8 +34,8 @@ lualine.setup({
 			hint = " ",
 		},
 		icons_enabled = true,
-		theme = "auto",
-		component_separators = { left = " ", right = " " },
+		theme = "poimandres",
+		component_separators = { left = '', right = '' },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			-- "alpha",
@@ -52,7 +52,7 @@ lualine.setup({
 		},
 	},
 	sections = {
-		lualine_a = { { icon = "", "mode" } },
+		lualine_a = { { icon = "󰁕", "mode", } },
 		lualine_b = { { icon = "", "branch", color = { fg = "#FFB86C" } } },
 		lualine_x = { "diagnostics", nomodoro.status },
 		lualine_y = { { lsp_name, color = { fg = "#F4F4F4" } } },
