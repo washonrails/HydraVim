@@ -227,6 +227,7 @@ lazy.setup({
 	"ellisonleao/gruvbox.nvim",
 	"lunarvim/horizon.nvim",
 	"EdenEast/nightfox.nvim",
+	"rebelot/kanagawa.nvim",
 	{
 		"ray-x/starry.nvim",
 		setup = function()
