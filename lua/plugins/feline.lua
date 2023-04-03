@@ -141,7 +141,7 @@ _G._generate_user_statusline_highlights = function()
 	end
 
 	local status = vim.o.background == "dark" and { fg = pal.black, bg = pal.white } or
-	{ fg = pal.white, bg = pal.black }
+		{ fg = pal.white, bg = pal.black }
 
 	local groups = {
 		-- statusline
@@ -236,13 +236,13 @@ local vi = {
 }
 
 local icons = {
-	locker = "",  -- #f023
-	page = "☰",    -- 2630
+	locker = "", -- #f023
+	page = "☰",   -- 2630
 	line_number = "", -- e0a1
 	connected = "", -- f817
-	dos = "",     -- e70f
-	unix = "",    -- f17c
-	mac = "",     -- f179
+	dos = "",    -- e70f
+	unix = "",   -- f17c
+	mac = "",    -- f179
 	mathematical_L = "𝑳",
 	vertical_bar = "┃",
 	vertical_bar_thin = "│",
@@ -357,7 +357,7 @@ local c = {
 		left_sep = { str = icons.left, hl = vi_mode_hl },
 	},
 	default = {
-	          -- needed to pass the parent StatusLine hl group to right hand side
+		-- needed to pass the parent StatusLine hl group to right hand side
 		provider = "",
 		hl = "StatusLine",
 	},
@@ -418,7 +418,7 @@ local active = {
 		c.fileinfo,
 		c.default, -- must be last
 	},
-	{          -- right
+	{        -- right
 		c.lsp_status,
 		c.lsp_error,
 		c.lsp_warn,
