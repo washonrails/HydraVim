@@ -144,13 +144,6 @@ lazy.setup({
 		end
 	},
 
-	-- {
-	-- 	"nvim-lualine/lualine.nvim",
-	-- 	config = function()
-	-- 		require("plugins.lualine")
-	-- 	end,
-	-- },
-
 	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufWritePre" },
@@ -197,6 +190,7 @@ lazy.setup({
 			require("plugins.indent_line")
 		end,
 	},
+
 	{
 		"mg979/vim-visual-multi",
 		event = { "BufReadPre", "BufNewFile" },
