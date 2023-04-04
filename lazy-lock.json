@@ -52,6 +52,7 @@
   "tokyodark.nvim": { "branch": "master", "commit": "32be5242f68be8a75ff5fbab358d14cb76887ab6" },
   "tokyonight.nvim": { "branch": "main", "commit": "1b0c88094548a62641ece1e668fa9a234e1c539e" },
   "ultisnips": { "branch": "master", "commit": "0ad238b1910d447476b2d98f593322c1cdb71285" },
+  "urlview.nvim": { "branch": "main", "commit": "e92d99f062685f9d3ab84238e1cdde6399dc64ce" },
   "veil.nvim": { "branch": "main", "commit": "b3090fa45b2439fabf9c8f48873324b8a42f6940" },
   "vim-devicons": { "branch": "master", "commit": "71f239af28b7214eebb60d4ea5bd040291fb7e33" },
   "vim-floaterm": { "branch": "master", "commit": "ca44a13a379d9af75092bc2fe2efee8c5248e876" },
