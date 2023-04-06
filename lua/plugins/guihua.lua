@@ -14,7 +14,6 @@ maps = {
 	vsplit = "<C-v>",
 	tabnew = "<C-t>",
 }
-
 --
 require("guihua.maps").setup({
 	maps = {
