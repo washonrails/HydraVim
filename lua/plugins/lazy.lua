@@ -28,6 +28,7 @@ lazy.setup({
 	"sar/illuminate.nvim",
 	"sindrets/diffview.nvim",
 	"voldikss/vim-translator",
+	"mfussenegger/nvim-dap",
 
 	{ "washonrails/mpv.nvim",         config = true },
 
@@ -205,23 +206,23 @@ lazy.setup({
 			require("plugins.colorizer")
 		end,
 	},
-
-	{
-		"folke/which-key.nvim",
-		keys = "<leader>",
-		config = function()
-			require("plugins.which_key")
-		end,
-	},
-
 	-- Themes
-	{ "catppuccin/nvim", as = "catppuccin", run = ":colorscheme catppuccin-mocha" },
+	{ "catppuccin/nvim",  as = "catppuccin", run = ":colorscheme catppuccin-mocha" },
 	"tiagovla/tokyodark.nvim",
 	"folke/tokyonight.nvim",
 	"ellisonleao/gruvbox.nvim",
 	"lunarvim/horizon.nvim",
 	"EdenEast/nightfox.nvim",
 	"rebelot/kanagawa.nvim",
+	{
+		"maxmx03/FluoroMachine.nvim",
+		config = function()
+			require("theme.syntheme")
+		end
+	},
+
+	{ 'rose-pine/neovim', name = 'rose-pine' },
+
 	{
 		"ray-x/starry.nvim",
 		setup = function()
@@ -277,6 +278,15 @@ lazy.setup({
 			require("plugins.noice")
 		end,
 	},
+
+	{
+		"rcarriga/nvim-dap-ui",
+		requires = { "mfussenegger/nvim-dap" },
+		config = function()
+			require("plugins.dap")
+		end
+	},
+
 })
 
 local ui = {
