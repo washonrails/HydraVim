@@ -14,15 +14,15 @@ gitsigns.setup({
 		untracked = { hl = "GitSignsAdd", text = " ¦", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
 	},
 	signcolumn = true,
-	numhl = false,
-	linehl = false,
+	numhl = true,
+	linehl = true,
 	word_diff = false,
 	watch_gitdir = {
 		interval = 1000,
 		follow_files = true,
 	},
 	attach_to_untracked = true,
-	current_line_blame = false,
+	current_line_blame = true,
 	current_line_blame_opts = {
 		virt_text = true,
 		virt_text_pos = "eol",
@@ -42,6 +42,6 @@ gitsigns.setup({
 		col = 1,
 	},
 	yadm = {
-		enable = false,
+		enable = true,
 	},
 })
