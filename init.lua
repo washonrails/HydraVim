@@ -5,6 +5,7 @@ local modules = {
 	"config.settings",
 	"config.command",
 	"theme.theme",
+	"core.ui.colors",
 	"plugins.folding",
 }
 
