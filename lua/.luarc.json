@@ -1,15 +1,15 @@
 {
-    "diagnostics.globals": [
-        "vim",
-        "describe",
-        "it",
-        "before_each",
-        "after_each",
-        "teardown",
-        "pending",
-        "requir"
-    ],
-    "diagnostics.disable": [
-        "unused-local"
-    ]
+	"diagnostics.globals": [
+		"vim",
+		"describe",
+		"it",
+		"before_each",
+		"after_each",
+		"teardown",
+		"pending",
+		"requir"
+	],
+	"diagnostics.disable": [
+		"unused-local"
+	]
 }
